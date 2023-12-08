@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+img{width: 100%}
+
+body{
+    font-family: 'Arial', sans-serif;
+    line-height: 1.5;
+}
+
+/****************/
+.main-container{
+    width: 90vw;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+.head-container {
+    width: 100%;
+    margin-bottom: 5%;
+}
+.head-container > h2{
+    width: 30%;
+    height: 50px;
+    text-align: center;
+    background-color: #99B9E1;
+    padding: 5px;
+    border-radius: 35px;
+    margin-bottom: 30px;
+    margin-left: 15%;
+}
+.head-container > p{
+    font-weight: 300;
+    padding: 10px 0;
+    opacity: 0.7;
+    text-align: center;
+}
+.head-container > select{
+    border: none;
+    cursor: pointer;
+    float: right;
+    margin-right: 5%;
+    opacity: 0.8;
+}
+.category-head{
+    margin-right: 10px ;
+    float: left;
+    font-weight: 600;
+}
+.category-head ul{
+    list-style-type: none;
+}
+.category-title{
+    display: flex;
+    background: #99B9E1;
+    padding: 5px;
+    color: #333;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: all 0.4s ease;
+    margin-right: 30px;
+}
+.items {
+    justify-content: initial;
+    background: #fff;
+    font-size: 13px;
+    padding: 2px;
+    font-weight: initial;
+}
+.icon-arrow-right {
+    margin-top: 2%;
+    margin-right: 3px;
+}
+.icon-arrow-down {
+    margin-top: 5px;
+    margin-left: 5px;
+    float: right;
+}
+.category-title:hover {
+    background-color: #99B9E1;
+    color: blue;
+}
+.category-title :hover{
+    color: blue;
+    opacity: 0.8;
+}
+.list-items li:hover{
+    color: blue;
+    opacity: 0.8;
+}
+.category-title li{
+    padding: 0 10px;
+    width: 95%;
+}
+.category-title a{
+    color: #333;
+    text-decoration: none;
+    padding: 0 10px;
+    width: 100%;
+    margin-top: 3%;
+}
+.front-img {
+    width: 10%;
+    height: 10%;
+}
+.list-items {
+    display: none;
+    margin-left: 50px;
+    font-size: 13px;
+    font-weight: initial;
+    /* padding: 5px; */
+}
+.list-items li{
+    padding: 5px;
+}
+.show {
+    display: block;
+}
+
+
+#posts-main-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    font-family: 'Poppins', sans-serif ;
+}
+#posts-main-container > div{
+    box-shadow: 0px 8px 22px -12px rgba(0, 0, 0, 0.64);
+}
+.post-img{
+    position: relative;
+}
+.post-content{
+    padding: 25px;
+}
+
+.post-content h3{
+    font-size: 22px;
+    padding: 12px 0;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 10%;
+}
+
+.post-content p{
+    color: #3C84C2;
+    font-style: 24px;
+    font-weight: 700;
+    margin-top: 2%;
+}
+
+.category-name{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 2px;
+}
+
+.cart-btn{
+    border: none;
+    margin: 5px auto;
+    padding: 8px 15px;
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    background: #6E80DC;
+    margin-bottom: 30px;
+    border-radius: 25px;
+    margin-top: 0;
+}
+
+.cart-btn:hover{
+    border: 3px solid #6E80DC;
+    background: #f6f6f6;
+}
+.pagination-container {
+    margin-left: 45%;
+}
+.pagination{
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    color: #383838;
+    padding: 10px 40px;
+    border-radius: 6px;
+}
+
+.pagination li {
+    list-style: none;
+    margin-top: 2% ;
+}
+
+.pagination li a {
+    display: inline-block;
+    margin: 0 10px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600 ;
+    line-height: 36px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.pagination li a.active{
+    color: #fff;
+    background-image: linear-gradient(#ff4568, #ff4568);
+    background-repeat: no-repeat;
+}
+.pagination li a:hover {
+    border: 2px solid blue;
+}
+
+.pagination .btn-1, .btn-2 {
+    display: inline-flex;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 500;
+    color: #383838;
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+/***************/
+@media(max-width: 1170px){
+    .posts-main-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media(max-width: 768px){
+    .posts-main-container{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
