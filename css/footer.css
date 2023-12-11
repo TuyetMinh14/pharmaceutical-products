@@ -1,0 +1,85 @@
+@font-face {
+    font-family:'Monsterat' ;
+    src: url(/font/Montserrat/26023618743.ttf);
+  }
+.km-email{
+    width: 100vw;
+height: 117px;
+position:absolute;
+left:0;
+bottom:288px;
+background: #6E80DC;
+}
+.km-email p{
+    color: #FFF;
+font-family: Monsterat;
+font-size: 30px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+font-weight: bold;
+margin-left:50px;
+margin-top:40px;
+}
+.km-email input{
+    width: 337px;
+height: 55px;
+flex-shrink: 0;
+top: 30px;
+left:19cm;
+position:absolute;
+border-radius: 1em;
+border: 0cap;
+}
+input::placeholder{
+    text-align: center;
+}
+input:-ms-input-placeholder{
+    text-align: center;
+}
+.decor-4{
+    left:90px;
+    width:5cm;
+}
+
+/*  */
+.contact{
+    background-color: #fff;
+    height: 288px;
+    width: 100vw;
+    position:absolute;
+    bottom:0px;
+    left:0;
+}
+.contact p{
+    color: #000;
+text-align: center;
+font-family: Montserrat;
+font-size: 25px;
+font-style: normal;
+font-weight: 900;
+line-height: normal;
+width: 449px;
+height: 64px;
+flex-shrink: 0;
+margin-bottom: 0;
+}
+.contact table{
+    position:absolute;
+    left:1cm;
+    bottom:2cm
+}
+.contact td{
+    padding:10px
+}
+.contact img{
+    width:48px;
+    height: 48px;
+}
+.contact a{
+    text-decoration: none; 
+    padding:50px;
+    color:#000;
+    font-weight: 700;
+    font-family:Inter;
+}
