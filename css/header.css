@@ -16,15 +16,10 @@
 .banner-header {
   display: block;
   position: relative;
-  background-color: #99b9e1;
   max-width: 100vw;
   height: 100px;
   top: 0;
-<<<<<<< HEAD
-  background-image: url('/img/header/pngtree-christmas-candy-png_260524.png');
-=======
   background-image: url('/img/header/keo\ Background\ Removed.png');
->>>>>>> tm
   background-size: 90px;
   background-repeat: no-repeat;
   background-position-x: 19.3cm;
@@ -115,8 +110,10 @@ width: 186px;
     width: 1457px;
 height: 179px;
 background: #6E80DC;
-position: absolute;
-left:0;
+position: relative;
+display: block;
+left: -10px;;
+margin-bottom: 0;
     }
 
 .hotline {
@@ -318,3 +315,4 @@ height: 80px;
     height: 80px;
     margin-left: 780px;
 }
+

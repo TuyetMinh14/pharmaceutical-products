@@ -1,0 +1,264 @@
+.banner-qc{
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    left:0;
+    height: 1000px;
+    width: 100vw; 
+}
+.container{
+    display: block;
+    max-width: 1320px;
+    padding: 52px;
+    max-height: 360px;
+    background-color: #99B9E1;
+}
+.slider-wrapper{
+    position: relative;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+.slider {
+    display:flex;
+    aspect-ratio: 16/9;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0, 0, 0.25);
+}
+.slider img{
+    flex: 1 0 100%;
+    scroll-snap-align:start;
+    object-fit: cover;
+    height:360px;
+    border-radius: 3em;
+    
+}
+.nav-slide {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    top: 9cm; /* Điều chỉnh vị trí từ dưới lên, bạn có thể thay đổi giá trị này theo ý muốn */
+    left:50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.nav-slide a{
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+    background-color: green;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+}
+.nav-slide a:hover{
+    opacity: 2;
+}
+
+.container button{
+    width: 51px;
+height: 51px;
+border: 0;
+border-radius: 50%;
+border: 3px;
+padding: 0;
+}
+
+.next{
+    position: relative;
+    left: 1294px;
+    bottom:15.5cm;
+}
+.round1 {
+    position: relative;
+    background-color: #EFA7CF;
+    width: 51px;
+    height: 51px;
+    border-radius: 50%;
+}
+
+span {
+    z-index: 999;
+    height: 3px;
+    margin:1px;
+    width: 20px;
+    background: #FF1095;
+    transition: 0.4s ease;
+}
+
+.round1 span:first-child {
+    display: block;
+    position: absolute;
+    transform: rotate(135deg);
+    left: 15%;
+    bottom: 33%;
+}
+
+.round1 span:nth-child(2) {
+    display: block;
+    position: absolute;
+    transform: rotate(135deg);
+    left: 45%;
+    bottom: 33%;
+}
+
+.round1 span:nth-child(3) {
+    display: block;
+    position: absolute;
+    transform: rotate(-135deg);
+    left: 15%;
+    bottom: 59%;
+}
+
+.round1 span:nth-child(4) {
+    display: block;
+    position: absolute;
+    transform: rotate(-135deg);
+    left: 45%;
+    bottom: 59%;
+}
+
+.round1:hover span:nth-child(1) {
+    transform: rotate(-225deg);
+}
+
+.round1:hover span:nth-child(2) {
+    transform: rotate(-225deg);
+}
+
+.round1:hover span:nth-child(3) {
+    transform: rotate(225deg);
+}
+
+.round1:hover span:nth-child(4) {
+    transform: rotate(225deg);
+}
+
+/* prev */
+.prev{
+    position: absolute;
+    right:1290px;
+    bottom:15.5cm;
+
+}
+.round2{
+    position: relative;
+    background-color: #EFA7CF;
+    width: 51px;
+    height: 51px;
+    border-radius: 50%;
+}
+
+.round2 span:first-child {
+    display: block;
+    position: absolute;
+    transform: rotate(45deg);
+    left: 10%;
+    bottom: 33%;
+}
+
+.round2 span:nth-child(2) {
+    display: block;
+    position: absolute;
+    transform: rotate(45deg);
+    left: 40%;
+    bottom: 33%;
+}
+
+.round2 span:nth-child(3) {
+    display: block;
+    position: absolute;
+    transform: rotate(135deg);
+    left: 10%;
+    bottom: 59%;
+}
+
+.round2 span:nth-child(4) {
+    display: block;
+    position: absolute;
+    transform: rotate(135deg);
+    left: 40%;
+    bottom: 59%;
+}
+
+.round2:hover span:nth-child(1) {
+    transform: rotate(225deg);
+}
+
+.round2:hover span:nth-child(2) {
+    transform: rotate(225deg);
+}
+
+.round2:hover span:nth-child(3) {
+    transform: rotate(-225deg);
+}
+
+.round2:hover span:nth-child(4) {
+    transform: rotate(-225deg);
+}
+
+/* service */
+.service{
+    display:block;
+    position: relative;
+    background-color: #EFA7CF;
+    width: 1180px;
+height: 120px;
+left:130px;
+border-radius: 3em;
+
+}
+.rows{
+height: 51px;
+width: 100vw;
+left:-8px;
+background: #D9D9D9;
+position: relative;
+top:60px;
+}
+
+/* danh muc san pham */
+.catgory1{
+    width:100vw;
+    height:440px;
+    background: #D99BBD;
+}
+
+.cat-title{
+    color: #000;
+font-family: Inter;
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+display:block;
+position: relative;
+top:31px;
+left: 61px;
+}
+.danhmuc{
+    position: absolute;
+    top:81px;
+    left: 100px;
+}
+.danhmuc ul{
+    list-style: none;
+    display: flex;
+}
+.danhmuc a{
+    padding:0;
+}
+.danhmuc ul li {
+    margin-right: -7.6px;
+    margin-left: 0; /* Adjust the value as needed for your desired spacing */
+    padding:0;
+}
+.danhmuc img{
+    width: 300px;
+    height:300px;
+    margin:0
+}
+.danhmuc a:hover{
+    opacity:10;
+}

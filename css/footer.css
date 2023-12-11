@@ -2,12 +2,19 @@
     font-family:'Monsterat' ;
     src: url(/font/Montserrat/26023618743.ttf);
   }
+footer{
+    display:block;
+    position: absolute;
+    bottom:0;
+    width: 100vw;
+    height: 465px;
+}
 .km-email{
     width: 100vw;
 height: 117px;
+display: block;
 position:absolute;
-left:0;
-bottom:288px;
+left: -8px;
 background: #6E80DC;
 }
 .km-email p{
