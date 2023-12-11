@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Category Filter in JS</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        
+        <div class = "main-container">
+            <div class="head-container">
+                <h2>Tất cả sản phẩm</h2>
+                
+            <!-- Sort-Price -->
+                <select name="sort-items" id="sort-items">
+                    <option value="">Sắp xếp</option>
+                    <option value="Giảm dần">Giá giảm dần</option>
+                    <option value="Tăng dần">Giá tăng dần</option>
+                </select>
+            </div>
+
+            <!-- Category -->
+            <div class = "filter-container">
+                <div class = "category-head">
+                    <ul>
+                        <div class = "category-title menu-btn " id = "all" href="?category=all">
+                            <li>Danh Mục</li>
+                            <span><i class = "fas fa-border-all icon-arrow-right"></i></span>
+                        </div>
+                        <div class = "category-title items ">
+                            <img src="https://data-service.pharmacity.io/pmc-upload-media/production/pmc-ecm-core/category-icons/MicrosoftTeams-image_24.png" alt="" class="front-img">
+                            <a class="menu-btn" id="menu1">Dược Phẩm <i class="fa-solid fa-angle-down icon-arrow-down"></i></a>
+                        </div>
+                        <ul class="list-items" id="list-items-menu1">
+                            <li><i class="fa-solid fa-caret-right icon-arrow-right"></i> Thuốc không kê đơn </li>  
+                            <li><i class="fa-solid fa-caret-right icon-arrow-right"></i> Thuốc kê đơn </li>  
+                        </ul>
+                        <div class = "category-title items">
+                            <img src="https://data-service.pharmacity.io/pmc-upload-media/production/pmc-ecm-core/category-icons/Group_10378.png" alt="" class="front-img">
+                            <a class="menu-btn" id="menu2">Chăm sóc sức khỏe <i class="fa-solid fa-angle-down icon-arrow-down"></i></a>
+                        </div>
+                        <ul class="list-items" id="list-items-menu2">
+                            <li><i class="fa-solid fa-caret-right icon-arrow-right"></i> Thực phẩm dinh dưỡng </li>  
+                            <li><i class="fa-solid fa-caret-right icon-arrow-right"></i> Dụng cụ sơ cứu </li>  
+                            <li><i class="fa-solid fa-caret-right icon-arrow-right"></i> Khẩu trang y tế </li>  
+                            <li><i class="fa-solid fa-caret-right icon-arrow-right"></i> Chống muỗi </li>  
+                            <li> <i class="fa-solid fa-caret-right icon-arrow-right"></i>Dầu tràm, dầu xoa bóp </li>  
+                        </ul>
+                        <div class = "category-title items">
+                            <img src="https://data-service.pharmacity.io/pmc-upload-media/production/pmc-ecm-core/category-icons/Group_10378-6.png" alt="" class="front-img">
+                            <a class="menu-btn" id="menu3">Thiết bị y tế <i class="fa-solid fa-angle-down icon-arrow-down"></i></a>
+                        </div>
+                        <ul class="list-items" id="list-items-menu3">
+                            <li><i class="fa-solid fa-caret-right icon-arrow-right"></i> Nhiệt kế </li>  
+                            <li><i class="fa-solid fa-caret-right icon-arrow-right"></i>Máy đo huyết áp </li>  
+                            <li><i class="fa-solid fa-caret-right icon-arrow-right"></i>Máy đo đường huyết </li>  
+                            <li><i class="fa-solid fa-caret-right icon-arrow-right"></i> Máy xông khí dung </li>  
+                        </ul>
+                        <div class = "category-title items">
+                            <img src="https://data-service.pharmacity.io/pmc-upload-media/production/pmc-ecm-core/category-icons/Group_10378-3.png" alt="" class="front-img">
+                            <a class="menu-btn" id="menu4">Thực phẩm chức năng <i class="fa-solid fa-angle-down icon-arrow-down"></i></a>
+                        </div>
+                        <ul class="list-items" id="list-items-menu4">
+                            <li><i class="fa-solid fa-caret-right icon-arrow-right"></i> TPCN Nhóm dạ dày </li>  
+                            <li><i class="fa-solid fa-caret-right icon-arrow-right"></i> TPCN Nhóm tim mạch </li>  
+                            <li><i class="fa-solid fa-caret-right icon-arrow-right"></i> TPCN Nhóm đường huyết </li>  
+                            <li><i class="fa-solid fa-caret-right icon-arrow-right"></i> TPCN Nhóm hô hấp </li>  
+                            <li><i class="fa-solid fa-caret-right icon-arrow-right"></i> TPCN Nhóm thần kinh </li>  
+                            <li><i class="fa-solid fa-caret-right icon-arrow-right"></i> TPCN Nhóm cơ xương khớp </li>  
+                            <li><i class="fa-solid fa-caret-right icon-arrow-right"></i> TPCN giảm cân </li>  
+                            <li><i class="fa-solid fa-caret-right icon-arrow-right"></i> TPCN Chăm sóc sắc đẹp </li>  
+                        </ul>
+                        <div class = "category-title items">
+                            <img src="https://data-service.pharmacity.io/pmc-upload-media/production/pmc-ecm-core/category-icons/Group_10378-1.png" alt="" class="front-img">
+                            <a class="menu-btn" id="menu5">Chăm sóc sắc đẹp <i class="fa-solid fa-angle-down icon-arrow-down"></i></a>
+                        </div>
+                        <ul class="list-items" id="list-items-menu5">
+                            <li><i class="fa-solid fa-caret-right icon-arrow-right"></i> Chăm sóc mặt </li>  
+                            <li><i class="fa-solid fa-caret-right icon-arrow-right"></i> Sản phẩm chống nắng </li>  
+                            <li><i class="fa-solid fa-caret-right icon-arrow-right"></i> Dụng cụ làm đẹp </li>  
+                            <li><i class="fa-solid fa-caret-right icon-arrow-right"></i> Dược-Mỹ phẩm </li>   
+                        </ul>
+                    </ul>
+                </div>
+
+                <!-- Products -->
+                <div id="posts-main-container">
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination-container">
+                    <div class="pagination" id="pagination">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- JS file -->
+        <script src = "catogory.js"></script>
+    </body>
+</html>
