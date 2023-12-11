@@ -1,10 +1,10 @@
 @font-face {
     font-family:'Lalezar' ;
-    src: url('/font/Lalezar/Lalezar-Regular.ttf');
+    src: url('./font/Lalezar/Lalezar-Regular.ttf');
   }
   @font-face {
     font-family:'Inter' ;
-    src: url('/font/Inter/Inter-VariableFont_slnt\,wght.ttf');
+    src: url('./font/Inter/Inter-VariableFont_slnt\,wght.ttf');
   }
   body {
   overflow-x: hidden;
@@ -19,7 +19,7 @@
   max-width: 100vw;
   height: 100px;
   top: 0;
-  background-image: url('/img/header/keo\ Background\ Removed.png');
+  background-image: url('./img/header/keo\ Background\ Removed.png');
   background-size: 90px;
   background-repeat: no-repeat;
   background-position-x: 19.3cm;
