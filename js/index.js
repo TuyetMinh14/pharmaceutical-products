@@ -16,10 +16,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     
     function setImg(){
-        return slider_img.setAttribute('src', '/img/index/images/'+images[i]);
+        return slider_img.setAttribute('src', './img/index/images/'+images[i]);
         
     }
 
     document.querySelector('.prev').addEventListener('click', prev);
     document.querySelector('.next').addEventListener('click', next);
 });
+

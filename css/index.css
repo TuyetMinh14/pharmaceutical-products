@@ -1,50 +1,65 @@
-.banner-qc{
+@font-face {
+    font-family: 'Monsterat';
+    src: url(./font/Montserrat/26023618743.ttf);
+}
+*{
+    list-style: none;
+}
+
+.banner-qc {
     display: block;
     background-color: #fff;
-    position: absolute;
-    left:0;
-    height: 1000px;
-    width: 100vw; 
+    position:relative;
+    left: -0.5rem;
+    height: 62.5rem;
+    width: 100vw;
 }
-.container{
+
+.container {
     display: block;
-    max-width: 1320px;
-    padding: 52px;
-    max-height: 360px;
-    background-color: #99B9E1;
+    max-width: 82.5rem; /* (1320 / 16) */
+    padding: 3.25rem; /* (52 / 16) */
+    max-height: 22.5rem; /* (360 / 16) */
+    position: relative;
+    top:-62rem;
+    left:3rem;
+    
 }
-.slider-wrapper{
+
+.slider-wrapper {
     position: relative;
     max-width: 1320px;
     margin: 0 auto;
 }
+
 .slider {
-    display:flex;
+    display: flex;
     aspect-ratio: 16/9;
     overflow-x: hidden;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0, 0, 0.25);
 }
-.slider img{
+
+.slider img {
     flex: 1 0 100%;
-    scroll-snap-align:start;
+    scroll-snap-align: start;
     object-fit: cover;
-    height:360px;
+    height: 360px;
     border-radius: 3em;
-    
 }
+
 .nav-slide {
     display: flex;
     column-gap: 1rem;
     position: absolute;
-    top: 9cm; /* Điều chỉnh vị trí từ dưới lên, bạn có thể thay đổi giá trị này theo ý muốn */
-    left:50%;
+    top: 21rem;
+    left: 50%;
     transform: translateX(-50%);
     z-index: 1;
 }
 
-.nav-slide a{
+.nav-slide a {
     width: 0.7rem;
     height: 0.7rem;
     border-radius: 50%;
@@ -52,24 +67,25 @@
     opacity: 0.75;
     transition: opacity ease 250ms;
 }
-.nav-slide a:hover{
-    opacity: 2;
+
+.nav-slide a:hover {
+    opacity: 1;
 }
 
-.container button{
-    width: 51px;
-height: 51px;
-border: 0;
-border-radius: 50%;
-border: 3px;
-padding: 0;
+.container button {
+    width: 3.1875rem; /* (51px / 16) = 3.1875rem */
+    height: 3.1875rem; /* (51px / 16) = 3.1875rem */
+    border-radius: 50%;
+    border: 0;
+    padding: 0;
 }
 
-.next{
+.next {
     position: relative;
-    left: 1294px;
-    bottom:15.5cm;
+    left: 80.875rem; /* (1294px / 16) = 80.875rem */
+    bottom: 15.5cm;
 }
+
 .round1 {
     position: relative;
     background-color: #EFA7CF;
@@ -203,44 +219,45 @@ span {
     display:block;
     position: relative;
     background-color: #EFA7CF;
-    width: 1180px;
-height: 120px;
-left:130px;
+    width: 73.75rem;
+height: 7.5rem;
+left:11rem;
+top:-62rem;
 border-radius: 3em;
 
 }
-.rows{
-height: 51px;
-width: 100vw;
-left:-8px;
-background: #D9D9D9;
-position: relative;
-top:60px;
-}
+    
+
+
 
 /* danh muc san pham */
+.rows{
+    left:3.75rem;
+    position: absolute;
+    top:67rem;
+    }
 .catgory1{
     width:100vw;
-    height:440px;
+    height:27.5rem;
     background: #D99BBD;
 }
 
 .cat-title{
     color: #000;
-font-family: Inter;
+font-family: Monsterat;
 font-size: 32px;
 font-style: normal;
 font-weight: 700;
 line-height: normal;
 display:block;
 position: relative;
-top:31px;
-left: 61px;
+top:1.938rem;
+left: 3.813rem;
 }
 .danhmuc{
     position: absolute;
-    top:81px;
-    left: 100px;
+    top:5.063rem;
+    left: 6.25rem;
 }
 .danhmuc ul{
     list-style: none;
@@ -260,5 +277,102 @@ left: 61px;
     margin:0
 }
 .danhmuc a:hover{
+    cursor: pointer;
     opacity:10;
 }
+hr{
+    height: 51px;
+width: 100vw;
+background: #D9D9D9;
+position: absolute;
+top:-9rem;
+display: block;
+border: none;
+}
+
+/* SANPHAMNOIBAT */
+
+.oproducts{
+    width:100vw;
+    height: 42rem;
+    background-color: #fff;
+    display: block;
+    position:relative;
+    top:-22.4rem;
+    left:3.2rem;
+}
+.oproducts hr{
+    top:2.875rem;
+}
+
+.oproducts .cat-title{
+    top:9rem;
+    left:3rem
+}
+
+.oproducts .product{
+    width:15rem;
+    height: 25rem;
+    border:none;
+    box-shadow: 0 0 12px rgba(15,61,145,.12);
+    border-radius: 12px;
+    margin-left: 1rem;
+
+}
+.oproducts .row{
+    margin-top:12rem;
+    margin-left: 2.5rem;
+
+}
+.oproducts .product ul{
+
+    display: flex;
+}
+
+.productimg{
+    width:15rem;
+    border-radius: 12px;
+}
+
+.oproducts ul{
+    display:flex;
+}
+.pname{
+    color: D9D9D9;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: left;
+    margin-left: 0.6rem;
+    margin-right: 0.6rem;
+    margin-top: 0.8rem;
+}
+.price{
+    color: #FF1095;
+    font-family: Monsterat;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: left;
+    margin-left: 0.6rem;
+    margin-right: 0.6rem;
+    margin-top: 0.8rem;
+}
+ .addstock{
+        width: 12rem;
+        height:2.5rem;
+        margin-left:1.5rem;
+        margin-top: 0.3rem;
+        border: none;
+        border-radius: 30px;
+        background: #6E80DC;
+        color: black;
+font-family: Inter;
+font-size: 15px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+ }
