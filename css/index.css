@@ -22,7 +22,7 @@
     max-height: 22.5rem; /* (360 / 16) */
     position: relative;
     top:-62rem;
-    left:3rem;
+    left:-0rem;
     
 }
 
@@ -221,7 +221,7 @@ span {
     background-color: #EFA7CF;
     width: 73.75rem;
 height: 7.5rem;
-left:11rem;
+left:8rem;
 top:-62rem;
 border-radius: 3em;
 
@@ -232,7 +232,7 @@ border-radius: 3em;
 
 /* danh muc san pham */
 .rows{
-    left:3.75rem;
+    left:0rem;
     position: absolute;
     top:67rem;
     }
@@ -288,18 +288,19 @@ position: absolute;
 top:-9rem;
 display: block;
 border: none;
+left:0rem;
 }
 
 /* SANPHAMNOIBAT */
 
 .oproducts{
     width:100vw;
-    height: 42rem;
+    height: 45rem;
     background-color: #fff;
     display: block;
     position:relative;
     top:-22.4rem;
-    left:3.2rem;
+    left:-0.5rem;
 }
 .oproducts hr{
     top:2.875rem;
@@ -368,7 +369,7 @@ border: none;
         margin-top: 0.3rem;
         border: none;
         border-radius: 30px;
-        background: #6E80DC;
+        background-color: #6E80DC;
         color: black;
 font-family: Inter;
 font-size: 15px;
@@ -376,3 +377,152 @@ font-style: normal;
 font-weight: 700;
 line-height: normal;
  }
+
+ /* chuc nang */
+
+ .cproduct .row .product .addstock{
+    background-color: #D99BBD;
+ }
+
+ .seeall {
+    position: absolute;
+    bottom: 1rem;
+    left: 74.94rem;
+    width: 11.125rem;
+    height: 2.75rem;
+    border-radius: 6.25rem;
+    background: #D99BBD;
+    text-align: center;
+    color: #000;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.seeall a {
+    color: #000;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding: 0.625rem 1.25rem;
+    text-decoration: none; /* Remove underline from the link */
+}
+
+/* ttgdinh */
+.gproduct .seeall{
+    background-color: #6E80DC;
+}
+
+/* news */
+
+.news {
+    width: 100vw;
+    height: 62.81rem;
+    background-color: #fff;
+    position: relative;
+    top:-22.4rem;
+    left:-0.5rem;
+}
+
+.news .new-title{
+    color: #000;
+font-family: Inter;
+font-size: 2rem;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+position: relative;
+left:3rem;
+}
+.news hr{
+    opacity: 0.3;
+background: #6E80DC;
+width: 82.375rem;
+height: 0.3125rem;
+text-align: center;
+position:relative;
+left:-0.6rem;
+top:1rem;
+}
+.news ul{
+    display:flex;
+    position: relative;
+    top:1rem;
+    left:0.7rem;
+    
+}
+.news ul li{
+    margin-right: 3rem;
+}
+.news-category{
+    width: fit-content;
+    height: fit-content;
+    padding:0.5rem 1rem;
+    border-radius: 6.25rem;
+border: 1px solid #000;
+background: #FFF;
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+}
+.news-category a{color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;}
+.news table{
+    position: relative;
+    left:3rem;
+    top:2rem;
+}
+.left-col img{
+    width: 47.4375rem;
+height: 31.5625rem;
+    left:2rem;
+    border-radius: 1rem;
+background: #FFF;
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.left-col .left-title{
+    width: 47.5rem;
+height: 4.75rem;
+position: relative;
+top:2rem;
+font-size: 2rem;
+color:#000;
+font-family:'Monsterat';
+}
+.right-col{
+    padding:0;
+}
+.right-col img{
+    width: 17.25rem;
+height: 11rem;
+    left:2rem;
+    border-radius: 1rem;
+background: #FFF;
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.right-col .right-title{
+    width: 13.9375rem;
+height: 11rem;
+flex-shrink: 0;
+position: relative;
+font-size: 1rem;
+color:#000;
+font-family:'Monsterat';
+}
+
+.right-col ul{
+    width:fit-content;
+    padding:0;
+    margin:0;}
+
+.right-col ul li{
+    padding-right: 1rem;
+    width:fit-content;
+    margin:0;
+}
