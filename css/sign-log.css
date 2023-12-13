@@ -1,5 +1,165 @@
+
+
+
+
 .signup{
-    border: solid black;
-    width: fit-content;
-    height: fit-content;
+    display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+    width:fit-content;
+    border:solid #000;
+    padding:4rem;
+     border-radius: 3rem;
+    display: none;
+    z-index: 1000;
+
 }
+/* The switch - the box around the slider */
+.switch1 {
+    position: relative;
+    display: inline-block;
+    width: 20rem;
+height: 5rem;
+
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch1 input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider1 {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #E9E9E9;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 1.5rem;
+  }
+  
+  .slider1:before {
+    position: absolute;
+    content: "";
+    height: 4.5rem;
+    width: 10rem;
+    left: 0.25rem;
+    bottom: 0.25rem;
+    border-radius: 1.5rem;
+background: #6E80DC;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider1 {
+    background-color: #E9E9E9;
+  }
+  
+  input:focus + .slider1 {
+    box-shadow: 0 0 1px #E9E9E9;
+  }
+  
+  input:checked + .slider1:before {
+    -webkit-transform: translateX(1rem);
+    -ms-transform: translateX(26px);
+    transform: translateX(9.5rem);
+    background-color: #6E80DC;
+  }
+
+  
+.dangnhap{
+    position: relative;
+    top:2rem;
+    left:12.1rem;
+    color: #000;
+font-family: Inter;
+font-size: 1.3rem;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.dangky{
+
+position: relative;
+    top:0.5rem;
+    left:2rem;
+    color: #000;
+font-family: Inter;
+font-size: 1.3rem;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+.signup table tr td{
+    padding:0.5rem;
+}
+
+.signup hr{
+
+height: 0.1rem;
+background-color: #6E80DC;
+}
+
+.signup input{
+    text-indent: 2.2rem;
+}
+ .input-icons1 input{
+    background: url(/img/index/tk.png) no-repeat scroll 0.6rem 0.4rem;
+    background-size: 12%;
+padding-left:30px;    
+ }
+.tk {
+    left:-1rem;
+    width: 18rem;
+    height:3rem;
+    border-radius: 3.125rem;
+background: #E9E9E9;
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.input-icons2 input{
+    background: url(/img/index/tkphone.png) no-repeat scroll 0.3rem 0.1rem;
+    background-size: 17%;
+padding-left:30px;    
+ }
+.phone {
+    left:-1rem;
+    width: 18rem;
+    height:3rem;
+    border-radius: 3.125rem;
+background: #E9E9E9;
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.input-icons3 input{
+    background: url(/img/index/clock.png) no-repeat scroll 0.6rem 0.2rem;
+    background-size: 15%;
+padding-left:30px;    
+ }
+.mk {
+    left:-1rem;
+    width: 18rem;
+    height:3rem;
+    border-radius: 3.125rem;
+background: #E9E9E9;
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.btn-sigup{
+    text-align: center;
+}
+.btn-sigup button{
+    border-radius: 3.125rem;
+background: #6E80DC;
+border:none;
+width:12rem;
+height:3rem;
+font-size: larger;
+}
+
