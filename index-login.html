@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/footer.css" />
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/sign-log.css" />
+    <link rel="stylesheet" href="./css/index-login.css">
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
@@ -47,9 +48,10 @@
           </ul>
         </div>
         <div class="decor"></div>
-        <a href="#" class="log">Đăng Nhập</a>
+        <a href="index.html" class="dangxuat">Đăng xuất</a>
         <div class="decor1"></div>
-        <a href="#" class="sigin" >Đăng Ký</a>
+        <div class="user-name"><img src="./img/header/username-icon-png-6.jpg" alt="" srcset="">
+        </div>
       </div>
       <img src="./img/header/LOGO.png" alt="" srcset="" class="logo" />
       <div class="search-box">
@@ -534,7 +536,7 @@
         </tr>
         <tr>
           <td class="input-icons3">
-            <input class="mk" type="text" />
+            <input class="mk" type="password" />
           </td>
         </tr>
         <tr>
@@ -578,10 +580,16 @@
         </tr>
         <tr>
           <td class="input-icons3">
-            <input class="mk" type="text" />
+            <input class="mk" type="password" />
           </td>
         </tr>
-                <tr>
+        <tr>
+          <td class="">
+            <input class="dongy" type="checkbox" value="yes" /> Tôi đồng ý với
+            điều khoản và điều kiện
+          </td>
+        </tr>
+        <tr>
           <td class="btn-login">
             <button type="submit" id="dongydangnhap">Đăng Nhập</button>
           </td>
@@ -590,6 +598,13 @@
     </form>
 
     <script src="./js/index.js"></script>
-    <script src="./js/login.js"></script>
+    <script>
+      function displayusername(){
+  var usernameDisplay = document.querySelector('.user-name')
+  console.log(usernameDisplay)
+  const user = window.localStorage.getItem('usernames');
+  usernameDisplay.innerText = user.usernames
+} 
+    </script>
   </body>
 </html>

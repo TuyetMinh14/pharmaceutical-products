@@ -1,0 +1,23 @@
+.dangxuat {
+    position: absolute;
+    top: 1.4rem; /* (16px / 200) * 25 = 1.5625rem */
+    left: 12.8rem; /* (16px / 200) * 200 = 12.5rem */
+    width: 6.25rem; /* (16px / 200) * 100 = 6.25rem */
+    font-size: 14px;
+  }
+  
+  .user-name {
+    position: absolute;
+    top: 1.2rem;
+    left: 20rem;
+    width: 6.25rem;
+    display: flex; /* Sử dụng display: flex; */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    font-size: 0.8rem;
+  }
+
+.user-name img {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 0.5rem; /* Tăng khoảng cách giữa hình ảnh và văn bản nếu cần thiết */
+}
