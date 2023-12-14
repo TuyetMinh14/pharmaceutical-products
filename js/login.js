@@ -46,7 +46,8 @@ btnRegister.addEventListener("click", (e) => {
   e.preventDefault();
   const phoneRegex = /^(0|84)([0-9]{9,10})$/;
   const isValidPhone = phoneRegex.test(inputPhoneRegister.value);
-  
+  const users = JSON.parse(localStorage.getItem(inputUsernameRegister.value)) || [];
+
   if (
     inputUsernameRegister.value === "" ||
     inputPasswordRegister.value === "" ||
@@ -54,6 +55,10 @@ btnRegister.addEventListener("click", (e) => {
   )
    {
     alert("Thông tin không hợp lệ");
+  }
+  else if(inputUsernameRegister.value == users.username)
+  {
+    alert("Tên người dùng hoặc số điện thoại đã được đăng ký");
   }
    else {
     // array user
@@ -72,8 +77,8 @@ btnRegister.addEventListener("click", (e) => {
     const logIn = {
       usernames: inputUsernameRegister.value,
     };
-    let json1 = JSON.stringify(usernames);
-    localStorage.setItem(inputUsernameRegister.value, json1);
+    let json1 = JSON.stringify(logIn);
+    localStorage.setItem('dangnhap', json1);
   }
 });
 
@@ -102,11 +107,13 @@ btnLogin.addEventListener("click", (e) => {
       alert("Đăng Nhập Thất Bại");
     }
   }
+  const logIn = {
+    usernames: inputUsername.value,
+  };
+  let json1 = JSON.stringify(logIn);
+  localStorage.setItem('dangnhap', json1);
 });
 
 
-
-// tạo 1 cái josn khác trên local stortage
-// json : tendangnhap sau khi dang ky xong xong roi display ten do -> dang xuat xoa json do                   
 
 

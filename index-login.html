@@ -50,7 +50,7 @@
         <div class="decor"></div>
         <a href="index.html" class="dangxuat">Đăng xuất</a>
         <div class="decor1"></div>
-        <div class="user-name"><img src="./img/header/username-icon-png-6.jpg" alt="" srcset="">
+        <div class="user-name">
         </div>
       </div>
       <img src="./img/header/LOGO.png" alt="" srcset="" class="logo" />
@@ -601,10 +601,22 @@
     <script>
       function displayusername(){
   var usernameDisplay = document.querySelector('.user-name')
-  console.log(usernameDisplay)
-  const user = window.localStorage.getItem('usernames');
-  usernameDisplay.innerText = user.usernames
+  const user = JSON.parse(localStorage.getItem('dangnhap'));
+    usernameDisplay.innerHTML = user.usernames + '<img src="./img/header/username-icon-png-6.jpg" alt="" srcset="">'
 } 
+displayusername()
+
+var dangxuatbutton = document.querySelector('.dangxuat');
+
+dangxuatbutton.addEventListener("click", function () {
+  window.localStorage.removeItem('dangnhap')
+ });
+function handleBeforeUnload() {
+  localStorage.removeItem('dangnhap');
+}
+
+window.addEventListener('beforeunload', handleBeforeUnload);
+
     </script>
   </body>
 </html>
