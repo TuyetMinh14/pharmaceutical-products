@@ -1,6 +1,6 @@
 @font-face {
     font-family:'Monsterat' ;
-    src: url(./font/Montserrat/26023618743.ttf);
+    src: url(../font/Montserrat/26023618743.ttf);
   }
 footer{
     display:block;
@@ -39,6 +39,7 @@ left:19cm;
 position:absolute;
 border-radius: 1em;
 border: 0cap;
+text-indent: 1rem;
 }
 input::placeholder{
     text-align: center;
