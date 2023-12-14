@@ -349,6 +349,9 @@ left:0rem;
     margin-left: 0.6rem;
     margin-right: 0.6rem;
     margin-top: 0.8rem;
+    overflow: hidden;
+    width: 13.802rem;
+    height: 3.125rem;
 }
 .price{
     color: #FF1095;
