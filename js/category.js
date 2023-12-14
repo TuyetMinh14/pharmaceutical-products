@@ -16,7 +16,6 @@ Array.from(menuBtns).forEach(function (btn) {
 
             click.classList.add('show')
         }
-
     });
 });
 
@@ -32,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
             price: 147000,
             info: "Hoạt chất: Acetylcysteine. Công dụng: Điều trị các bệnh lý đường hô hấp có đờm nhầy quánh như viêm phế quản cấp và mạn. Đối tượng sử dụng: Người lớn/ trẻ em trên 2 tuổi. Hình thức: Viên nang cứng. Thương hiệu: Imexpharm. Nơi sản xuất: Việt Nam. *Thuốc chỉ dùng theo đơn của bác sĩ",
             description: "Thành phần. Acetylcysteine 200mg. Tá dược: Đường trắng, Mannitol, Dinatri hydrophosphat khan, Bột mùi dâu, Aspartam, Colloidal anhydrous silica. Chỉ định (Thuốc dùng cho bệnh gì?). Thuốc Acetylcystein 200 mg được chỉ định dùng trong các trường hợp sau: - Điều trị các bệnh lý đường hô hấp có đờm nhầy quánh như viêm phế quản cấp và mạn. - Dùng làm thuốc tiêu chất nhầy trong bệnh nhầy nhớt (mucoviscidosis) như xơ nang tuyến tụy.",
-            subImg: ""
+            // subImg: "",
             // addDescription: "Chống chỉ định (Khi nào không nên dùng thuốc này?) Thuốc Acetylcystein 200 mg chống chỉ định trong các trường hợp sau - Quá mẫn với acetylcystein hay bất kỳ thành phần nào của thuốc. - Người có tiền sử hen (nguy cơ phản ứng co thắt phế quản với tất cả các dạng thuốc chứa acetylcystein). - Trẻ em dưới 2 tuổi. Liều dùng và cách dùng - Dạng bào chế của viên nang cứng Acetylcystein 200mg không thích hợp sử dụng cho trẻ em từ 2 đến 6 tuổi. - Người lớn và trẻ em trên 6 tuổi: 1 viên/lần x 3 lần/ngày. Lưu ý: Liều dùng trên chỉ mang tính chất tham khảo. Liều dùng cụ thể tùy thuộc vào thể trạng và mức độ diễn tiến của bệnh. Để có liều dùng phù hợp, bạn cần tham khảo ý kiến bác sĩ hoặc chuyên viên y tế. Tác dụng phụ Khi sử dụng thuốc Acetylcystein 200 mg bạn có thể gặp các tác dụng không mong muốn (ADR). Thường gặp, ADR > 1/100 - Buồn nôn, nôn. Ít gặp, 1/1000 < ADR < 1/100 - Buồn ngủ, nhức đầu, ù tai, viêm miệng, chảy nước mũi nhiều, phát ban, mày đay. Hiếm gặp, ADR < 1/1000 - Co thắt phế quản kèm phản ứng dạng phản vệ toàn thân, sốt, rét run. Hướng dẫn cách xử trí ADR - Khi gặp tác dụng phụ của thuốc, cần ngưng sử dụng và thông báo cho bác sĩ hoặc đến cơ sở y tế gần nhất để được xử trí kịp thời. Thận trọng (Những lưu ý khi dùng thuốc) - Cần giám sát chặt chẽ người có tiền sử dị ứng vì có nguy cơ phát hen. - Nếu có co thắt phế quản, phải dùng thuốc phun mù giãn phế quản như salbutamol (thuốc beta-2 adrenergic chọn lọc, tác dụng ngắn) hoặc ipratropium (thuốc kháng muscarin) và phải ngừng sử dụng acetylcystein. - Khi điều trị với acetylcystein, có thể xuất hiện nhiều đờm loãng ở phế quản, cần phải hút để lấy ra nếu người bệnh giảm khả năng ho. Sử dụng thuốc cho phụ nữ có thai và cho con bú: - Phụ nữ có thai: Thuốc dùng được cho phụ nữ có thai. - Phụ nữ cho con bú: Thuốc dùng được cho phụ nữ đang cho con bú. Ảnh hưởng của thuốc lên khả năng lái xe, vận hành máy móc - Thuốc không ảnh hưởng đến khả năng lái xe và vận hành máy móc. Tương tác thuốc (Những lưu ý khi dùng chung thuốc với thực phẩm hoặc thuốc khác) - Acetylcystein là một chất khử nên không phù hợp với các chất oxy - hóa. - Không được dùng đồng thời các thuốc ho khác hoặc bất cứ thuốc nào làm giảm bài tiết phế quản trong thời gian điều trị bằng acetylcystein. Bảo quản: Nhiệt độ dưới 30°C, tránh ẩm và ánh sáng Đóng gói: Hộp 10 vỉ x 10 viên Thương hiệu: Imexpharm Nơi sản xuất: Việt Nam Mọi thông tin trên đây chỉ mang tính chất tham khảo. Việc sử dụng thuốc phải tuân theo hướng dẫn của bác sĩ, dược sĩ. Vui lòng đọc kĩ thông tin chi tiết ở tờ rơi bên trong hộp sản phẩm."
             
         },
@@ -54,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
             alt: "post",
             category: "Thuốc kê đơn",
             name: "Acnotin 20 (Hộp 3 vỉ x 10 viên)",
-            price: 0,
+            price: 100000,
             info: "Lưu ý: Sản phẩm này chỉ bán khi có chỉ định của bác sĩ, mọi thông tin trên Website, App chỉ mang tính chất tham khảo. Vui lòng xác nhận bạn là dược sĩ, bác sĩ, nhân viên y tế có nhu cầu tìm hiểu về sản phẩm này. Hoạt tính: Drotaverin HCI 40mg. Công dụng: Điều trị mụn trứng cá toàn thân, mụn nặng... Hình thức: Viên nang mềm. Thương hiệu: MEGA (Thái Lan). *Thuốc chỉ dùng theo đơn của bác sĩ.",
             description: "Thành phần Mỗi viên nang gelatin mềm chứa: - Hoạt chất: Isotretinoin (USP) 20mg - Tá dược: Sáp ong trắng, Butylated hydroxyanisol, dinatri Edetat, Dầu thực vật hydro hóa một phần, Dầu đậu nành. - Vỏ nang: Gelatin, Glycerin, Dung dịch sorbitol 76%, Carmoisin (E122), Màu xanh (FD &amp; C Blue No.1), Ponceau 4R (E124), Oxyd sắt đen (E172), Titan dioxyd (E171), Nước tinh khiết. Chỉ định (Thuốc dùng cho bệnh gì?) Isotretinoin là một retinoid điều trị mụn trứng cá toàn thân, chỉ định trong trường hợp mụn trứng cá nặng, mụn trứng cá không đáp ứng với các phương pháp điều trị thông thường, mụn trứng cá gây biến dạng mặt để lại nhiều sẹo xấu, mụn trứng cá kéo dài lâu năm gây ảnh hưởng.",
             subImg: "https://data-service.pharmacity.io/pmc-upload-media/production/pmc-ecm-core/products/P03195_2_l.webp"
@@ -575,7 +574,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const productDiv = document.createElement("a");
         productDiv.style.textDecoration = 'none';
         productDiv.style.color = '#383838';
-        productDiv.href = '/detail.html?id=' + product.id; 
+        productDiv.href = 'detail.html?id=' + product.id; 
         productDiv.className = "product-container";
 
         const postImgDiv = document.createElement("div");
@@ -594,21 +593,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const productPrice = document.createElement("p");
         productPrice.textContent = product.price.toLocaleString() + ' VNĐ';
-
+        
         const cartBtn = document.createElement("button");
         cartBtn.type = "button";
         cartBtn.className = "cart-btn";
         cartBtn.textContent = "Thêm vào giỏ hàng";
-
+        
         cartBtn.addEventListener('click', function (event) {
             event.preventDefault();
+        
         });
-
-            // Adding a click event listener to each product
-        postContentDiv.addEventListener("click", function () {
-            window.location.href = `/detail.html?id=${product.id}`;
-        });
-
+        
 
         postContentDiv.appendChild(productName);
         postContentDiv.appendChild(productPrice);
@@ -740,64 +735,78 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-// CART
-document.addEventListener('DOMContentLoaded', function () {
-            // Lấy ra các phần tử cần thao tác
-            const quantityInputs = document.querySelectorAll('.input-quantity');
-            const minusButtons = document.querySelectorAll('.fa-minus');
-            const plusButtons = document.querySelectorAll('.fa-plus');
+// // CART
+// document.addEventListener('DOMContentLoaded', function () {
+//             // Lấy ra các phần tử cần thao tác
+//             const quantityInputs = document.querySelectorAll('.input-quantity');
+//             const minusButtons = document.querySelectorAll('.fa-minus');
+//             const plusButtons = document.querySelectorAll('.fa-plus');
         
-            updateTotalQuantity();
-            // Thêm sự kiện cho nút trừ
-            minusButtons.forEach(function (button, index) {
-                button.addEventListener('click', function () {
-                    if (parseInt(quantityInputs[index].value) > 0) {
-                        quantityInputs[index].value = parseInt(quantityInputs[index].value) - 1;
-                        updateTotal(index);
-                        updateTotalQuantity();
-                    }
-                });
-            });
+//             updateTotalQuantity();
+//             // Thêm sự kiện cho nút trừ
+//             minusButtons.forEach(function (button, index) {
+//                 button.addEventListener('click', function () {
+//                     if (parseInt(quantityInputs[index].value) > 0) {
+//                         quantityInputs[index].value = parseInt(quantityInputs[index].value) - 1;
+//                         updateTotal(index);
+//                         updateTotalQuantity();
+//                     }
+//                 });
+//             });
         
-            // Thêm sự kiện cho nút cộng
-            plusButtons.forEach(function (button, index) {
-                button.addEventListener('click', function () {
-                    quantityInputs[index].value = parseInt(quantityInputs[index].value) + 1;
-                    updateTotal(index);
-                    updateTotalQuantity();
+//             // Thêm sự kiện cho nút cộng
+//             plusButtons.forEach(function (button, index) {
+//                 button.addEventListener('click', function () {
+//                     quantityInputs[index].value = parseInt(quantityInputs[index].value) + 1;
+//                     updateTotal(index);
+//                     updateTotalQuantity();
         
-                });
-            });
+//                 });
+//             });
         
-            // Thêm sự kiện khi giá trị số lượng thay đổi
-            quantityInputs.forEach(function (input, index) {
-                input.addEventListener('change', function () {
-                    if (parseInt(input.value) < 0) {
-                        input.value = 0;
-                    }
-                    updateTotal(index);
-                    updateTotalQuantity();
-                });
-            });
+//             // Thêm sự kiện khi giá trị số lượng thay đổi
+//             quantityInputs.forEach(function (input, index) {
+//                 input.addEventListener('change', function () {
+//                     if (parseInt(input.value) < 0) {
+//                         input.value = 0;
+//                     }
+//                     updateTotal(index);
+//                     updateTotalQuantity();
+//                 });
+//             });
         
-            // Hàm cập nhật tổng giá trị
-            function updateTotal(index) {
-                const quantity = parseInt(quantityInputs[index].value);
-                const pricePerUnit = parseFloat(quantityInputs[index].closest('.cart-item').querySelector('.cart-price').textContent.replace('$', ''));
-                const totalPrice = quantity * pricePerUnit;
-                quantityInputs[index].closest('.cart-item').querySelector('.cart-price:last-child').textContent = '$' + totalPrice.toFixed(2);
-            }
+//             // Hàm cập nhật tổng giá trị
+//             function updateTotal(index) {
+//                 const quantity = parseInt(quantityInputs[index].value);
+//                 const pricePerUnit = parseFloat(quantityInputs[index].closest('.cart-item').querySelector('.cart-price').textContent.replace('$', ''));
+//                 const totalPrice = quantity * pricePerUnit;
+//                 quantityInputs[index].closest('.cart-item').querySelector('.cart-price:last-child').textContent = '$' + totalPrice.toFixed(2);
+//             }
         
-            // Hàm cập nhật tổng số lượng sản phẩm
-            function updateTotalQuantity() {
-                let totalQuantity = 0;
-                quantityInputs.forEach(function (input) {
-                    totalQuantity += parseInt(input.value);
-                });
-            document.getElementById('total-quantity').innerHTML = 'Số lượng sản phẩm:' + ' ' + totalQuantity;
-            }
+//             // Hàm cập nhật tổng số lượng sản phẩm
+//             function updateTotalQuantity() {
+//                 let totalQuantity = 0;
+//                 quantityInputs.forEach(function (input) {
+//                     totalQuantity += parseInt(input.value);
+//                 });
+//             document.getElementById('total-quantity').innerHTML = 'Số lượng sản phẩm:' + ' ' + totalQuantity;
+//             }
 
-});
+// });
+
+// CART
+let iconCart = document.querySelector('#icon-cart');
+let closeCart = document.querySelector('.close')
+let body = document.querySelector('body');
+
+iconCart.addEventListener('click', () => {
+    body.classList.toggle('show-cart');
+})
+
+closeCart.addEventListener('click', () => {
+    body.classList.toggle('show-cart');
+})
+
 
 // DETAIL
 document.addEventListener("DOMContentLoaded", function () {
@@ -819,8 +828,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 const productName = document.querySelector('.name-detail');
                 const productPrice = document.querySelector('.price-detail');
                 const infoDetail = document.querySelector('.info-detail');
-                const productDescription = document.getElementById('decription');
-                // const productaddDescription = document.getElementById('add-decription');
+                const productDescription = document.getElementById('description');
+                // const productaddDescription = document.getElementById('add-description');
 
                 if (product.info) {
                     const infoLines = product.info.split('. ');
@@ -830,15 +839,15 @@ document.addEventListener("DOMContentLoaded", function () {
                     });
                     infoDetail.innerHTML = infoHTML;
                 };
-                if (product.decription) {
-                    const decriptionLines = product.decription.split('. ');
+                if (product.description) {
+                    const descriptionLines = product.description.split('. ');
 
-                    let decriptionHTML = '';
+                    let descriptionHTML = '';
 
-                    decriptionLines.forEach(line => {
-                        decriptionHTML += `${line} <br>`;
+                    descriptionLines.forEach(line => {
+                        descriptionHTML += `${line} <br>`;
                     });
-                    productDescription.innerHTML = decriptionHTML;
+                    productDescription.innerHTML = descriptionHTML;
                 };
                 productImg.innerHTML = `<img src="${product.imgSrc}" alt="${product.alt}" class="img-detail">`;
                 productSubImg.innerHTML =`
@@ -863,28 +872,28 @@ document.addEventListener("DOMContentLoaded", function () {
                 productName.textContent = product.name;
                 productPrice.textContent = product.price.toLocaleString() + ' Đ';
 
-                const decriptionTab = document.getElementById("decription-tab");
+                const descriptionTab = document.getElementById("description-tab");
                 const infoTab = document.getElementById("info-tab");
-                const decriptionDetail = document.getElementById('decription');
+                const descriptionDetail = document.getElementById('description');
                 const info = document.getElementById('info');
                 const moreDetail = document.getElementById('more-detail');
 
-                decriptionDetail.style.display = 'block';
+                descriptionDetail.style.display = 'block';
                 info.style.display = 'none';
 
-                decriptionTab.addEventListener('click', function () {
+                descriptionTab.addEventListener('click', function () {
                     info.style.display = 'none';
-                    decriptionDetail.style.display = 'block';
+                    descriptionDetail.style.display = 'block';
                     moreDetail.style.display = 'block';
                 });
 
                 infoTab.addEventListener('click', function () {
                     info.style.display = 'block';
-                    decriptionDetail.style.display = 'none';
+                    descriptionDetail.style.display = 'none';
                     moreDetail.style.display = 'none';
                 });
-                // if (product.addDecription) {
-                //     const addLines = product.addDecription.split('. ')
+                // if (product.adddescription) {
+                //     const addLines = product.adddescription.split('. ')
 
                 //     let addHTML = '';
 
@@ -971,4 +980,3 @@ document.addEventListener("DOMContentLoaded", function () {
         
     }
 });
-
