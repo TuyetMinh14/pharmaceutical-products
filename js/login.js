@@ -108,16 +108,37 @@ btnLogin.addEventListener("click", (e) => {
       user.password === inputPassword.value
     ) {
       alert("Đăng Nhập Thành Công");
+      const logIn = {
+        usernames: inputUsername.value,
+      };
+      let json1 = JSON.stringify(logIn);
+      localStorage.setItem('dangnhap', json1);
       window.location.href = "index-login.html";
     } else {
       alert("Đăng Nhập Thất Bại");
     }
   }
-  const logIn = {
-    usernames: inputUsername.value,
-  };
-  let json1 = JSON.stringify(logIn);
-  localStorage.setItem('dangnhap', json1);
+  
+});
+
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    if (document.querySelector(".login")) {
+      // Thực hiện sự kiện đăng nhập
+      event.preventDefault(); // Ngăn chặn hành động mặc định của phím Enter (chẳng hạn nhấn Enter để submit form)
+      btnLogin.click(); // Gọi sự kiện click của nút đăng nhập
+    }
+  }
+});
+
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    if (document.querySelector(".signup")) {
+      // Thực hiện sự kiện đăng nhập
+      event.preventDefault(); // Ngăn chặn hành động mặc định của phím Enter (chẳng hạn nhấn Enter để submit form)
+      btnLogin.click(); // Gọi sự kiện click của nút đăng nhập
+    }
+  }
 });
 
 

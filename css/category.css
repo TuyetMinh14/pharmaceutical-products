@@ -24,6 +24,7 @@ body {
 }
 
 .main-container {
+    background-color: #fff;
     width: 100vw;
     margin: 0 auto;
     padding: 1.25em 0;
@@ -258,6 +259,7 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
 .pagination-container {
     margin-left: 45%;
+    margin-bottom:2rem;
 }
 
 .pagination {
@@ -506,6 +508,7 @@ header{
     transition: .5s;
     border-radius: 25px;
     padding: 20px;
+    z-index: 1000;
 }
 body.showCart .cartTab{
     right: 0;
@@ -646,15 +649,16 @@ body.showCart .main-container, body.showCart .header-container{
 
 .main-img {
     width: 100%;
-    height: 60vh;
-    border: 0.0625em dotted black;
+    height: 100%;
     transition: all 0.6s ease;
     border-radius: 2.1875em;
+    border: 1px solid #e5e5e5;
+    text-align: center;
 }
 
 .img-detail {
-    width: 70%;
-    margin-left: 18%;
+    width: 90%;
+    border-radius: 1rem;
 }
 
 .main-img:hover {
@@ -662,7 +666,7 @@ body.showCart .main-container, body.showCart .header-container{
 }
 
 .sub-img {
-    width: 30%;
+    width: 50%;
     display: flex;
     flex-direction: row;
     gap: 1.25em;
@@ -671,8 +675,8 @@ body.showCart .main-container, body.showCart .header-container{
 
 .main-sub, .sub {
     width: 100%;
-    height: 10vh;
-    border: 0.125em dotted black;
+    height: 20vh;
+    border: 1px solid #e5e5e5;
     border-radius: 0.3125em;
     transition: all 0.3s ease;
 }
@@ -694,6 +698,9 @@ body.showCart .main-container, body.showCart .header-container{
 }
 
 .detail-content {
+    width: 43.75rem;
+    height: 12.5rem;
+    border-radius: 8rem;
     margin-top: 1.875em;
     background-color: #6E80DC;
     padding: 0.625em 1.5625em;
@@ -703,13 +710,19 @@ body.showCart .main-container, body.showCart .header-container{
 
 .name-detail {
     color: #fff;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: relative;
+    top: 2rem;
 }
 .price-detail {
     color: #F4C1DE;
     font-weight: 800;
-    font-size: 1.5em;
+    font-size: 2.5em;
     margin-left: 10%;
-    margin-top: 2%;
+    margin-top: 7%;
 }
 
 .buyNow-btn, .detail-btn .cart-btn {
@@ -825,4 +838,5 @@ body.showCart .main-container, body.showCart .header-container{
     width: 80%;
     font-size: 1em;
 }
+
 
