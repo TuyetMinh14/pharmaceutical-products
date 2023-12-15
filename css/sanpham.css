@@ -1,320 +1,299 @@
-span{
-    background: none;    
+span {
+  background: none;
 }
-.khungsanpham{
-    display: block;
-    margin-left: -1rem;
-    width: 100vw;
-height: 49rem;
-background-color: #fff;
-grid-row-start: 1;
-grid-row-end: 1;
+.khungsanpham {
+  display: block;
+  margin-left: -1rem;
+  width: 100vw;
+  height: 49rem;
+  background-color: #fff;
+  grid-row-start: 1;
+  grid-row-end: 1;
 }
-.khungsanpham table tr td{
-    width: 33.75rem;
-    height: 27.375rem;
-    padding-top: 5.19rem;
-    padding-left: 5rem;
+.khungsanpham table tr td {
+  width: 33.75rem;
+  height: 27.375rem;
+  padding-top: 5.19rem;
+  padding-left: 5rem;
 }
-.khungsanpham .hinh1{
-    width: 33.75rem;
-height: 27.375rem;
-flex-shrink: 0;
-border: 1px solid #e5e5e5;
-border-radius: 12px;
-
-
+.khungsanpham .hinh1 {
+  width: 33.75rem;
+  height: 27.375rem;
+  flex-shrink: 0;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
 }
-.khungsanpham p img{
-    width: 7.5rem;
-height: 7.5rem;
-flex-shrink: 0;
-border: 1px solid #e5e5e5;
-border-radius: 12px;
-cursor: pointer;
+.khungsanpham p img {
+  width: 7.5rem;
+  height: 7.5rem;
+  flex-shrink: 0;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  cursor: pointer;
 }
 
-
-
-.hinh2{
-    border: solid #ff1095;;
+.hinh2 {
+  border: solid #ff1095;
 }
 
-.khungsanpham .nameprice{
-    width: 43.75rem;
-height: 12.5rem;
-background-color: #6e80dcca;
-backdrop-filter: blur(2px);
-border-radius: 5rem;
+.khungsanpham .nameprice {
+  width: 43.75rem;
+  height: 12.5rem;
+  background-color: #6e80dcca;
+  backdrop-filter: blur(2px);
+  border-radius: 5rem;
 }
-.tensanpham{
-    color: #FFf;
-font-family: Inter;
-font-size: 2rem;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-position: relative;
-text-align: center;
-top:2rem;
+.tensanpham {
+  color: #fff;
+  font-family: Inter;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  position: relative;
+  text-align: center;
+  top: 2rem;
 }
-.gia{
-    color: #F4C1DE;
-font-family: Monsterat;
-font-size: 3rem;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-position: relative;
-top:4.8rem;
-left:4rem;
+.gia {
+  color: #f4c1de;
+  font-family: Monsterat;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  position: relative;
+  top: 4.8rem;
+  left: 4rem;
 }
 
-.khungsanpham .chuthich{
-    width: 43.75rem;
-height: 12.5rem;
-color: #000;
-font-family: Inter;
-font-size: 1.25rem;
-font-style: normal;
-font-weight: 400;
-line-height: 3.5rem;
-overflow: hidden;
+.khungsanpham .chuthich {
+  width: 43.75rem;
+  height: 12.5rem;
+  color: #000;
+  font-family: Inter;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3.5rem;
+  overflow: hidden;
 }
 
 .in-debutton {
-    width: 15rem;
-    height: 3.625rem;
-    flex-shrink: 0;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    background-color: #FFF;
-    border: solid #000;
+  width: 15rem;
+  height: 3.625rem;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background-color: #fff;
+  border: solid #000;
 }
 
 .in-debutton span {
-    width: 100%;
-    text-align: center;
-    font-size: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-  
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
-.in-debutton span.num{
-    cursor:not-allowed;
-    background-color: #F4C1DE;
-    width: 5rem;
-height: 2.6875rem;
-flex-shrink: 0;
-border-radius: 1.875rem;
-}
-
-.btn-foraddstock{
-    display: flex;
-}
-.muangay{
-    width: 13.6rem;
-height: 8rem;
-margin-top:2.5rem;
-background-color:#6E80DC;
-border: none;
-border-radius: 4rem;
-color: #FFF;
-font-family: Monsterat;
-font-size: 1.5rem;
-font-style: normal;
-font-weight: bold;
-line-height: normal;
-cursor: pointer;
-}
-.addstocks{
-    width: 24rem;
-height: 8rem;
-margin:2.5rem;
-background-color:#6E80DC;
-border: none;
-border-radius: 4rem;
-color: #FFF;
-cursor: pointer;
-
-}
-.addstocks p{
-    width: fit-content;
-    font-family: Monsterat;
-font-size: 1.5rem;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-}
-.addstocks img{
-    width: 3rem;
-height: 3rem;
-flex-shrink: 0;
-margin-top: 1rem;
-margin-right: 0.5rem;
+.in-debutton span.num {
+  cursor: not-allowed;
+  background-color: #f4c1de;
+  width: 5rem;
+  height: 2.6875rem;
+  flex-shrink: 0;
+  border-radius: 1.875rem;
 }
 
-.addstocks ul{
-    display: flex;
+.btn-foraddstock {
+  display: flex;
 }
-.addstocks ul li{
-    margin:none;
-    height: fit-content;
+.muangay {
+  width: 13.6rem;
+  height: 8rem;
+  margin-top: 2.5rem;
+  background-color: #6e80dc;
+  border: none;
+  border-radius: 4rem;
+  color: #fff;
+  font-family: Monsterat;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  cursor: pointer;
+}
+#addstocks {
+  width: 24rem;
+  height: 8rem;
+  margin: 2.5rem;
+  background-color: #6e80dc;
+  border: none;
+  border-radius: 4rem;
+  color: #fff;
+  cursor: pointer;
+}
+#addstocks p {
+  width: fit-content;
+  font-family: Monsterat;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+#addstocks img {
+  width: 3rem;
+  height: 3rem;
+  flex-shrink: 0;
+  margin-top: 1rem;
+  margin-right: 0.5rem;
 }
 
-
-
-
-
+#addstocks ul {
+  display: flex;
+}
+#addstocks ul li {
+  margin: none;
+  height: fit-content;
+}
 
 /* thong tin san pham */
-.thongtinsanpham{
-    display: block;
-    display: grid;
-    width: 100vw;
-height: 32rem;
-background: #E9E9E9;
-grid-row-start: 2;
-grid-row-end: 1;
-margin-left: -1rem;
+.thongtinsanpham {
+  display: block;
+  display: grid;
+  width: 100vw;
+  height: 32rem;
+  background: #e9e9e9;
+  grid-row-start: 2;
+  grid-row-end: 1;
+  margin-left: -1rem;
 }
 
-.thongtinsanpham .thongtinsanpham-banner{
-    width: 74.9375rem;
-height: 24.9375rem;
-flex-shrink: 0;
-border-radius: 1.875rem;
-background-color: #FFF;
-margin-top:3.81rem;
-margin-left: 7.56rem;
-margin-bottom: 3.81rem;
+.thongtinsanpham .thongtinsanpham-banner {
+  width: 74.9375rem;
+  height: 24.9375rem;
+  flex-shrink: 0;
+  border-radius: 1.875rem;
+  background-color: #fff;
+  margin-top: 3.81rem;
+  margin-left: 7.56rem;
+  margin-bottom: 3.81rem;
 }
-.nav-menuthongtinsanpham ul{
-    display:flex;
-    margin-bottom: 0.75rem;
- }
-.nav-menuthongtinsanpham{
-    color: #000000b1;
-font-family: Inter;
-font-size: 1.5rem;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
+.nav-menuthongtinsanpham ul {
+  display: flex;
+  margin-bottom: 0.75rem;
 }
-
-.nav-menuthongtinsanpham ul li{
-    margin-left: 2.16rem;
-    margin-right: 2.16rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    position: relative;
+.nav-menuthongtinsanpham {
+  color: #000000b1;
+  font-family: Inter;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
-.noidung-thontinsanpham{
-    display: block;
-    width: 64rem;
-    height: 15rem;
-    margin-left:5rem;
-    overflow: hidden;
-    margin-bottom: 0.8rem;
-}
-.noidungthongtin{
-    display: "none";
-}
-.noidungthongtin table tr td{
-    padding-left: 4.7rem;
-    padding-bottom: 2rem;
-}
-.noidungthongtin #left-col-tt{
-    font-weight: bold;
-}
-.noidungthongtin #right-col-tt{
-    height: max-content;
-    width:55rem;
+.nav-menuthongtinsanpham ul li {
+  margin-left: 2.16rem;
+  margin-right: 2.16rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  position: relative;
 }
 
-
-.xemthembutton{
-    color:#000;
-    text-align: center;
-    text-decoration: underline;
-    margin-bottom: 1rem;
-    cursor: pointer;
+.noidung-thontinsanpham {
+  display: block;
+  width: 64rem;
+  height: 15rem;
+  margin-left: 5rem;
+  overflow: hidden;
+  margin-bottom: 0.8rem;
+}
+.noidungthongtin {
+  display: "none";
+}
+.noidungthongtin table tr td {
+  padding-left: 4.7rem;
+  padding-bottom: 2rem;
+}
+.noidungthongtin #left-col-tt {
+  font-weight: bold;
+}
+.noidungthongtin #right-col-tt {
+  height: max-content;
+  width: 55rem;
 }
 
+.xemthembutton {
+  color: #000;
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
 
 /* nav bar */
 
-.mota{
-    cursor: pointer;
+.mota {
+  cursor: pointer;
 }
-.thongtin{
-    cursor: pointer;
+.thongtin {
+  cursor: pointer;
 }
-.thongtinsanpham-banner ul li:hover{
-    color: #99B9E1;
+.thongtinsanpham-banner ul li:hover {
+  color: #99b9e1;
 }
 
-.thongtinsanpham-banner ul li::after{
-    content: '';
-    background:#99B9E1;
-    opacity: 0;
-    transition:all 0.2s;
-    position:absolute;
-    bottom:-0.5rem;
-    height:2px;
-    width: 100%;
+.thongtinsanpham-banner ul li::after {
+  content: "";
+  background: #99b9e1;
+  opacity: 0;
+  transition: all 0.2s;
+  position: absolute;
+  bottom: -0.5rem;
+  height: 2px;
+  width: 100%;
 }
 
 .thongtinsanpham-banner ul li:hover::after,
-.thongtinsanpham-banner ul li:focus::after{
-    opacity: 1;
-    
+.thongtinsanpham-banner ul li:focus::after {
+  opacity: 1;
 }
-
 
 /* sanpham tuong tu */
 
-.sanphamtuongtu{
-    display: block;
-    height: 35rem;
-    background-color: #FFF;
-    position: relative;
-    margin-left: -1rem;
+.sanphamtuongtu {
+  display: block;
+  height: 35rem;
+  background-color: #fff;
+  position: relative;
+  margin-left: -1rem;
 }
-.sanphamtuongtu ul{
-    display: flex;
-    margin-top: 4rem;
-    margin-left: 3rem;
-}
-
-
-.sanphamtuongtu .product{
-    width:15rem;
-    height: 25rem;
-    border:none;
-    box-shadow: 0 0 12px rgba(15,61,145,.12);
-    border-radius: 12px;
-    margin-left: 1rem;
-
-}
-.sanphamtuongtu.row{
-    margin-top:12rem;
-    margin-left: 2.5rem;
-
+.sanphamtuongtu ul {
+  display: flex;
+  margin-top: 4rem;
+  margin-left: 3rem;
 }
 
-
-.productimg{
-    width:15rem;
-    border-radius: 12px;
+.sanphamtuongtu .product {
+  width: 15rem;
+  height: 25rem;
+  border: none;
+  box-shadow: 0 0 12px rgba(15, 61, 145, 0.12);
+  border-radius: 12px;
+  margin-left: 1rem;
+}
+.sanphamtuongtu.row {
+  margin-top: 12rem;
+  margin-left: 2.5rem;
 }
 
-.sanphamtuongtu ul{
-    display:flex;
+.productimg {
+  width: 15rem;
+  border-radius: 12px;
 }
 
-
+.sanphamtuongtu ul {
+  display: flex;
+}
