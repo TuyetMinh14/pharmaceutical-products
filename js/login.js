@@ -37,7 +37,8 @@ function closePopup() {
 const inputUsernameRegister = document.querySelector(".tk");
 const inputPasswordRegister = document.querySelector(".mk");
 const inputPhoneRegister = document.querySelector(".phone");
-
+const checkbox = document.querySelector('.dongy')
+console.log(checkbox.value)
 const btnRegister = document.querySelector("#dongydangky");
 
 
@@ -51,14 +52,15 @@ btnRegister.addEventListener("click", (e) => {
   if (
     inputUsernameRegister.value === "" ||
     inputPasswordRegister.value === "" ||
-    !isValidPhone 
+    !isValidPhone ||
+    checkbox.value == ""
   )
    {
     alert("Thông tin không hợp lệ");
   }
   else if(inputUsernameRegister.value == users.username)
   {
-    alert("Tên người dùng hoặc số điện thoại đã được đăng ký");
+    alert("Tên người dùng đã được đăng ký");
   }
    else {
     // array user

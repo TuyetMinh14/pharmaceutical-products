@@ -41,3 +41,7 @@
 
 }
 
+.sanphamtuongtu .product:hover{
+    border: solid #5F84CE;
+    cursor: pointer;
+}

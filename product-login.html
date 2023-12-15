@@ -10,63 +10,88 @@
     <link rel="stylesheet" href="./css/sign-log.css" />
     <link rel="stylesheet" href="./css/sp-hover-index.css">
     <link rel="stylesheet" href="./css/sanpham.css">
-    <script
-      src="https://code.jquery.com/jquery-3.7.1.min.js"
-      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-      crossorigin="anonymous"
-    ></script>
+    <style>
+        .dangxuat {
+      position: absolute;
+      top: 1.35rem; 
+      left: 12.8rem; 
+      width: 6.25rem;
+      font-size: 14px;
+    }
+    .user-name {
+      position: relative;
+      top: 1.2rem;
+      left: 20rem;
+      width: 6.25rem;
+      display: flex; /* Sử dụng display: flex; */
+      align-items: center; /* Căn giữa theo chiều dọc */
+      font-size: 0.8rem;
+    }
+  
+  .user-name img {
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-left: 0.5rem; /* Tăng khoảng cách giữa hình ảnh và văn bản nếu cần thiết */
+  }
+      </style>
+      <script
+        src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"
+      ></script>
   </head>
 
   <body>
     
     <div class="banner-header">
-      <img src="./img/header/caythong1.png" alt="" />
-      <div class="decor-1">KHUYẾN MÃI ĐẶC BIỆT</div>
-      <div class="decor-2">CUỐI NĂM</div>
-      <div class="decor-3">CUỐI NĂM</div>
-      <button class="decor-4"><a href="">MUA NGAY</a></button>
-    </div>
-    <div class="logo-content">
-      <div class="hotline">
-        Hotline đặt hàng
-        <button>
-          <img src="./img/header/phone.png" alt="" /><a href="tel: +84896714266"
-            >08967-14-266</a
-          >
-        </button>
+        <img src="./img/header/caythong1.png" alt="" />
+        <div class="decor-1">KHUYẾN MÃI ĐẶC BIỆT</div>
+        <div class="decor-2">CUỐI NĂM</div>
+        <div class="decor-3">CUỐI NĂM</div>
+        <button class="decor-4"><a href="">MUA NGAY</a></button>
       </div>
-      <div class="nav-menu">
-        <div class="language">
-          <div class="language-selected">
-            <img
-              src="https://www.worldometers.info/img/flags/vm-flag.gif"
-              alt=""
-            />
-            <div class="lan">VietNam</div>
+      <div class="logo-content">
+        <div class="hotline">
+          Hotline đặt hàng
+          <button>
+            <img src="./img/header/phone.png" alt="" /><a href="tel: +84896714266"
+              >08967-14-266</a
+            >
+          </button>
+        </div>
+        <div class="nav-menu">
+          <div class="language">
+            <div class="language-selected">
+              <img
+                src="https://www.worldometers.info/img/flags/vm-flag.gif"
+                alt=""
+              />
+              <div class="lan">VietNam</div>
+            </div>
+            <ul>
+              <li><a href="#" class="vie">VietNam</a></li>
+              <li><a href="#" class="en">English</a></li>
+            </ul>
           </div>
-          <ul>
-            <li><a href="#" class="vie">VietNam</a></li>
-            <li><a href="#" class="en">English</a></li>
-          </ul>
+          <div class="decor"></div>
+          <a href="index.html" class="dangxuat">Đăng xuất</a>
+          <div class="decor1"></div>
+          <div class="user-name">
+          </div>
         </div>
-        <div class="decor"></div>
-        <a href="#" class="log">Đăng Nhập</a>
-        <div class="decor1"></div>
-        <a href="#" class="sigin" >Đăng Ký</a>
-      </div>
-      <img src="./img/header/LOGO.png" alt="" srcset="" class="logo" id="logo-web"/>
-      <div class="search-box">
-        <div class="row">
-          <input type="text" />
-          <img src="./img/header/lookup Background Removed.png" alt="" />
+        <img src="./img/header/LOGO.png" alt="" srcset="" class="logo" />
+        <div class="search-box">
+          <div class="row">
+            <input type="text" />
+            <img src="./img/header/lookup Background Removed.png" alt="" />
+          </div>
         </div>
+        <a href="#" class="stock"
+          ><img src="./img/header/stock.png" alt="" srcset=""
+        />            <span id="cart-item-count">0</span>
+  
+      </a>
       </div>
-      <a href="#" class="stock"
-        ><img src="./img/header/stock.png" alt="" srcset=""
-      />
-      <span id="cart-item-count">0</span>
-    </a>
-    </div>
       <div class="khungsanpham">
         <table>
           <tr>
@@ -112,8 +137,6 @@ cơ mắc bệnh về u bướu do các gốc tự do gây ra.
 
         </table>
       </div>
-
-      <!-- thong tin san pham -->
       <div class="thongtinsanpham">
         <div class="thongtinsanpham-banner">
           <div class="nav-menuthongtinsanpham">
@@ -122,15 +145,14 @@ cơ mắc bệnh về u bướu do các gốc tự do gây ra.
                     Mô Tả
                 </div>
             </li>
-                <li><div class="thontin">
+                <li><div class="thongtin" >
                 Thông Tin Sản Phẩm
             </div>
         </li>
             </ul>
           </div>
-
           <div class="noidung-thontinsanpham">
-            <div class="motasp">Công dụng
+            Công dụng
 
 Giúp chống oxy hóa, hổ trợ tăng cường sức đề kháng cho cơ thể.
 
@@ -185,9 +207,64 @@ Công ty chịu trách nhiệm về SP: Fergrove Pharmaceuticals Australia Pty L
 Công ty phân phối: Công ty Cổ Phần Quốc tế ngôi sao Thái Bình Dương
 
 Thực phẩm này không phải là thuốc và không có tác dụng thay thế thuốc chữa bệnh
+
+
+Bảo quản Bảo quản ở nhiệt độ dưới 30oC, tránh nhiệt và ánh sáng trực tiếp.
+
+Thương hiệu Australia
+
+Nơi sản xuất Fergrove Pharmaceuticals Australia Pty Ltd
+
+Tên Nhà sản xuất Công ty Cổ Phần Quốc tế ngôi sao Thái Bình Dương
+
+Số Giấy Xác nhận nội dung quảng cáo Số : 1011/2023/XNQC-ATTP
+
+Số Giấy công bố Số: 719/2023/ĐKSP
+
+Công ty chịu trách nhiệm về SP: Fergrove Pharmaceuticals Australia Pty Ltd
+
+Công ty phân phối: Công ty Cổ Phần Quốc tế ngôi sao Thái Bình Dương
+
+Thực phẩm này không phải là thuốc và không có tác dụng thay thế thuốc chữa bệnh
+
+
+Bảo quản Bảo quản ở nhiệt độ dưới 30oC, tránh nhiệt và ánh sáng trực tiếp.
+
+Thương hiệu Australia
+
+Nơi sản xuất Fergrove Pharmaceuticals Australia Pty Ltd
+
+Tên Nhà sản xuất Công ty Cổ Phần Quốc tế ngôi sao Thái Bình Dương
+
+Số Giấy Xác nhận nội dung quảng cáo Số : 1011/2023/XNQC-ATTP
+
+Số Giấy công bố Số: 719/2023/ĐKSP
+
+Công ty chịu trách nhiệm về SP: Fergrove Pharmaceuticals Australia Pty Ltd
+
+Công ty phân phối: Công ty Cổ Phần Quốc tế ngôi sao Thái Bình Dương
+
+Thực phẩm này không phải là thuốc và không có tác dụng thay thế thuốc chữa bệnh
+
+Bảo quản Bảo quản ở nhiệt độ dưới 30oC, tránh nhiệt và ánh sáng trực tiếp.
+
+Thương hiệu Australia
+
+Nơi sản xuất Fergrove Pharmaceuticals Australia Pty Ltd
+
+Tên Nhà sản xuất Công ty Cổ Phần Quốc tế ngôi sao Thái Bình Dương
+
+Số Giấy Xác nhận nội dung quảng cáo Số : 1011/2023/XNQC-ATTP
+
+Số Giấy công bố Số: 719/2023/ĐKSP
+
+Công ty chịu trách nhiệm về SP: Fergrove Pharmaceuticals Australia Pty Ltd
+
+Công ty phân phối: Công ty Cổ Phần Quốc tế ngôi sao Thái Bình Dương
+
+Thực phẩm này không phải là thuốc và không có tác dụng thay thế thuốc chữa bệnh
           </div>
-        </div>
-        <div class="noidungthongtin">
+          <div class="noidungthongtin">
             <table>
               <tr>
                 <td id="left-col-tt">Brand</td>
@@ -200,101 +277,97 @@ Thực phẩm này không phải là thuốc và không có tác dụng thay th�
             </table>
         </div>
           <div class="xemthembutton">Xem Thêm</div>
+
         </div>
       </div>
-
-
-      <!-- san pham tuong tu -->
       <div class="sanphamtuongtu">
-          <div class="cat-title">SẢN PHẨM NỔI BẬT</div>
-          <ul class="row">
-            <li>
-              <div class="product">
-                <img
-                  class="productimg"
-                  src="./img/index/op-p1.png"
-                  alt=""
-                  srcset=""
-                />
-                <div class="pname">
-                  Nước uống Collagen Goodlife Collagen Glow 3000mg (Hộp 10 ống x 25mL)
-                </div>
-                <div class="price">240.000 đ</div>
-                <button class="addstock">THÊM VÀO GIỎ HÀNG</button>
+        <div class="cat-title">SẢN PHẨM NỔI BẬT</div>
+        <ul class="row">
+          <li>
+            <div class="product">
+              <img
+                class="productimg"
+                src="./img/index/op-p1.png"
+                alt=""
+                srcset=""
+              />
+              <div class="pname">
+                Nước uống Collagen Goodlife Collagen Glow 3000mg (Hộp 10 ống x 25mL)
               </div>
-            </li>
-            <li>
-              <div class="product">
-                <img
-                  class="productimg"
-                  src="./img/index/spnb2.jpg"
-                  alt=""
-                  srcset=""
-                />
-                <div class="pname">
-                  Thực phẩm bảo vệ sức khỏe Hair Support (Hộp 3 vỉ x 10 viên)
-                </div>
-                <div class="price">131.250 đ</div>
-                <button class="addstock">THÊM VÀO GIỎ HÀNG</button>
+              <div class="price">240.000 đ</div>
+              <button class="addstock">THÊM VÀO GIỎ HÀNG</button>
+            </div>
+          </li>
+          <li>
+            <div class="product">
+              <img
+                class="productimg"
+                src="./img/index/spnb2.jpg"
+                alt=""
+                srcset=""
+              />
+              <div class="pname">
+                Thực phẩm bảo vệ sức khỏe Hair Support (Hộp 3 vỉ x 10 viên)
               </div>
-            </li>
-            <li>
-              <div class="product">
-                <img
-                  class="productimg"
-                  src="./img/index/spnb3.jpg"
-                  alt=""
-                  srcset=""
-                />
-                <div class="pname">
-                  Thực phẩm bảo vệ sức khỏe Xịt họng thảo dược Herbal Throat Spray
-                </div>
-                <div class="price">129.000 đ</div>
-                <button class="addstock">THÊM VÀO GIỎ HÀNG</button>
+              <div class="price">131.250 đ</div>
+              <button class="addstock">THÊM VÀO GIỎ HÀNG</button>
+            </div>
+          </li>
+          <li>
+            <div class="product">
+              <img
+                class="productimg"
+                src="./img/index/spnb3.jpg"
+                alt=""
+                srcset=""
+              />
+              <div class="pname">
+                Thực phẩm bảo vệ sức khỏe Xịt họng thảo dược Herbal Throat Spray
               </div>
-            </li>
-            <li>
-              <div class="product">
-                <img
-                  class="productimg"
-                  src="./img/index/spnb4.jpg"
-                  alt=""
-                  srcset=""
-                />
-                <div class="pname">
-                  Thực phẩm bảo vệ sức khỏe Calcium và Vitamin D3 (Chai 60 viên)
-                </div>
-                <div class="price">108.750 đ</div>
-                <button class="addstock">THÊM VÀO GIỎ HÀNG</button>
+              <div class="price">129.000 đ</div>
+              <button class="addstock">THÊM VÀO GIỎ HÀNG</button>
+            </div>
+          </li>
+          <li>
+            <div class="product">
+              <img
+                class="productimg"
+                src="./img/index/spnb4.jpg"
+                alt=""
+                srcset=""
+              />
+              <div class="pname">
+                Thực phẩm bảo vệ sức khỏe Calcium và Vitamin D3 (Chai 60 viên)
               </div>
-            </li>
-            <li>
-              <div class="product">
-                <img
-                  class="productimg"
-                  src="./img/index/spnb5.jpg"
-                  alt=""
-                  srcset=""
-                />
-                <div class="pname">
-                  Viên sủi Multivitamin Pharmacity (Tuýp 20 viên)
-                </div>
-                <div class="price">112.000 đ</div>
-                <button class="addstock">THÊM VÀO GIỎ HÀNG</button>
+              <div class="price">108.750 đ</div>
+              <button class="addstock">THÊM VÀO GIỎ HÀNG</button>
+            </div>
+          </li>
+          <li>
+            <div class="product">
+              <img
+                class="productimg"
+                src="./img/index/spnb5.jpg"
+                alt=""
+                srcset=""
+              />
+              <div class="pname">
+                Viên sủi Multivitamin Pharmacity (Tuýp 20 viên)
               </div>
-            </li>
-          </ul>
-        </div>
-      
- 
-      
+              <div class="price">112.000 đ</div>
+              <button class="addstock">THÊM VÀO GIỎ HÀNG</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+
     
    
 
 
 
 
-    <footer class="footer" >
+    <footer class="footer">
       <div class="km-email">
         <p>ĐĂNG KÝ NHẬN KHUYẾN MÃI</p>
         <input type="text" placeholder="Nhập email hoặc số điện thoại" id = "email"/>
@@ -404,9 +477,28 @@ Thực phẩm này không phải là thuốc và không có tác dụng thay th�
       </table>
     </form>
 
-    <script src="./js/login.js"></script>
     <script src="./js/nhap-email.js"></script>
-    <script src="./js/selectpicsp.js"></script>
-    <script src="./js/sanpham.js"></script>
+    <script>
+      function displayusername(){
+  var usernameDisplay = document.querySelector('.user-name')
+  const user = JSON.parse(localStorage.getItem('dangnhap'));
+    usernameDisplay.innerHTML = user.usernames + '<img src="./img/header/username-icon-png-6.jpg" alt="" srcset="">'
+} 
+displayusername()
+
+var dangxuatbutton = document.querySelector('.dangxuat');
+
+dangxuatbutton.addEventListener("click", function () {
+  window.localStorage.removeItem('dangnhap')
+ });
+function handleBeforeUnload() {
+  localStorage.removeItem('dangnhap');
+}
+
+window.addEventListener('beforeunload', handleBeforeUnload);
+
+
+    </script>
+        <script src="./js/sanpham.js"></script>
   </body>
 </html>

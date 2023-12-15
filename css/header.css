@@ -184,6 +184,7 @@ a {
 }
 .language-selected {
   position: absolute;
+  display: none;
   top: 0.938rem;
   border-radius: 3.125rem;
   background: #0d2748;
