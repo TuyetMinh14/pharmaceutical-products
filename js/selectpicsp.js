@@ -24,7 +24,7 @@ plus.addEventListener("click",()=>{
 
 minus.addEventListener("click",()=>{
     a--;
-    a = (a <= 1) ? '01': a;
+    a = (a <= 1) ? '01': a = (a < 10) ? "0" + a: a;
     num.innerText=a
 })
 

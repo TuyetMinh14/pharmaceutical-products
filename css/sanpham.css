@@ -104,7 +104,7 @@ overflow: hidden;
   
 }
 .in-debutton span.num{
-    cursor: none;
+    cursor:not-allowed;
     background-color: #F4C1DE;
     width: 5rem;
 height: 2.6875rem;
