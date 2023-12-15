@@ -113,7 +113,7 @@ a {
   background: #6e80dc;
   position: relative;
   display: block;
-  left: -0.5rem;
+  left: -1rem;
   margin-bottom: 0;
 }
 
@@ -318,4 +318,20 @@ a.en:before {
   width: 11.25rem; /* (180px / 16) = 11.25rem */
   height: 5rem; /* (80px / 16) = 5rem */
   margin-left: 48.75rem; /* (780px / 16) = 48.75rem */
+}
+body .stock {
+  position: relative;
+}
+.stock span {
+  display: flex;
+  background-color: #fff;
+  border-radius: 50%;
+  color: #333;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  top: -50%;
 }

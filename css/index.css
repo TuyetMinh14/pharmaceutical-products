@@ -22,7 +22,7 @@
     max-height: 22.5rem; /* (360 / 16) */
     position: relative;
     top:-62rem;
-    left:-0rem;
+    left:rem;
     
 }
 
@@ -288,7 +288,7 @@ position: absolute;
 top:-9rem;
 display: block;
 border: none;
-left:0rem;
+
 }
 
 /* SANPHAMNOIBAT */
@@ -300,7 +300,7 @@ left:0rem;
     display: block;
     position:relative;
     top:-26.5rem;
-    left:-0.5rem;
+    left:-0.4rem;
 }
 .oproducts hr{
     top:2.875rem;
@@ -426,7 +426,7 @@ line-height: normal;
     background-color: #fff;
     position: relative;
     top:-22.4rem;
-    left:-0.5rem;
+    left:-0.4em;
 }
 
 .news .new-title{
@@ -492,15 +492,18 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .left-col .left-title{
     width: 47.5rem;
-height: 4.75rem;
+height: 5.6rem;
 position: relative;
 top:2rem;
-font-size: 2rem;
+font-size: 1.8rem;
 color:#000;
 font-family:'Monsterat';
 }
 .right-col{
     padding:0;
+}
+.right-col ul{
+    height: 11rem;
 }
 .right-col img{
     width: 17.25rem;
@@ -518,6 +521,8 @@ position: relative;
 font-size: 1rem;
 color:#000;
 font-family:'Monsterat';
+overflow: hidden;
+font-weight: bold;
 }
 
 .right-col ul{

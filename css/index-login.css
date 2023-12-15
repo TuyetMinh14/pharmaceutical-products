@@ -1,13 +1,13 @@
 .dangxuat {
-    position: absolute;
-    top: 1.4rem; /* (16px / 200) * 25 = 1.5625rem */
+    position: relative;
+    top: -10rem; /* (16px / 200) * 25 = 1.5625rem */
     left: 12.8rem; /* (16px / 200) * 200 = 12.5rem */
     width: 6.25rem; /* (16px / 200) * 100 = 6.25rem */
     font-size: 14px;
   }
   
   .user-name {
-    position: absolute;
+    position: relative;
     top: 1.2rem;
     left: 20rem;
     width: 6.25rem;

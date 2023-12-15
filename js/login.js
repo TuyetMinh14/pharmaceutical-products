@@ -84,19 +84,23 @@ btnRegister.addEventListener("click", (e) => {
 
 // đăng nhập
 // validation form login
-const inputUsername = document.querySelector(".login .tk");
-const inputPassword = document.querySelector(".login .mk");
+const inputUsername = document.querySelector(".tkdangnhap");
+const inputPassword = document.querySelector(".mkdangnhap");
+
 
 const btnLogin = document.querySelector("#dongydangnhap");
-
+console.log(btnLogin)
 // validation form login
 
 btnLogin.addEventListener("click", (e) => {
   e.preventDefault();
-  if (inputUsername.value === "" || inputPassword.value === "") {
+  if (inputUsername.value === "" || inputPassword.value === "") 
+  {
     alert("vui lòng không để trống");
   } else {
-    const user = JSON.parse(localStorage.getItem(inputUsername.value));
+    const user = JSON.parse(localStorage.getItem(inputUsername.value)) || [];
+    console.log(user.username)
+    console.log(inputUsername.value)
     if (
       user.username === inputUsername.value &&
       user.password === inputPassword.value

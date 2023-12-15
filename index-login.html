@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,7 +8,31 @@
     <link rel="stylesheet" href="./css/footer.css" />
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/sign-log.css" />
-    <link rel="stylesheet" href="./css/index-login.css">
+    <link rel="stylesheet" href="./css/sp-hover-index.css">
+    <style>
+      .dangxuat {
+    position: absolute;
+    top: 1.35rem; 
+    left: 12.8rem; 
+    width: 6.25rem;
+    font-size: 14px;
+  }
+  .user-name {
+    position: relative;
+    top: 1.2rem;
+    left: 20rem;
+    width: 6.25rem;
+    display: flex; /* Sử dụng display: flex; */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    font-size: 0.8rem;
+  }
+
+.user-name img {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 0.5rem; /* Tăng khoảng cách giữa hình ảnh và văn bản nếu cần thiết */
+}
+    </style>
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
@@ -62,7 +86,9 @@
       </div>
       <a href="#" class="stock"
         ><img src="./img/header/stock.png" alt="" srcset=""
-      /></a>
+      />            <span id="cart-item-count">0</span>
+
+    </a>
     </div>
 
     <!-- banner qc -->
@@ -617,6 +643,7 @@ function handleBeforeUnload() {
 }
 
 window.addEventListener('beforeunload', handleBeforeUnload);
+
 
     </script>
   </body>
