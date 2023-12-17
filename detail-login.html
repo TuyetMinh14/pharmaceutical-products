@@ -71,7 +71,7 @@
             </ul>
           </div>
           <div class="decor"></div>
-          <a href="/detail.html" class="dangxuat">Đăng xuất</a>
+          <a href="/detail.html" class="dangxuat" onclick="dangxuat()">Đăng xuất</a>
           <div class="decor1"></div>
           <div class="user-name">
           </div>
@@ -184,7 +184,16 @@ usernameDisplay.innerHTML = user.usernames + '<img src="./img/header/username-ic
 localStorage.removeItem('user');
 } 
 displayusername()
-</script> 
+
+  function changehref(){
+  a = localStorage.getItem('href')||[]
+  dangxuat = document.querySelector('.dangxuat')
+  dangxuat.setAttribute('href', a)
+  }
+  
+
+  changehref()
+</script>
 <script src="./js/productindex.js"></script>
 </body>
 </html>
