@@ -607,6 +607,9 @@ document.addEventListener("DOMContentLoaded", function () {
             // addDescription: "- Vết cắt. - Trầy xước. - Côn trùng cắn. - Phẫu thuật. Đối tượng sử dụng. An toàn và dịu nhẹ cho trẻ từ 3 tháng tuổi trở lên. Cách sử dụng. Điều trị sẹo với 3 bước đơn giản. Sử dụng dễ dàng: Lấy gel với lượng to bằng hạt đậu vào giữa vết sẹo và nhẹ nhàng xoa mỏng lan rộng ra ngoài cho toàn vùng sẹo. 2 lần/ngày: Nên thoa 2 lần vào sáng – tối để làn da được bảo vệ suốt 24h. 2 tháng dùng đều đặn: Kiên trì để đạt hiệu quả làm phẳng, mềm và mờ sẹo. Tác dụng của sản phẩm sẽ tùy thuộc vào cơ địa của mỗi người. Lưu ý. - Bạn chỉ cần một lượng nhỏ bằng hạt đậu Dermatix® Ultra Kids cho mỗi lần sử dụng. Việc thoa nhiều sẽ gây lãng phí và cần thời gian nhiều hơn để gel khô. Không thoa lên vết thương hở hoặc còn chảy dịch. Tác dụng của thuốc sẽ tùy thuộc vào cấu trúc cơ địa của mỗi người. Bảo quản: Dưới 25 độ và tránh xa nguồn nhiệt. Giữ xa tầm tay trẻ em. Quy cách đóng gói: Tuýp 5g. Thương hiệu: Menarini (Ý). Nhà sản xuất: Menarini. Nơi sản xuất: Singapore."
         },
     ];
+
+    const user = JSON.parse(localStorage.getItem('dangnhap'))|| []
+    const a = user.usernames + 1 ||[]
     localStorage.setItem('productsData', JSON.stringify(productsData));
 
     const productContainer = document.getElementById("posts-main-container");
@@ -649,7 +652,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let body = document.querySelector('body');
     let closeCart = document.querySelector('.close');
     let cartTotalSpan = document.querySelector('#total');
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let cart = JSON.parse(localStorage.getItem(a)) || [];
     iconCart.addEventListener('click', () => {
         body.classList.toggle('showCart');
     });
@@ -679,7 +682,7 @@ document.addEventListener("DOMContentLoaded", function () {
         addCartToMemory();
     };
     const addCartToMemory = () => {
-        localStorage.setItem('cart', JSON.stringify(cart));
+        localStorage.setItem(a, JSON.stringify(cart));
     };
 
 

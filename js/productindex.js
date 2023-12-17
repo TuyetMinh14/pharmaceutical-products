@@ -720,7 +720,8 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     ];
 
-
+    const user = JSON.parse(localStorage.getItem('dangnhap'))|| []
+    const a = user.usernames + 1 ||[]
 
     
     localStorage.setItem("productsData", JSON.stringify(productsData));
@@ -733,7 +734,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // add cart
     let iconCart = document.querySelector(".stock");
     let closeCart = document.querySelector(".close");
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let cart = JSON.parse(localStorage.getItem(a)) || [];
     let iconCartSpan = document.querySelector("#cart-item-count");
     let listCartHTML = document.querySelector(".listCart");
     let body = document.querySelector("body");
@@ -792,9 +793,11 @@ document.addEventListener("DOMContentLoaded", function () {
       addCartToHTML();
       addCartToMemory();
     };
+    
+    
 
     const addCartToMemory = () => {
-      localStorage.setItem("cart", JSON.stringify(cart));
+      localStorage.setItem(a, JSON.stringify(cart));
     };
 
 
