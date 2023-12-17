@@ -8,14 +8,25 @@ document.addEventListener("DOMContentLoaded", function () {
         const paymentContainer = document.querySelector('.cart-container');
         const totalQuantityCheckout = document.querySelector('#total-quantity');
         const totalPriceCheckout = document.querySelector('#total-price');
+        const discountInput = document.getElementById('sale');
+        const applyDiscountBtn = document.getElementById('apply-discount-btn');
+        const paySuccessful = document.getElementById('pay-successful');
+        const paySuccessfulOnline = document.getElementById('pay-successful-online');
+        const checkOutBtn = document.getElementById('button-checkout');
+        const acceptCheckOutBtn = document.getElementById('accept-payment');
+        const acceptCheckOutBtnOnline = document.getElementById('accept-payment-online');
+
+
+        // Đưa biến cart ra khỏi hàm để nó có thể được sử dụng ở các hàm khác
+        let cart = [];
 
         const displayCartItems = () => {
-            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart = JSON.parse(localStorage.getItem('cart')) || [];
             listCartHTML.innerHTML = '';
             paymentContainer.innerHTML = '';
             let totalQuantity = 0;
             let sum = 0;
-
+            let shipFee = 30000;
             if (cart.length > 0) {
                 cart.forEach(item => {
                     totalQuantity += item.quantity;
@@ -57,14 +68,17 @@ document.addEventListener("DOMContentLoaded", function () {
                         <div class="quantity">
                             <span>${item.quantity}</span>
                         </div>
-                        <div class="total-price">${(info.price * item.quantity).toLocaleString()} VNĐ</div>
+                        <div class="total-price">${((info.price * item.quantity)).toLocaleString()} VNĐ</div>
                     `;
                 });
 
                 iconCartSpan.innerText = totalQuantity;
                 totalQuantityCheckout.innerHTML = totalQuantity;
-                cartTotalSpan.innerHTML = `<span> Tổng tiền: ${sum.toLocaleString()} VNĐ </span>`;
-                totalPriceCheckout.innerHTML = sum.toLocaleString() + ' VNĐ';
+                cartTotalSpan.innerHTML = `<span> Tổng tiền: ${sum.toLocaleString() } VNĐ </span>`;
+                totalPriceCheckout.innerHTML = (sum + shipFee).toLocaleString() + ' VNĐ';
+            } else {
+                iconCartSpan.innerText = 0;
+                cartTotalSpan.innerHTML = '<strong>Giỏ hàng trống</strong>';
             }
         };
 
@@ -81,7 +95,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         const changeQuantityCart = (product_id, type) => {
-            let cart = JSON.parse(localStorage.getItem('cart')) || [];
             let positionItemInCart = cart.findIndex((value) => value.product_id == product_id);
 
             if (positionItemInCart >= 0) {
@@ -102,6 +115,79 @@ document.addEventListener("DOMContentLoaded", function () {
 
             displayCartItems();
         };
+
+        applyDiscountBtn.addEventListener('click', () => {
+            let discountCode = discountInput.value;
+
+            localStorage.setItem('discountCode', discountCode);
+
+            handleDiscount(discountCode);
+        });
+
+        // Hàm xử lý giảm giá
+        const handleDiscount = (discountCode) => {
+            let storedDiscountCode = localStorage.getItem('discountCode');
+
+            if (storedDiscountCode && storedDiscountCode === discountCode) {
+                let discountPercentage = parseFloat(discountCode);
+
+                if (!isNaN(discountPercentage) && discountPercentage >= 0 && discountPercentage <= 100) {
+                    let finalTotal = calculateDiscountedTotal(discountPercentage);
+
+                    totalPriceCheckout.innerHTML = `<span>Tổng tiền (giảm ${discountPercentage}%): ${finalTotal.toLocaleString()} VNĐ</span>`;
+                } else {
+                    console.error('Giảm giá không hợp lệ');
+                }
+            } else {
+                console.error('Mã giảm giá không khớp hoặc không tồn tại');
+            }
+        };
+
+        const calculateDiscountedTotal = (discountPercentage) => {
+            let sum = calculateSum(); // Đây là hàm bạn cần cung cấp để tính tổng giá trị giỏ hàng
+            let discountAmount = (discountPercentage / 100) * sum;
+            return sum - discountAmount;
+        };
+
+        const calculateSum = () => {
+            let sum = 0;
+            if (cart.length > 0) {
+                cart.forEach(item => {
+                    let positionProduct = productsData.findIndex((value) => value.id == item.product_id);
+                    let info = productsData[positionProduct];
+                    sum += info.price * item.quantity + 30000;
+                });
+            }
+            return sum;
+        };
+
+        checkOutBtn.addEventListener('click', () => {
+            const selectedPaymentMethod = document.querySelector('input[name="payment"]:checked');
+
+            if (selectedPaymentMethod) {
+                const paymentMethod = selectedPaymentMethod.value;
+
+                if (paymentMethod === 'online') {
+                    paySuccessfulOnline.classList.add('checkOut-online')
+                } else if (paymentMethod === 'offline') {
+                    paySuccessful.classList.add('checkOut');
+                }
+                
+            } else {
+                alert('Vui lòng chọn loại thanh toán');
+            }
+        });
+        acceptCheckOutBtn.addEventListener('click', () => {
+            localStorage.removeItem('cart');
+            displayCartItems();
+            paySuccessful.classList.remove('checkOut');
+        });
+        acceptCheckOutBtnOnline.addEventListener('click', () => {
+            localStorage.removeItem('cart');
+            displayCartItems();
+            paySuccessfulOnline.classList.remove('checkOut-online');
+            paySuccessful.classList.add('checkOut');
+        });
         displayCartItems();
     }
 });

@@ -12,47 +12,6 @@
 
 </head>
 <body>
-    <div class="header-container">
-        <div class="banner-header">
-            <img src="./img/header/caythong1.png" alt="">
-            <div class="decor-1">KHUYẾN MÃI ĐẶC BIỆT</div>
-            <div class="decor-2">CUỐI NĂM</div>
-            <div class="decor-3">CUỐI NĂM</div>
-            <div class="decor-4-box"><button class="decor-4" ><a href="">MUA NGAY</a></button></div>
-        </div>
-        <div class="logo-content">
-            <div class="hotline">Hotline đặt hàng
-                <button><img src="./img/header/phone.png" alt=""><a href="tel: +84896714266">08967-14-266</a></button>
-            </div>
-            <div class="nav-menu">
-                <div class="language">
-                    <div class="language-selected">
-                        <img src="https://www.worldometers.info/img/flags/vm-flag.gif" alt="">
-                        <div class="lan">VietNam</div>
-                    </div>
-                    <ul>
-                        <li><a href="#" class="vie">VietNam</a></li>
-                        <li><a href="#" class="en">English</a></li>
-                    </ul>
-                </div>
-                <div class="decor"></div>
-                <a  href=""  class="login" >Đăng Nhập</a>
-                <div class="decor1"></div>
-                <a href="" class="sigin">Đăng Ký</a>
-            </div>
-            <img src="./img/header/LOGO.png" alt="" srcset="" class="logo">
-            <div class="search-box">
-                <div class="row">
-                    <input type="text"> <img src="./img/header/lookup Background Removed.png" alt="">
-                </div>
-            </div>
-            <a href="#" id="icon-cart" class="stock">
-                <img src="./img/header/stock.png" alt="" srcset="">
-                <span id="cart-item-count">0</span>
-            </a>
-        </div>
-    </div>
-
     <div class="main-container">
         <div class="head-container">
             <h2>Thanh Toán</h2>
@@ -122,7 +81,26 @@
                     <div class="group">
                         <label >Nhập số nhà, đường...</label>
                         <input type="text" name="soduong" id="soduong">
-
+                    </div>
+                </div>
+                <div class="form-payment">
+                    <div class="form-ship">
+                        <label >Chọn hình thức thanh toán:</label>
+                        <div>
+                            <input type="radio" value="online" name="payment">
+                            <label for="online">Thanh toán online</label> 
+                        </div>
+                        <div>
+                            <input type="radio" value="offline" name="payment">
+                            <label for="offline">Thanh toán khi nhận hàng (COD)</label>
+                        </div>
+                    </div>
+                    <div class="form-discount">
+                        <div class="group">
+                            <label for="sale-input">Nhập mã giảm giá: </label>
+                            <input type="text" id="sale">
+                            <button id="apply-discount-btn">Áp dụng</button>
+                        </div>
                     </div>
                 </div>
                 <div class="ship">
@@ -146,24 +124,66 @@
                         </div>
                     </div>
                 </div>
-                <button class="button-checkout">Đặt hàng</button>
+                <button class="button-checkout" id="button-checkout">Đặt hàng</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="cartTab">
+    <div class="cartTab" id="cartTab">
         <h1>Giỏ hàng</h1>
         <div class="listCart">
+            
         </div>
+
         <div id="total">
             <strong></strong>
         </div>
-
         <div class="btn">
             <button class="close">Đóng</button>
-            <button class="checkOut" ><a href="payment.html">Thanh toán</a></button>
+            <button class="checkOut-btn" ><a href="payment.html">Thanh toán</a></button>
             <button class="sale">Nhập mã KM</button>
+        </div>
+    </div>
+
+    <div class="pay-successful" id="pay-successful">
+        <img src="img/green-checkmark-transparent-17.png" alt="">
+        <h2>Cảm ơn bạn đã đặt hàng!</h2>
+        <p>Đơn hàng cả bạn đã được ghi lại, và sẽ sớm được giao. Xin cảm ơn!</p>
+        <button type="button" id="accept-payment">Ok</button>
+    </div>
+
+    <div class="pay-successful-online" id="pay-successful-online">
+        <a href="https://www.shift4shop.com/credit-card-logos.html"><img alt="Credit Card Logos" title="Credit Card Logos" src="https://www.shift4shop.com/images/credit-card-logos/cc-lg-4.png" /></a>
+        <hr>
+        
+        <div class="card-details">
+            <form>
+                <p>Card number</p>
+                <div class="c-number" id="c-number">
+                    <input id="number" class="cc-number" placeholder="Card number" maxlength="19" required>
+                    <i class="fa-solid fa-credit-card" style="margin: 0;"></i>
+                </div>
+
+                <div class="c-details">
+                    <div>
+                        <p>Expiry date</p>
+                        <input id="e-date" class="cc-exp" placeholder="MM/YY" required maxlength="5" required>
+                    </div>
+                    <div>
+                        <p>CVV</p>
+                        <div class="cvv-box" id="cvv-box">
+                            <input id="cvv" class="cc-cvv" placeholder="CVV" required maxlength="3" required>
+                            <i class="fa-solid fa-circle-question" title="3 digits on the back of the card" style="cursor: pointer;"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="email">
+                    <p>Email</p>
+                    <input type="email" placeholder="example@email.com" id="email" required>
+                </div>
+                <button id="accept-payment-online">PAY NOW</button>
+            </form>
         </div>
     </div>
     <!-- JS file -->
