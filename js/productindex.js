@@ -1018,3 +1018,9 @@ document.addEventListener("DOMContentLoaded", function () {
     addCartToHTML();
 
 });
+
+
+function dangxuat(){
+  localStorage.removeItem('dangnhap');
+} 
+

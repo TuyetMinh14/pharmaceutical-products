@@ -123,24 +123,35 @@ console.log(btnLogin)
 
 btnLogin.addEventListener("click", (e) => {
   e.preventDefault();
-  if (inputUsername.value === "" || inputPassword.value === "") 
-  {
-    alert("vui lòng không để trống");
+  
+  if (inputUsername.value === "" || inputPassword.value === "") {
+    alert("Vui lòng không để trống");
   } else {
-    const user = JSON.parse(localStorage.getItem(inputUsername.value)) || [];
-    console.log(user.username)
-    console.log(inputUsername.value)
-    if (
-      user.username === inputUsername.value &&
-      user.password === inputPassword.value
-    ) {
+    const user = JSON.parse(localStorage.getItem(inputUsername.value)) || {};
+    
+    if (user.username === inputUsername.value && user.password === inputPassword.value) {
       alert("Đăng Nhập Thành Công");
+
+      // Lưu thông tin đăng nhập vào Local Storage
       const logIn = {
-        usernames: inputUsername.value,
+        username: inputUsername.value,
       };
       let json1 = JSON.stringify(logIn);
       localStorage.setItem('dangnhap', json1);
-      window.location.href = "index-login.html";
+
+      // Kiểm tra trang hiện tại và chuyển hướng tương ứng
+      if (window.location.pathname.includes("index.html")) {
+        window.location.href = "index-login.html";
+      } else if (window.location.pathname.includes("detail.html")) {
+        // Lấy id từ URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+        window.location.href = `detail-login.html?id=${productId}`;
+        localStorage.setItem('href',`detail.html?id=${productId}`);
+      } else {
+        // Trường hợp khác, có thể thêm các trang khác nếu cần
+        window.location.href = "index-login.html";
+      }
     } else {
       alert("Đăng Nhập Thất Bại");
     }
@@ -150,8 +161,8 @@ btnLogin.addEventListener("click", (e) => {
   };
   let json1 = JSON.stringify(logIn);
   localStorage.setItem('dangnhap', json1);
-  
 });
+
 
 
 
