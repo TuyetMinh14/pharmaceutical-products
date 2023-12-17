@@ -72,7 +72,7 @@
             </ul>
           </div>
           <div class="decor"></div>
-          <a href="/detail.html" class="dangxuat" onclick="dangxuat()">Đăng xuất</a>
+          <a href="/detail.html" class="dangxuat" onclick="changehref()">Đăng xuất</a>
           <div class="decor1"></div>
           <div class="user-name">
           </div>
@@ -186,15 +186,35 @@ localStorage.removeItem('user');
 } 
 displayusername()
 
-  function changehref(){
-  a = localStorage.getItem('href')||[]
-  dangxuat = document.querySelector('.dangxuat')
-  dangxuat.setAttribute('href', a)
-  }
+if (window.location.pathname.includes("detail.html")) {
+        // Lấy id từ URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+        window.location.href = `detail-login.html?id=${productId}`;
+        localStorage.setItem('href',`detail.html?id=${productId}`);
+      } 
+
+      function noLog(){
+        if (window.location.pathname.includes("detail-login.html")) {
+        // Lấy id từ URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+        localStorage.setItem('href',`detail.html?id=${productId}`);
+      } 
+      }
+      noLog()
   
+  
+  function changehref(){
+  next = localStorage.getItem('href')||[]
+  console.log(next)
+  dangxuat = document.querySelector('.dangxuat')
+  dangxuat.setAttribute('href', next)
+  }
 
   changehref()
 </script>
+<script src="./js/login.js"></script>
 <script src="./js/productindex.js"></script>
 </body>
 </html>

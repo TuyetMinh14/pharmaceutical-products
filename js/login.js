@@ -117,6 +117,8 @@ const inputUsername = document.querySelector(".tkdangnhap");
 const inputPassword = document.querySelector(".mkdangnhap");
 
 
+
+
 const btnLogin = document.querySelector("#dongydangnhap");
 console.log(btnLogin)
 // validation form login
