@@ -104,12 +104,11 @@ a {
   width: fit-content;
 }
 .logo-content {
-  width: 100%;
-  height: 179px;
+  width: 100vw;
+  height: 13vw;
   background: #6e80dc;
   display: block;
-  margin-left: -0.5rem;
-  margin-bottom: 0;
+  margin-left: -0.55vw;
 }
 
 .hotline {
@@ -261,26 +260,26 @@ a.en:before {
   left: 7.8cm;
   top: 1.2rem;
 }
-.log {
+.log{
   position: absolute;
-  top: 1.5625rem; /* (16px / 200) * 25 = 1.5625rem */
-  left: 12.5rem; /* (16px / 200) * 200 = 12.5rem */
-  width: 6.25rem; /* (16px / 200) * 100 = 6.25rem */
+  top: 1.8vw; /* (16px / 200) * 25 = 1.5625rem */
+  left: 13.5vw; /* (16px / 200) * 200 = 12.5rem */
+  width: 10vw; /* (16px / 200) * 100 = 6.25rem */
 }
 
 .sigin {
   position: absolute;
-  top: 1.5625rem; /* (16px / 200) * 25 = 1.5625rem */
-  left: 20.625rem; /* (16px / 200) * 330 = 20.625rem */
-  width: 6.25rem; /* (16px / 200) * 100 = 6.25rem */
+  top: 1.8vw; 
+  left: 23vw;
+  width: 10vw; 
 }
 
 /* logo */
 .logo {
-  margin-left: 6.25rem; /* (100px / 16) = 6.25rem */
-  margin-top: 4.5625rem; /* (73px / 16) = 4.5625rem */
-  width: 16.25rem; /* (260px / 16) = 16.25rem */
-  height: 5rem; /* (80px / 16) = 5rem */
+  margin-left: 5%; /* (100px / 16) = 6.25rem */
+  margin-top: 5%; /* (73px / 16) = 4.5625rem */
+  width: 17vw; /* (260px / 16) = 16.25rem */
+  height: 7vw;
 }
 
 /* search box */
@@ -310,8 +309,8 @@ a.en:before {
 
 /* stock */
 .stock img {
-  width: 11.25rem; /* (180px / 16) = 11.25rem */
-  height: 5rem; /* (80px / 16) = 5rem */
+  width: 15vw; /* (180px / 16) = 11.25rem */
+  height: 6vw; /* (80px / 16) = 5rem */
   margin-left: 48.75rem; /* (780px / 16) = 48.75rem */
 }
 body .stock {
