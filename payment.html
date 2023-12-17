@@ -10,9 +10,98 @@
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="css/category.css">
     <link rel="stylesheet" href="css/header.css">
-
+    <style>
+        .dangxuat {
+      position: absolute;
+      top: 1.35rem; 
+      left: 12.8rem; 
+      width: 6.25rem;
+      font-size: 14px;
+    }
+    .user-name {
+      position: relative;
+      top: 1.2rem;
+      left: 20rem;
+      width: 6.25rem;
+      display: flex; /* Sử dụng display: flex; */
+      align-items: center; /* Căn giữa theo chiều dọc */
+      font-size: 0.8rem;
+    }
+  
+  .user-name img {
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-left: 0.5rem; /* Tăng khoảng cách giữa hình ảnh và văn bản nếu cần thiết */
+  }
+  
+      </style>
+      <script
+        src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"
+      ></script>
+    </head>
+  
+    <body>
+      <div class="banner-header">
+        <img src="./img/header/caythong1.png" alt="" />
+        <div class="decor-1">KHUYẾN MÃI ĐẶC BIỆT</div>
+        <div class="decor-2">CUỐI NĂM</div>
+        <div class="decor-3">CUỐI NĂM</div>
+        <button class="decor-4"><a href="">MUA NGAY</a></button>
+      </div>
+      <div class="logo-content">
+        <div class="hotline">
+          Hotline đặt hàng
+          <button>
+            <img src="./img/header/phone.png" alt="" /><a href="tel: +84896714266"
+              >08967-14-266</a
+            >
+          </button>
+        </div>
+        <div class="nav-menu">
+          <div class="language">
+            <div class="language-selected">
+              <img
+                src="https://www.worldometers.info/img/flags/vm-flag.gif"
+                alt=""
+              />
+              <div class="lan">VietNam</div>
+            </div>
+            <ul>
+              <li><a href="#" class="vie">VietNam</a></li>
+              <li><a href="#" class="en">English</a></li>
+            </ul>
+          </div>
+          <div class="decor"></div>
+          <a href="index.html" class="dangxuat" onclick="dangxuat()">Đăng xuất</a>
+          <div class="decor1"></div>
+          <div class="user-name">
+          </div>
+        </div>
+        <a href="index-login.html"><img src="./img/header/LOGO.png" alt="" srcset="" class="logo" id="logo-web"/></a>
+        <div class="search-box">
+          <div class="row">
+            <input type="text" />
+            <img src="./img/header/lookup Background Removed.png" alt="" />
+          </div>
+        </div>
+        <a href="#" class="stock" style="display: none;"
+          ><img src="./img/header/stock.png" alt="" srcset=""
+        />            <span id="cart-item-count">0</span>
+  
+      </a>
+      </div>
 </head>
 <body>
+
+
+
+
+
+
+
+
     <div class="main-container">
         <div class="head-container">
             <h2>Thanh Toán</h2>
@@ -187,10 +276,23 @@
             </form>
         </div>
     </div>
-    <!-- JS file -->
-    <script src = "js/category.js"></script>
-    <script src = "js/payment.js"></script>
 
+
+    <div class="checkOut" style="display: none;"></div>
+    <div id="cart-item-count" style="display: none;"></div>
+    <!-- JS file -->
+    <script src = "js/payment.js"></script>
+    <!-- <script src="./js/productindex.js"></script> -->
+    <script>
+        function displayusername(){
+    var usernameDisplay = document.querySelector('.user-name')||[]
+    const user = JSON.parse(localStorage.getItem('dangnhap'))||[];
+      usernameDisplay.innerHTML = user.usernames + '<img src="./img/header/username-icon-png-6.jpg" alt="" srcset="">'
+    //   localStorage.removeItem('user');
+      } 
+      displayusername()
+      </script> 
+      <script src="./js/category.js"></script>
 
     
 

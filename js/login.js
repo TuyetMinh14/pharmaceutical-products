@@ -152,7 +152,7 @@ btnLogin.addEventListener("click", (e) => {
         localStorage.setItem('href',`detail.html?id=${productId}`);
       } else {
         // Trường hợp khác, có thể thêm các trang khác nếu cần
-        window.location.href = "index-login.html";
+        window.location.href = "category-login.html";
       }
     } else {
       alert("Đăng Nhập Thất Bại");
@@ -190,4 +190,5 @@ btnLogin.addEventListener("click", (e) => {
 //     }
 //   }
 // });
+
 

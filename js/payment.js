@@ -15,13 +15,15 @@ document.addEventListener("DOMContentLoaded", function () {
         const checkOutBtn = document.getElementById('button-checkout');
         const acceptCheckOutBtn = document.getElementById('accept-payment');
         const acceptCheckOutBtnOnline = document.getElementById('accept-payment-online');
+        const user = JSON.parse(localStorage.getItem('dangnhap'))|| []
+        const a = user.usernames + 1 ||[]
 
 
         // Đưa biến cart ra khỏi hàm để nó có thể được sử dụng ở các hàm khác
         let cart = [];
 
         const displayCartItems = () => {
-            cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart = JSON.parse(localStorage.getItem(a)) || [];
             listCartHTML.innerHTML = '';
             paymentContainer.innerHTML = '';
             let totalQuantity = 0;
@@ -178,12 +180,12 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
         acceptCheckOutBtn.addEventListener('click', () => {
-            localStorage.removeItem('cart');
+            localStorage.removeItem(a);
             displayCartItems();
             paySuccessful.classList.remove('checkOut');
         });
         acceptCheckOutBtnOnline.addEventListener('click', () => {
-            localStorage.removeItem('cart');
+            localStorage.removeItem(a);
             displayCartItems();
             paySuccessfulOnline.classList.remove('checkOut-online');
             paySuccessful.classList.add('checkOut');
