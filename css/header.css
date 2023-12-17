@@ -153,12 +153,12 @@ a {
   line-height: normal;
 }
 .decor {
-  width: 0.063rem;
-  height: 1.5rem;
+  width: 0.2vw;
+  height: 2vw;
   background: #fff;
   position: absolute;
-  left: 4.5cm;
-  top: 1.2rem;
+  left: 90%;
+  margin-top: 12%;
 }
 .nav-menu a {
   font-family: Inter;
@@ -253,30 +253,30 @@ a.en:before {
   border: solid #0d2748;
 }
 .decor1 {
-  width: 0.063rem;
-  height: 1.5rem;
+  width: 0.2vw;
+  height: 2vw;
   background: #fff;
   position: absolute;
-  left: 7.8cm;
-  top: 1.2rem;
+  left: 190%;
+  margin-top: 0%;
 }
 .log{
-  position: absolute;
-  top: 1.8vw; /* (16px / 200) * 25 = 1.5625rem */
-  left: 13.5vw; /* (16px / 200) * 200 = 12.5rem */
+  position: relative;
+  top:1.5vw;
+left: 13.5vw; /* (16px / 200) * 200 = 12.5rem */
   width: 10vw; /* (16px / 200) * 100 = 6.25rem */
 }
 
 .sigin {
   position: absolute;
-  top: 1.8vw; 
+  top: 1.5vw; 
   left: 23vw;
   width: 10vw; 
 }
 
 /* logo */
 .logo {
-  margin-left: 5%; /* (100px / 16) = 6.25rem */
+  margin-left: 5%; 
   margin-top: 5%; /* (73px / 16) = 4.5625rem */
   width: 17vw; /* (260px / 16) = 16.25rem */
   height: 7vw;
@@ -311,7 +311,8 @@ a.en:before {
 .stock img {
   width: 15vw; /* (180px / 16) = 11.25rem */
   height: 6vw; /* (80px / 16) = 5rem */
-  margin-left: 48.75rem; /* (780px / 16) = 48.75rem */
+  margin-left: 55%; /* (780px / 16) = 48.75rem */
+  
 }
 body .stock {
   position: relative;
