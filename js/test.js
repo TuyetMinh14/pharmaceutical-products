@@ -1259,8 +1259,6 @@ document.addEventListener("DOMContentLoaded", function () {
       const addCartToMemory = () => {
         localStorage.setItem("cart", JSON.stringify(cart));
       };
-
-
       const addCartToHTML = () => {
         listCartHTML.innerHTML = "";
         let totalQuantity = 0;
@@ -1303,7 +1301,6 @@ document.addEventListener("DOMContentLoaded", function () {
           cartTotalSpan.innerHTML = `<span> Tổng tiền: ${sum.toLocaleString()} VNĐ </span>`;
         }
       };
-
 
       listCartHTML.addEventListener("click", (event) => {
         let positionClick = event.target;
@@ -1371,5 +1368,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-   
+
+
+// add 
+
+
+  
 });

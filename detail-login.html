@@ -176,6 +176,14 @@
       </footer>
     <script src="js/category.js"></script>
     <script src="./js/nhap-email.js"></script>
-
+<script>
+  function displayusername(){
+var usernameDisplay = document.querySelector('.user-name')||[]
+const user = JSON.parse(localStorage.getItem('dangnhap'));
+usernameDisplay.innerHTML = user.usernames + '<img src="./img/header/username-icon-png-6.jpg" alt="" srcset="">'
+localStorage.removeItem('user');
+} 
+displayusername()
+</script> 
 </body>
 </html>

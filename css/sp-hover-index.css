@@ -46,3 +46,13 @@
     cursor: pointer;
 }
 
+#addstock{
+    
+    cursor: pointer;
+}
+
+.cproduct .row .product #addstock:hover, .product #addstock:hover{
+    transition: all 0.2s;
+    background-color: white;
+    border: 0.1rem solid #5F84CE;
+}

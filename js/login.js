@@ -37,9 +37,18 @@ function closePopup() {
 const inputUsernameRegister = document.querySelector(".tk");
 const inputPasswordRegister = document.querySelector(".mk");
 const inputPhoneRegister = document.querySelector(".phone");
+
 const checkbox = document.querySelector('.dongy')
-console.log(checkbox.value)
 const btnRegister = document.querySelector("#dongydangky");
+
+// iterate localStorage
+const logIn = {
+  username: "user",
+  password: "123"
+};
+let json2 = JSON.stringify(logIn);
+localStorage.setItem('user', json2);
+
 
 
 
@@ -48,21 +57,40 @@ btnRegister.addEventListener("click", (e) => {
   const phoneRegex = /^(0|84)([0-9]{9,10})$/;
   const isValidPhone = phoneRegex.test(inputPhoneRegister.value);
   const users = JSON.parse(localStorage.getItem(inputUsernameRegister.value)) || [];
-
   if (
     inputUsernameRegister.value === "" ||
     inputPasswordRegister.value === "" ||
     !isValidPhone ||
-    checkbox.value == ""
+    checkbox.checked === false
   )
    {
     alert("Thông tin không hợp lệ");
+    return;
   }
-  else if(inputUsernameRegister.value == users.username)
+
+  if(inputUsernameRegister.value == users.username)
   {
-    alert("Tên người dùng đã được đăng ký");
+    alert("Tên người dùng đã được đăng ký");  
+    return;
+  } 
+  
+  for (let i = 0; i < localStorage.length; i++) {
+
+    // set iteration key name
+    const key = localStorage.key(i);
+  
+    // use key name to retrieve the corresponding value
+    const value = localStorage.getItem(key);
+  
+    // console.log the iteration key and value
+    if(inputPhoneRegister.value == JSON.parse(value).phone)
+    {
+      alert('Số điện thoại đã được đăng ký')
+      return;
+    }
+  
   }
-   else {
+
     // array user
     const user = {
       username: inputUsernameRegister.value,
@@ -73,19 +101,14 @@ btnRegister.addEventListener("click", (e) => {
     localStorage.setItem(inputUsernameRegister.value, json);
     alert("Đăng Ký Thành Công");
     window.location.href = "index-login.html";
-
-    //arraydangnhap 
-
     const logIn = {
       usernames: inputUsernameRegister.value,
     };
     let json1 = JSON.stringify(logIn);
     localStorage.setItem('dangnhap', json1);
-  }
 });
 
-// đăng nhập
-// validation form login
+
 const inputUsername = document.querySelector(".tkdangnhap");
 const inputPassword = document.querySelector(".mkdangnhap");
 
@@ -101,11 +124,9 @@ btnLogin.addEventListener("click", (e) => {
     alert("vui lòng không để trống");
   } else {
     const user = JSON.parse(localStorage.getItem(inputUsername.value)) || [];
-    console.log(user.username)
-    console.log(inputUsername.value)
     if (
       user.username === inputUsername.value &&
-      user.password === inputPassword.value
+      user.password === inputPassword.value 
     ) {
       alert("Đăng Nhập Thành Công");
       const logIn = {
@@ -119,28 +140,35 @@ btnLogin.addEventListener("click", (e) => {
     }
   }
   
-});
+  const logIn = {
+    usernames: inputUsername.value,
+  };
+  let json1 = JSON.stringify(logIn);
+  localStorage.setItem('dangnhap', json1);
+}
+);
 
-document.addEventListener("keydown", function (event) {
-  if (event.key === "Enter") {
-    if (document.querySelector(".login")) {
-      // Thực hiện sự kiện đăng nhập
-      event.preventDefault(); // Ngăn chặn hành động mặc định của phím Enter (chẳng hạn nhấn Enter để submit form)
-      btnLogin.click(); // Gọi sự kiện click của nút đăng nhập
-    }
-  }
-});
 
-document.addEventListener("keydown", function (event) {
-  if (event.key === "Enter") {
-    if (document.querySelector(".signup")) {
-      // Thực hiện sự kiện đăng nhập
-      event.preventDefault(); // Ngăn chặn hành động mặc định của phím Enter (chẳng hạn nhấn Enter để submit form)
-      btnLogin.click(); // Gọi sự kiện click của nút đăng nhập
-    }
-  }
-});
+// var dangxuatbutton = document.querySelector('.dangxuat');
+
+// dangxuatbutton.addEventListener("click", function () {
+//   window.localStorage.removeItem('dangnhap')
+//  });
+// function handleBeforeUnload() {
+//   localStorage.removeItem('dangnhap');
+// }
+
+// window.addEventListener('beforeunload', handleBeforeUnload);
 
 
 
+// document.addEventListener("keydown", function (event) {
+//   if (event.key === "Enter") {
+//     if (document.querySelector(".login")) {
+//       // Thực hiện sự kiện đăng nhập
+//       event.preventDefault(); // Ngăn chặn hành động mặc định của phím Enter (chẳng hạn nhấn Enter để submit form)
+//       btnLogin.click(); // Gọi sự kiện click của nút đăng nhập
+//     }
+//   }
+// });
 
