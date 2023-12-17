@@ -226,13 +226,14 @@ span {
 
 /* danh muc san pham */
 .rows {
-  left: -0.5rem;
+  width: 100%;
+  left: -0.01vw;
   position: absolute;
-  top: 55rem;
+  top: 113%;
 }
 .catgory1 {
   width: 100vw;
-  height: 27.5rem;
+  height: 30vw;
   background: #d99bbd;
 }
 
@@ -245,8 +246,8 @@ span {
   line-height: normal;
   display: block;
   position: relative;
-  top: 1.938rem;
-  left: 3.813rem;
+  top: 2vw;
+  left: 3vw;
 }
 .danhmuc {
   position: absolute;
@@ -266,8 +267,7 @@ span {
   padding: 0;
 }
 .danhmuc img {
-  width: 300px;
-  height: 300px;
+  width: 100%;
   margin: 0;
 }
 .danhmuc a:hover {

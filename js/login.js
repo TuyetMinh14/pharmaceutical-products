@@ -32,6 +32,10 @@ function closePopup() {
   popuplogin.style.display = "none";
 }
 
+function addstockNolog(){
+  popuplogin.style.display = "block";
+};
+
 // đăng ký
 // validation form register and register user local storage
 const inputUsernameRegister = document.querySelector(".tk");
@@ -124,9 +128,11 @@ btnLogin.addEventListener("click", (e) => {
     alert("vui lòng không để trống");
   } else {
     const user = JSON.parse(localStorage.getItem(inputUsername.value)) || [];
+    console.log(user.username)
+    console.log(inputUsername.value)
     if (
       user.username === inputUsername.value &&
-      user.password === inputPassword.value 
+      user.password === inputPassword.value
     ) {
       alert("Đăng Nhập Thành Công");
       const logIn = {
@@ -139,14 +145,14 @@ btnLogin.addEventListener("click", (e) => {
       alert("Đăng Nhập Thất Bại");
     }
   }
-  
   const logIn = {
     usernames: inputUsername.value,
   };
   let json1 = JSON.stringify(logIn);
   localStorage.setItem('dangnhap', json1);
-}
-);
+  
+});
+
 
 
 // var dangxuatbutton = document.querySelector('.dangxuat');

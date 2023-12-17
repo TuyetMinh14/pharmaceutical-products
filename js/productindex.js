@@ -724,9 +724,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     
     localStorage.setItem("productsData", JSON.stringify(productsData));
-    const productContainer1 = document.querySelector(".oproducts .row");
-    const productContainer2 = document.querySelector(".cproduct .row");
-    const productContainer3 = document.querySelector(".gproduct .row");
+    const productContainer1 = document.querySelector(".oproducts .row") || [];
+    const productContainer2 = document.querySelector(".cproduct .row")||[];
+    const productContainer3 = document.querySelector(".gproduct .row")||[];
 
 
 
@@ -857,35 +857,62 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-  function createProductElement(product) {
-    const productDiv = document.createElement("li");
-    href = "detail.html?id=" + product.id;
-    productDiv.innerHTML = `
-            <a product-container href="${href}">
-            <div class="product">
-                <img src="${product.imgSrc}" alt="${product.alt}" class ={src-img}>
-                <div class="post-content">
-                ${product.name}
+    function createProductElement(product) {
+      const productDiv = document.createElement("li");
+      let addToCartButton;
+      
+      // Kiểm tra giá trị "dangnhap" trong Local Storage
+      if (localStorage.getItem('dangnhap')) {
+          // Nếu có giá trị "dangnhap", thực hiện lệnh thông thường
+          href = "detail-login.html?id=" + product.id;
+          productDiv.innerHTML = `
+              <a product-container href="${href}">
+              <div class="product">
+                  <img src="${product.imgSrc}" alt="${product.alt}" class ={src-img}>
+                  <div class="post-content">
+                  ${product.name}
+                  </div>
+                  <div class="price">${product.price.toLocaleString()} </div>
+                  <button type="button" class="cart-btn" id="addstock">Thêm vào giỏ hàng</button>
                 </div>
-                <div class="price">${product.price.toLocaleString()} </div>
-                <button type="button" class="cart-btn" id="addstock">Thêm vào giỏ hàng</button>
-              </div>
-            <\a>
-        `;
-    const cartBtn = productDiv.querySelector(".cart-btn");
-    productDiv.dataset.id = product.id;
-    cartBtn.addEventListener("click", function (event) {
-      event.preventDefault();
-      let positionClick = event.target;
-      if (positionClick.classList.contains("cart-btn")) {
-        let id_product = productDiv.dataset.id;
-        addToCart(product.id);
+              </a>
+          `;
+          addToCartButton = productDiv.querySelector(".cart-btn");
+      } else {
+          // Nếu không có giá trị "dangnhap", thực hiện lệnh khác
+          href = "detail.html?id=" + product.id;
+          productDiv.innerHTML = `
+              <a product-container href="${href}">
+              <div class="product">
+                  <img src="${product.imgSrc}" alt="${product.alt}" class ={src-img}>
+                  <div class="post-content">
+                  ${product.name}
+                  </div>
+                  <div class="price">${product.price.toLocaleString()} </div>
+                  <button type="button" class="cart-btn" id="addstock" onclick="addstockNolog()">Thêm vào giỏ hàng</button>
+                </div>
+              </a>
+          `;
+          addToCartButton = productDiv.querySelector(".cart-btn");
       }
-    });
-    addCartToHTML();
-
-    return productDiv;
+  
+      productDiv.dataset.id = product.id;
+  
+      // Thêm sự kiện click cho nút thêm vào giỏ hàng
+      addToCartButton.addEventListener("click", function (event) {
+          event.preventDefault();
+          let positionClick = event.target;
+          if (positionClick.classList.contains("cart-btn")) {
+              let id_product = productDiv.dataset.id;
+              addToCart(product.id);
+          }
+      });
+  
+      addCartToHTML();
+  
+      return productDiv;
   }
+  
 
 
   const changeQuantityCart = (product_id, type) => {

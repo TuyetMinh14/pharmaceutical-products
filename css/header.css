@@ -147,7 +147,7 @@ a {
   font-family: Inter;
   text-decoration: none;
   color: #fff;
-  font-size: 0.75rem;
+  font-size: 1.5vw;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -164,7 +164,7 @@ a {
   font-family: Inter;
   text-decoration: none;
   color: #fff;
-  font-size: 0.9rem;
+  font-size: 1vw;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -258,7 +258,7 @@ a.en:before {
   background: #fff;
   position: absolute;
   left: 190%;
-  margin-top: 0%;
+  top:80%;
 }
 .log{
   position: relative;
@@ -269,7 +269,7 @@ left: 13.5vw; /* (16px / 200) * 200 = 12.5rem */
 
 .sigin {
   position: absolute;
-  top: 1.5vw; 
+  top: 2vw; 
   left: 23vw;
   width: 10vw; 
 }

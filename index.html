@@ -64,7 +64,9 @@
       <a href="#" class="stock" id="icon-cart"
         ><img src="./img/header/stock.png" alt="" srcset=""
       />
-      <span id="cart-item-count">0</span>
+      <span id="cart-item-count" style="display: none;">0</span>
+      <span id="cart-item-count1">0</span>
+
     </a>
     </div>
 
@@ -390,5 +392,13 @@
     <script src="./js/login.js"></script>
     <script src="./js/nhap-email.js"></script>
     <script src="./js/productindex.js"></script>
+    <script>
+      window.addEventListener('beforeunload', function (event) {
+        localStorage.removeItem('cart');
+        localStorage.removeItem('dangnhap')
+      });
+
+    </script>
+    
   </body>
 </html>

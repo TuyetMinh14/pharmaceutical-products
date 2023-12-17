@@ -33,6 +33,7 @@
     height: 1.5rem;
     margin-left: 0.5rem; /* Tăng khoảng cách giữa hình ảnh và văn bản nếu cần thiết */
 }
+
     </style>
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -130,11 +131,11 @@
       <!-- danhmuc -->
 
     </div>
-    <div class="rows">
+    <div class="rows" >
       <hr />
       <div class="catgory1">
         <div class="cat-title">DANH MỤC SẢN PHẨM</div>
-        <div class="danhmuc">
+        <div class="danhmuc" >
           <ul>
             <li>
               <a href=""><img src="./img/index/duocpham.png" alt="" /></a>
@@ -155,48 +156,52 @@
       </div>
     </div>
 
-    <!-- san pham noi bat -->
-      <div class="oproducts">
-        <hr />
-            <div class="cat-title">SẢN PHẨM NỔI BẬT</div>
-            <ul class="row">
-            </ul>
-      </div>
-  
-  
-      
-      <div class="cproduct oproducts">
-        <hr />
-        <div class="cat-title">Thực Phẩm Chức Năng</div>
-        <ul class="row">
-        </ul>
-        <!-- <a href="" class="seeall"> Xem tất cả</a> -->
-  
-      </div>
-  
-      <div class="gproduct oproducts">
-        <hr />  
-        <div class="cat-title">Chăm sóc sức khỏe</div>
-        <ul class="row">
-        </ul>
-  
-      </div>
-
-      <div class="cartTab">
-        <h1>Giỏ hàng</h1>
-        <div class="listCart">
-            
-        </div>
-
-        <div id="total">
-        </div>
-
-        <div class="btn">
-            <button class="close">Đóng</button>
-            <button class="checkOut">Thanh toán</button>
-            <button class="sale">Nhập mã KM</button>
-        </div>
+    <!-- sanphamnoibat -->
+    <div class="oproducts" >
+      <hr />
+          <div class="cat-title" >SẢN PHẨM NỔI BẬT</div>
+          <ul class="row">
+          </ul>
     </div>
+
+
+    
+    <div class="cproduct oproducts">
+      <hr/>
+      <div class="cat-title">Thực Phẩm Chức Năng</div>
+      <ul class="row">
+      </ul>
+      <!-- <a href="" class="seeall"> Xem tất cả</a> -->
+
+    </div>
+
+    <div class="gproduct oproducts" >
+      <hr />  
+      <div class="cat-title">Chăm sóc sức khỏe</div>
+      <ul class="row">
+      </ul>
+
+    </div>
+
+
+
+    <div class="cartTab" style="display: none;">
+      <h1>Giỏ hàng</h1>
+      <div class="listCart">
+          
+      </div>
+
+      <div id="total">
+      </div>
+
+      <div class="btn">
+          <button class="close">Đóng</button>
+          <button class="checkOut">Thanh toán</button>
+          <button class="sale">Nhập mã KM</button>
+      </div>
+  </div>
+
+      
         <!-- newws -->
         <div class="news">
           <div class="new-title">TIN SỨC KHOẺ</div>
@@ -412,6 +417,7 @@
         </tr>
       </table>
     </form>
+    <div class="productContainer1" style="display: none;"></div>
 
     <script src="./js/index.js"></script>
     <script src="./js/nhap-email.js"></script>
@@ -423,8 +429,6 @@
     localStorage.removeItem('user');
     } 
     displayusername()
-    
-
     </script> 
     <script src="./js/productindex.js"></script>
   </body>
