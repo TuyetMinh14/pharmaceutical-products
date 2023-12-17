@@ -318,6 +318,8 @@ body {
 
 .payment {
     background-color: #E9E9E9;
+    width: 70%;
+
 }
 .payment-item .total-price {
     color: red;
@@ -410,11 +412,43 @@ hr {
     background-color: #6a6fc9;
     color: #fff;
 }
-.checkout-layout .ship {
+.checkout-layout .form-payment {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    border-bottom: 1px solid #7a7fe2;
+    padding-bottom: 20px;
+}
+
+.checkout-layout .form-paymen .form-ship {
+    width: 100%;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+}
+
+.checkout-layout .form-payment .form-discount input{
+    width: 55%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border:none;
+    background-color: #6a6fc9;
+    color: #fff;
+}
+#apply-discount-btn {
+    background-color: #5358B3;
+    border: none;
+    color: #EFA7CF;
+}
+.checkout-layout .ship {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     font-weight: 600;
     font-size: 18px;
+    text-align: center;
 }
 .checkout-layout .ship-fee {
     color: #EFA7CF;
@@ -449,7 +483,103 @@ hr {
 
 /***********/
 
-svg{
+/***** PAYMENT SUCCESSFUL ******/
+
+.pay-successful {
+    width: 400px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-80%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: hidden;
+    transition: transform 1s top 1s;
+}
+.checkOut {
+    visibility: visible;
+    top: 130%;
+    transform: translate(-50%,-80%) scale(1);
+
+}
+.pay-successful img {
+    width: 70px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+.pay-successful h2 {
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px ;
+}
+.pay-successful button {
+    width: 100px;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #6fd649;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+
+}
+
+.pay-successful-online{
+	width: 400px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.1);
+    padding: 0 30px 30px;
+    color: #333;
+	border: 1px solid #ccc;
+	height: 60vh;
+    visibility: hidden;
+}
+.checkOut-online {
+    visibility: visible;
+    top: 130%;
+    transform: translate(-50%, -80%) scale(1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+.pay-successful-online hr {
+    border:1px solid #ccc; 
+    margin: 0 15px;
+}
+.pay-successful-online a{
+	width: 100%;
+	padding: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.pay-successful-online .card-details input{
+    width: 90%;
+}
+.pay-successful-online .card-details button {
+    width: 100px;
+    margin-top: 10px;
+    margin-left: 30%;
+    padding: 10px 0;
+    background: #6fd649;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+/* svg{
     width: 30px;
 }
 header{
@@ -505,7 +635,7 @@ header{
     padding: 5px 10px;
     margin-top: 10px;
     border-radius: 20px;
-}
+} */
 
 /* cart */
 .cartTab{
@@ -536,6 +666,24 @@ body.showCart .main-container, body.showCart .header-container{
     background-color: #eee;
     border-radius: 25px;
     border: 2px solid gray;
+}
+#sale-content {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+    font-weight: 600;
+}
+#sale-input{
+    display: none;
+    width: 100%;
+    padding: 10px;
+    background-color: #eee;
+    border-radius: 25px;
+    border: 2px solid gray;
+    margin-left: 2%;
 }
 
 .cartTab #total{
@@ -586,7 +734,7 @@ body.showCart .main-container, body.showCart .header-container{
     background-color: #eee;
 }
 
-.cartTab .checkOut:hover {
+.cartTab .checkOut-btn:hover {
     transform: scale(1.1);
 }
 .cartTab .sale:hover {
