@@ -648,7 +648,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let iconCartSpan = document.querySelector('#icon-cart span');
     let body = document.querySelector('body');
     let closeCart = document.querySelector('.close');
-    let cartTotalSpan = document.querySelector('#total')
+    let cartTotalSpan = document.querySelector('#total');
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     iconCart.addEventListener('click', () => {
         body.classList.toggle('showCart');
@@ -681,6 +681,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const addCartToMemory = () => {
         localStorage.setItem('cart', JSON.stringify(cart));
     };
+
+
     const addCartToHTML = () => {
         listCartHTML.innerHTML = '';
         let totalQuantity = 0;
@@ -715,72 +717,15 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
             iconCartSpan.innerText = totalQuantity;
-
             cartTotalSpan.innerHTML = `<span>Tổng tiền: ${sum.toLocaleString()} VNĐ</span>`;
 
         } else {
+            iconCartSpan.innerText = 0;
             cartTotalSpan.innerHTML = '<strong>Giỏ hàng trống</strong>';
         }
-    }}
-<<<<<<< HEAD
-        addCartToHTML();
-        addCartToMemory();
-      };
-      const addCartToMemory = () => {
-        localStorage.setItem("cart", JSON.stringify(cart));
-      };
-
-
-      const addCartToHTML = () => {
-        listCartHTML.innerHTML = "";
-        let totalQuantity = 0;
-        let sum = 0;
-
-        if (cart.length > 0) {
-          cart.forEach((item) => {
-            totalQuantity += item.quantity;
-            let newItem = document.createElement("div");
-            newItem.classList.add("item");
-            newItem.dataset.id = item.product_id;
-
-            let positionProduct = productsData.findIndex(
-              (value) => value.id == item.product_id
-            );
-            let info = productsData[positionProduct];
-            sum += info.price * item.quantity;
-
-            listCartHTML.appendChild(newItem);
-            newItem.innerHTML = `
-                            <div class="image">
-                                <img src="${info.imgSrc}" >
-                            </div>
-                            <div class="name">
-                                ${info.name}
-                            </div>
-                            <div class="totalPrice">${(
-                              info.price * item.quantity
-                            ).toLocaleString()}</div>
-                            <div class="quantity">
-                                <span class="minus"><</span>
-                                <span>${item.quantity}</span>
-                                <span class="plus">></span>
-                            </div>
-                        `;
-          });
-
-          iconCartSpan.innerText = totalQuantity;
-
-          cartTotalSpan.innerHTML = `<span> Tổng tiền: ${sum.toLocaleString()} VNĐ </span>`;
-        }
-      };
-
-
-      listCartHTML.addEventListener("click", (event) => {
-=======
     };
 
     listCartHTML.addEventListener('click', (event) => {
->>>>>>> a83f4214a8205a8a55df4e3697fd6294646336bd
         let positionClick = event.target;
         if (positionClick.classList.contains('minus') || positionClick.classList.contains('plus')) {
             let product_id = positionClick.parentElement.parentElement.dataset.id;
@@ -827,15 +772,6 @@ document.addEventListener("DOMContentLoaded", function () {
         displayProductsOnPage(currentPage);
         generatePagination();
     }
-<<<<<<< HEAD
-  
-
-
-
-
-
-   
-=======
 
     function displayProductsOnPage(pageNumber) {
         const startIndex = (pageNumber - 1) * itemsPerPage;
@@ -882,8 +818,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         highlightCurrentPage();
     }
-    // PAYMENT
-    
 
     // Hàm hiển thị active trên trang khi thay đổi trang
     function highlightCurrentPage() {
@@ -896,12 +830,12 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Hàm sự kiện hiển thị mặc định tất cả sản phẩm, và bấm vào Danh Mục để quay về mặc định
     menuButtons.forEach(button => {
         button.addEventListener('click', function () {
-            const categoryId = this.id;
             displayProductsByCategory('');
-            if (categoryId === 'all' || categoryId === '') {
+            const categoryId = this.id;
+            console.log(categoryId);
+            if (categoryId === 'all' || categoryId === '' || categoryId.startsWith('menu')) {
                 displayProductsByCategory('');
             } else {
                 displayProductsByCategory(categoryId);
@@ -909,13 +843,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // document.querySelectorAll('.menu-btn').forEach(menubtn => {
-    //     menubtn.addEventListener('click', (event) => {
-    //         const selectedCategoryId = event.currentTarget.id;
-    //         displayProductsByCategory(selectedCategoryId);
-    //     });
-    // });
-    
     // Hàm sự kiện hiển thị các sản phẩm theo danh mục
     document.querySelectorAll('.list-items').forEach(list => {
         list.addEventListener('click', function (event) {
@@ -949,7 +876,6 @@ document.addEventListener("DOMContentLoaded", function () {
         generatePagination();
     }
     displayProductsByCategory('');
->>>>>>> a83f4214a8205a8a55df4e3697fd6294646336bd
 });
 
 
