@@ -571,3 +571,9 @@ hr {
     height: 1.5rem;
     margin-left: 0.5rem; /* Tăng khoảng cách giữa hình ảnh và văn bản nếu cần thiết */
 }
+
+
+@media all and (max-width: 480px) {
+  
+
+}

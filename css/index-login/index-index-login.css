@@ -22,7 +22,7 @@
   max-height: 22.5rem; /* (360 / 16) */
   position: relative;
   top: -62rem;
-  left: rem;
+  left: 4%;
 }
 
 .slider-wrapper {
@@ -81,8 +81,8 @@
 
 .next {
   position: relative;
-  left: 80.875rem; /* (1294px / 16) = 80.875rem */
-  bottom: 15.5cm;
+  left: 98%; 
+  margin-top: 5%;
 }
 
 .round1 {
@@ -153,7 +153,7 @@ span {
 /* prev */
 .prev {
   position: absolute;
-  right: 1290px;
+  left: -2%;
   bottom: 15.5cm;
 }
 .round2 {
@@ -229,7 +229,7 @@ span {
   width: 100%;
   left: -0.01vw;
   position: absolute;
-  top: 113%;
+  top: 115%;
 }
 .catgory1 {
   width: 100vw;
@@ -292,9 +292,9 @@ hr {
   background-color: #fff;
   display: block;
   position: relative;
-  top: -26.5rem;
+  top: -22rem;
   left: -0.4rem;
-  padding-bottom: 2%;
+  padding-bottom: 5%;
 }
 .oproducts hr {
   top: 2.875rem;
@@ -315,7 +315,7 @@ hr {
   border: none;
   box-shadow: 0 0 12px rgba(15, 61, 145, 0.12);
   border-radius: 12px;
-  margin-left: 1rem;
+  margin-left: 15%;
   
 }
 .oproducts .row {
@@ -327,7 +327,8 @@ hr {
   height:100%;
 }
 .oproducts .product ul {
-  display: flex;
+  display: flex; 
+
 
 }
 
@@ -380,6 +381,7 @@ hr {
   font-weight: 700;
   line-height: normal;
   margin-bottom: 15%;
+  overflow: hidden;
 }
 
 /* chuc nang */
@@ -424,7 +426,7 @@ hr {
 /* news */
 
 .news {
-  width: 100vw;
+  max-width: 100vw;
   height: 62.81rem;
   background-color: #fff;
   position: relative;
@@ -450,14 +452,14 @@ hr {
   height: 0.3125rem;
   text-align: center;
   position: relative;
-  left: -0.6rem;
+  left: 5%;
   top: 1rem;
 }
 .news ul {
   display: flex;
   position: relative;
-  top: 1rem;
-  left: 0.7rem;
+  top: 2rem;
+  left: 4%;
 }
 .news ul li {
   margin-right: 3rem;
@@ -483,7 +485,7 @@ hr {
 .news table {
   position: relative;
   left: 3rem;
-  top: 2rem;
+  top: 5%;
 }
 .left-col img {
   width: 47.4375rem;
@@ -540,5 +542,31 @@ hr {
   margin: 0;
 }
 
+@media all and (max-width: 480px) {
 
+  .prev, .next{
+    display:none
+  }
+  @media screen and (max-width: 480px) {
+    .slider {
+      aspect-ratio: unset;
+      height: auto;
+    }
+  
+    .slider img {
+      height: auto;
+      width: 480px;
+      border-radius: 0; /* Adjust as needed */
+      object-fit: contain;
+    }
+  
+    .nav-slide {
+      top: auto;
+      bottom: 1rem; /* Adjust as needed */
+    }
+  }
+
+
+
+}
 
