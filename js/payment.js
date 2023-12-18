@@ -125,20 +125,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Hàm xử lý giảm giá
         const handleDiscount = (discountCode) => {
-            var discountCodeDefault = "choem10diemnhathay"
-
-            if (discountCode == discountCodeDefault) {
-                
-                finaltotal = 
-
-                    totalPriceCheckout.innerHTML = `<span>Tổng tiền (giảm ${discountPercentage}%): ${finalTotal.toLocaleString()} VNĐ</span>`;
-                } else {
-                    console.error('Giảm giá không hợp lệ');
-                }
+            const discountCodeDefault = "choem10diemnhathay";
+            const discountPercentage = 10;
+          
+            if (discountCode === discountCodeDefault) {
+              const finalTotal = calculateDiscountedTotal(discountPercentage);
+          
+              // Hiển thị tổng tiền sau khi giảm giá
+              totalPriceCheckout.innerHTML = `<span>Tổng tiền (giảm ${discountPercentage}%): ${finalTotal.toLocaleString()} VNĐ</span>`;
             } else {
-                console.error('Mã giảm giá không khớp hoặc không tồn tại');
+              console.error('Mã giảm giá không hợp lệ');
             }
-        };
+          };
 
         const calculateDiscountedTotal = (discountPercentage) => {
             let sum = calculateSum(); 
