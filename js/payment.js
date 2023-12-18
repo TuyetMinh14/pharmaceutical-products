@@ -19,9 +19,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Đưa biến cart ra khỏi hàm để nó có thể được sử dụng ở các hàm khác
         // let cart = [];
+        const user = JSON.parse(localStorage.getItem('dangnhap'))|| []
+        const a = user.usernames + 1 ||[]    
 
         const displayCartItems = () => {
-            cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart = JSON.parse(localStorage.getItem(a)) || [];
             listCartHTML.innerHTML = '';
             paymentContainer.innerHTML = '';
             let totalQuantity = 0;
@@ -118,21 +120,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
         applyDiscountBtn.addEventListener('click', () => {
             let discountCode = discountInput.value;
-
-            localStorage.setItem('discountCode', discountCode);
-
             handleDiscount(discountCode);
         });
 
         // Hàm xử lý giảm giá
         const handleDiscount = (discountCode) => {
-            let storedDiscountCode = localStorage.getItem('discountCode');
+            var discountCodeDefault = "choem10diemnhathay"
 
-            if (storedDiscountCode && storedDiscountCode === discountCode) {
-                let discountPercentage = parseFloat(discountCode);
-
-                if (!isNaN(discountPercentage) && discountPercentage >= 0 && discountPercentage <= 100) {
-                    let finalTotal = calculateDiscountedTotal(discountPercentage);
+            if (discountCode == discountCodeDefault) {
+                
+                finaltotal = 
 
                     totalPriceCheckout.innerHTML = `<span>Tổng tiền (giảm ${discountPercentage}%): ${finalTotal.toLocaleString()} VNĐ</span>`;
                 } else {
@@ -167,11 +164,17 @@ document.addEventListener("DOMContentLoaded", function () {
             const quan = document.getElementById('quan').value;
             const soduong = document.getElementById('soduong').value;
             const selectedPaymentMethod = document.querySelector('input[name="payment"]:checked');
-
+            const phoneRegex = /^(0|84)([0-9]{9,10})$/;
+            const isValidPhone = phoneRegex.test(sdt);
             console.log(thanhpho);
             if (ten === "" || sdt === "" || thanhpho === "" || quan === "" || soduong === "") {
                 alert('Bạn chưa điền đầy đủ thông tin đặt hàng!');
-            }  else {
+                return;
+            }  
+            if(!isValidPhone){
+
+            }
+            else {
                 if (selectedPaymentMethod) {
                     const paymentMethod = selectedPaymentMethod.value;
     

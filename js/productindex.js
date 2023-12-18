@@ -1022,7 +1022,16 @@ document.addEventListener("DOMContentLoaded", function () {
     displayProducts3(storedProductsData);
     addCartToHTML();
 
-    }});
+
+    const thanhToan = document.querySelector('.checkOut')
+
+thanhToan.addEventListener("click",function(){
+  window.location.href = "payment.html";
+})
+
+    }
+  
+  });
 
 
 function dangxuat(){
@@ -1030,11 +1039,6 @@ function dangxuat(){
 } 
 
 
-// const thanhToan = document.querySelector('.checkOut')
-
-// thanhToan.addEventListener("click",function(){
-//   window.location.href = "payment.html";
-// })
 
 // const payment = document.querySelector('#accept-payment')
 // payment.addEventListener("click",function(){
