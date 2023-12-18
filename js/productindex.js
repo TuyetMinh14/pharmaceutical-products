@@ -1034,7 +1034,7 @@ thanhToan.addEventListener("click",function(){
   window.location.href = "payment.html";
 })
 
-const payment = document.querySelector('#accept-payment')
-payment.addEventListener("click",function(){
-  window.location.href = "index-login.html";
-})
+// const payment = document.querySelector('#accept-payment')
+// payment.addEventListener("click",function(){
+//   window.location.href = "index-login.html";
+// })

@@ -591,27 +591,27 @@ const productsData = [
     },
 ];
 
-searchInput.addEventListener("input", e => {
-  const value = e.target.value.toLowerCase()
-  users.forEach(item => {
-    const isVisible =
-  item.name.toLowerCase().includes(value) ||
-  item.price.toString().toLowerCase().includes(value)
-    item.element.classList.toggle("hide", !isVisible)
-  })
-})
+// searchInput.addEventListener("input", e => {
+//   const value = e.target.value.toLowerCase()
+//   users.forEach(item => {
+//     const isVisible =
+//   item.name.toLowerCase().includes(value) ||
+//   item.price.toString().toLowerCase().includes(value)
+//     item.element.classList.toggle("hide", !isVisible)
+//   })
+// })
 
-const data = productsData
-  .then(res => res.json())
-  .then(data => {
-    users = data.map(user => {
-      const card = userCardTemplate.content.cloneNode(true).children[0]
-      const productName = card.querySelector("[data-product-name]")
-const productPrice = card.querySelector("[data-product-price]")
-productName.textContent = user.name
-productPrice.textContent = user.price
+// const data = productsData
+//   .then(res => res.json())
+//   .then(data => {
+//     users = data.map(user => {
+//       const card = userCardTemplate.content.cloneNode(true).children[0]
+//       const productName = card.querySelector("[data-product-name]")
+// const productPrice = card.querySelector("[data-product-price]")
+// productName.textContent = user.name
+// productPrice.textContent = user.price
 
-      userCardContainer.append(card)
-      return { name: user.name, email: user.price, element: card }
-    })
-  })
+//       userCardContainer.append(card)
+//       return { name: user.name, email: user.price, element: card }
+//     })
+//   })

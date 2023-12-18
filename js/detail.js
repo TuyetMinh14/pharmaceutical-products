@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const totalQuantityCheckout = document.querySelector('#total-quantity');
         const totalPriceCheckout = document.querySelector('#total-price');
         const discountInput = document.getElementById('sale');
-        const applyDiscountBtn = document.getElementById('apply-discount-btn');
+        const applyDiscountBtn = document.getElementById('apply-discount-btn') || [];
         const paySuccessful = document.getElementById('pay-successful');
         const paySuccessfulOnline = document.getElementById('pay-successful-online');
         const checkOutBtn = document.getElementById('button-checkout');
@@ -116,32 +116,32 @@ document.addEventListener("DOMContentLoaded", function () {
             displayCartItems();
         };
 
-        applyDiscountBtn.addEventListener('click', () => {
-            let discountCode = discountInput.value;
+        // applyDiscountBtn.addEventListener('click', () => {
+        //     let discountCode = discountInput.value;
 
-            localStorage.setItem('discountCode', discountCode);
+        //     localStorage.setItem('discountCode', discountCode);
 
-            handleDiscount(discountCode);
-        });
+        //     handleDiscount(discountCode);
+        // });
 
         // Hàm xử lý giảm giá
-        const handleDiscount = (discountCode) => {
-            let storedDiscountCode = localStorage.getItem('discountCode');
+        // const handleDiscount = (discountCode) => {
+        //     let storedDiscountCode = localStorage.getItem('discountCode');
 
-            if (storedDiscountCode && storedDiscountCode === discountCode) {
-                let discountPercentage = parseFloat(discountCode);
+        //     if (storedDiscountCode && storedDiscountCode === discountCode) {
+        //         let discountPercentage = parseFloat(discountCode);
 
-                if (!isNaN(discountPercentage) && discountPercentage >= 0 && discountPercentage <= 100) {
-                    let finalTotal = calculateDiscountedTotal(discountPercentage);
+        //         if (!isNaN(discountPercentage) && discountPercentage >= 0 && discountPercentage <= 100) {
+        //             let finalTotal = calculateDiscountedTotal(discountPercentage);
 
-                    totalPriceCheckout.innerHTML = `<span>Tổng tiền (giảm ${discountPercentage}%): ${finalTotal.toLocaleString()} VNĐ</span>`;
-                } else {
-                    console.error('Giảm giá không hợp lệ');
-                }
-            } else {
-                console.error('Mã giảm giá không khớp hoặc không tồn tại');
-            }
-        };
+        //             totalPriceCheckout.innerHTML = `<span>Tổng tiền (giảm ${discountPercentage}%): ${finalTotal.toLocaleString()} VNĐ</span>`;
+        //         } else {
+        //             console.error('Giảm giá không hợp lệ');
+        //         }
+        //     } else {
+        //         console.error('Mã giảm giá không khớp hoặc không tồn tại');
+        //     }
+        // };
 
         const calculateDiscountedTotal = (discountPercentage) => {
             let sum = calculateSum(); // Đây là hàm bạn cần cung cấp để tính tổng giá trị giỏ hàng
