@@ -13,7 +13,7 @@
 footer{
     display:block;
     position: relative;
-    top:-35rem;
+    top:-35vw;
     left:-0.3rem;
     width: 100vw;
     max-height: fit-content;
@@ -101,3 +101,5 @@ margin-bottom: 0;
     font-weight: 700;
     font-family: Inter;
 }
+
+
