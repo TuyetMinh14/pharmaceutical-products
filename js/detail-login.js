@@ -117,11 +117,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 return productDiv;
             }
              // CART
+             const user = JSON.parse(localStorage.getItem('dangnhap'))|| []
+            const a = user.usernames + 1 ||[]
              let listCartHTML = document.querySelector('.listCart');
              let iconCartSpan = document.querySelector('#icon-cart span') || document.querySelector('#cart-item-count');
              let body = document.querySelector('body');
              let cartTotalSpan = document.querySelector('#total')
-             let cart = JSON.parse(localStorage.getItem('cart')) || [];
+             let cart = JSON.parse(localStorage.getItem(a)) || [];
+
+
+
             const addToCart = (product_id) => {
                 let positionThisProductInCart = cart.findIndex((value) => value.product_id == product_id);
                 
@@ -143,7 +148,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 addCartToMemory();
             };
             const addCartToMemory = () => {
-                localStorage.setItem('cart', JSON.stringify(cart));
+                localStorage.setItem(a, JSON.stringify(cart));
             };
             const addCartToHTML = () => {
                 listCartHTML.innerHTML = '';
@@ -182,8 +187,16 @@ document.addEventListener("DOMContentLoaded", function () {
             
                     cartTotalSpan.innerHTML = `<span> Tổng tiền: ${sum.toLocaleString()} VNĐ </span>`;
                 } 
+                else{
+                    iconCartSpan.innerText = 0;
+                    totalQuantity=0;
+                    cartTotalSpan.innerHTML ="Gio hang trong"
+                }
             };
             
+
+
+
             listCartHTML.addEventListener('click', (event) => {
                 let positionClick = event.target;
                 if (positionClick.classList.contains('minus') || positionClick.classList.contains('plus')) {
@@ -219,6 +232,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 addCartToHTML();
                 addCartToMemory();
             };
+
+
+
             function displaySubProducts(category, productId) {
                 const subProducts = productsData.filter(product => product.category === category && product.id !== productId);
 

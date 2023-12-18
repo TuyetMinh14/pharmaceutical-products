@@ -117,10 +117,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 return productDiv;
             }
              // CART
+             const user = JSON.parse(localStorage.getItem('dangnhap'))|| []
+            const a = user.usernames + 1 ||[]
              let listCartHTML = document.querySelector('.listCart');
              let iconCartSpan = document.querySelector('#icon-cart span');
              let cartTotalSpan = document.querySelector('#total')
-             let cart = JSON.parse(localStorage.getItem('cart')) || [];
+             let cart = JSON.parse(localStorage.getItem(a)) || [];
             const addToCart = (product_id) => {
                 let positionThisProductInCart = cart.findIndex((value) => value.product_id == product_id);
                 

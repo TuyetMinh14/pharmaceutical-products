@@ -740,9 +740,17 @@ document.addEventListener("DOMContentLoaded", function () {
     let body = document.querySelector("body");
     let cartTotalSpan = document.querySelector("#total");
 
+    iconCart.addEventListener("click", () => {
+      body.classList.toggle("showCart");
+    });
+  
+    closeCart.addEventListener("click", () => {
+      body.classList.toggle("showCart");
+    });
 
 
 
+    if (window.location.pathname.includes("index-login.html")){
     listCartHTML.addEventListener("click", (event) => {
       let positionClick = event.target;
       if (
@@ -760,13 +768,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-    iconCart.addEventListener("click", () => {
-      body.classList.toggle("showCart");
-    });
-  
-    closeCart.addEventListener("click", () => {
-      body.classList.toggle("showCart");
-    });
 
 
     const addToCart = (product_id) => {
@@ -842,6 +843,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
         cartTotalSpan.innerHTML = `<span>Tổng tiền: ${sum.toLocaleString()} VNĐ</span>`;
       } else {
+        iconCartSpan.innerText = 0;
         cartTotalSpan.innerText = "Giỏ hàng trống";
       }
     };
@@ -1009,7 +1011,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
     slicedProducts.forEach((product) => {
       
-      const productElement = createProductElement(product);
+      const productElement = createProductElement(product)||[];
       productContainer3.appendChild(productElement);
     });
   }  
@@ -1020,7 +1022,7 @@ document.addEventListener("DOMContentLoaded", function () {
     displayProducts3(storedProductsData);
     addCartToHTML();
 
-});
+    }});
 
 
 function dangxuat(){
@@ -1028,11 +1030,11 @@ function dangxuat(){
 } 
 
 
-const thanhToan = document.querySelector('.checkOut')
+// const thanhToan = document.querySelector('.checkOut')
 
-thanhToan.addEventListener("click",function(){
-  window.location.href = "payment.html";
-})
+// thanhToan.addEventListener("click",function(){
+//   window.location.href = "payment.html";
+// })
 
 // const payment = document.querySelector('#accept-payment')
 // payment.addEventListener("click",function(){
