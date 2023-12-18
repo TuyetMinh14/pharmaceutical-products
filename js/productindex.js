@@ -740,9 +740,6 @@ document.addEventListener("DOMContentLoaded", function () {
     let body = document.querySelector("body");
     let cartTotalSpan = document.querySelector("#total");
 
-
-
-
     listCartHTML.addEventListener("click", (event) => {
       let positionClick = event.target;
       if (
@@ -794,7 +791,6 @@ document.addEventListener("DOMContentLoaded", function () {
       addCartToMemory();
     };
     
-    
 
     const addCartToMemory = () => {
       localStorage.setItem(a, JSON.stringify(cart));
@@ -821,44 +817,31 @@ document.addEventListener("DOMContentLoaded", function () {
   
           listCartHTML.appendChild(newItem);
           newItem.innerHTML = `
-                      <div class="image">
-                          <img src="${info.imgSrc}" >
-                      </div>
-                      <div class="name">
-                          ${info.name}
-                      </div>
-                      <div class="totalPrice">${(
-                        info.price * item.quantity
-                      ).toLocaleString()}</div>
-                      <div class="quantity">
-                          <span class="minus"><</span>
-                          <span>${item.quantity}</span>
-                          <span class="plus">></span>
-                      </div>
-                  `;
+            <div class="image">
+                <img src="${info.imgSrc}" >
+            </div>
+            <div class="name">
+                ${info.name}
+            </div>
+            <div class="totalPrice">${(
+              info.price * item.quantity
+            ).toLocaleString()}</div>
+            <div class="quantity">
+                <span class="minus"><</span>
+                <span>${item.quantity}</span>
+                <span class="plus">></span>
+            </div>
+        `;
         });
   
         iconCartSpan.innerText = totalQuantity;
   
         cartTotalSpan.innerHTML = `<span>Tổng tiền: ${sum.toLocaleString()} VNĐ</span>`;
       } else {
+        iconCartSpan.innerText = 0;
         cartTotalSpan.innerText = "Giỏ hàng trống";
       }
     };
-
-
-    
-
-
-
-
-
-
-    
-
-
-
-
 
     function createProductElement(product) {
       const productDiv = document.createElement("li");
@@ -916,8 +899,6 @@ document.addEventListener("DOMContentLoaded", function () {
       return productDiv;
   }
   
-
-
   const changeQuantityCart = (product_id, type) => {
     let positionItemInCart = cart.findIndex(
       (value) => value.product_id == product_id
@@ -943,13 +924,6 @@ document.addEventListener("DOMContentLoaded", function () {
     addCartToHTML();
     addCartToMemory();
   };
-
-
-
-
-
-
-
 
 
   function displayProducts(products) {

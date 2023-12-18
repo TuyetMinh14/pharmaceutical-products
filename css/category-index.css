@@ -547,29 +547,28 @@ body.showCart .main-container, body.showCart .header-container{
     border: 2px solid gray;
 }
 .cartTab .btn{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    display: flex;
+    justify-content: center;
 }
 .cartTab button{
     background-color: #99B9E1;
     border: none;
-    font-size: 18px;
+    padding: 0 20px;
+    font-size: 22px;
     font-family: Poppins;
     font-weight: 600;
     cursor: pointer;
     border-radius:  30px;
+    transition: all .6s ease;
 }
 .cartTab .close, .cartTab .sale{
     background-color: #eee;
 }
 
-.cartTab .checkOut {
-
+.cartTab .checkOut-btn:hover {
+    transform: scale(1.2);
 }
-.cartTab .sale {
 
-}
 .listCart {
     padding: 10px;
     background-color: #eee;
