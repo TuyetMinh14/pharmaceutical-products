@@ -607,9 +607,9 @@ const data = productsData
     users = data.map(user => {
       const card = userCardTemplate.content.cloneNode(true).children[0]
       const productName = card.querySelector("[data-product-name]")
-const productPrice = card.querySelector("[data-product-price]")
-productName.textContent = user.name
-productPrice.textContent = user.price
+        const productPrice = card.querySelector("[data-product-price]")
+        productName.textContent = user.name
+        productPrice.textContent = user.price
 
       userCardContainer.append(card)
       return { name: user.name, email: user.price, element: card }

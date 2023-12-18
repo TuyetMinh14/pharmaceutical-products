@@ -655,8 +655,9 @@ header{
 body.showCart .cartTab{
     right: 0;
 }
-body.showCart .main-container, body.showCart .header-container{
-    transform: translateX(-250px);
+body.showCart .main-container, body.showCart .banner-header,
+body.showCart .main-container, body.showCart .logo-content{
+    transform: translateX(-150px);
 }
 
 .cartTab h1{
