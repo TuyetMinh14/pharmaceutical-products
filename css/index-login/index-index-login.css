@@ -233,7 +233,7 @@ span {
 }
 .catgory1 {
   width: 100vw;
-  height: 30vw;
+  height: 40vw;
   background: #d99bbd;
 }
 
@@ -292,9 +292,9 @@ hr {
   background-color: #fff;
   display: block;
   position: relative;
-  top: -22rem;
+  top: -18rem;
   left: -0.4rem;
-  padding-bottom: 5%;
+  padding-bottom: 10%;
 }
 .oproducts hr {
   top: 2.875rem;
@@ -370,7 +370,7 @@ hr {
 }
 #addstock {
   width: 80%;
-  height:8%;
+  height:10%;
   border: none;
   border-radius: 30px;
   background-color: #6e80dc;
@@ -570,3 +570,63 @@ hr {
 
 }
 
+
+
+.product:hover{
+  border: solid #5F84CE;
+  cursor: pointer;
+}
+.danhmuc{
+  max-width: fit-content;
+  transition: all 0.3s ease-in-out;
+}
+.danhmuc a:hover img{
+  transform: scale(1.01,1.01);
+  margin-right: 0.25rem;
+  margin-left: 0.25rem;
+}
+
+.left-col:hover{
+  padding: 0.5rem;
+  box-shadow: 0.2rem 0.2rem 1rem #5F84CE;
+  border-radius: 0.8rem;
+  cursor: pointer;
+}
+
+.right-col ul:hover{
+  padding: 0.3rem;
+  box-shadow: 0.1rem 0.1rem 2rem #5F84CE;
+  border-radius: 0.8rem;
+  cursor: pointer;
+}
+.news-category:hover{
+  padding: 0.8rem 1.3rem;
+  border: solid #5F84CE;
+  cursor: pointer;
+}
+.seeall:hover{
+  padding: 0.3rem;
+}
+.decor-4:hover{
+  border: solid #5F84CE;
+}
+.log:hover,.sigin:hover,.dangxuat:hover{
+  text-decoration: underline solid #efa7cf 0.3rem;
+
+}
+
+.sanphamtuongtu .product:hover{
+  border: solid #5F84CE;
+  cursor: pointer;
+}
+
+#addstock{
+  
+  cursor: pointer;
+}
+
+.cproduct .row .product #addstock:hover, .product #addstock:hover{
+  transition: all 0.2s;
+  background-color: white;
+  border: 0.1rem solid #5F84CE;
+}

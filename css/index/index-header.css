@@ -289,9 +289,17 @@
   
   /* search box */
   .search-box {
+    max-width: 45vw;
+    margin: 1.5rem auto;
     position: absolute;
     left: 28%;
-    top: 25%; 
+    top: 15%; 
+  }
+  .search-box .row{
+    background: #fff;
+    border-radius: 1rem;
+    max-width:  100%;
+    position: relative;
   }
   
   .search-box input {
@@ -304,21 +312,49 @@
   }
   
   .search-box img {
-    width: 1.875rem; /* (30px / 16) = 1.875rem */
-    height: 1.875rem; /* (30px / 16) = 1.875rem */
-    padding: 0.625rem; /* (10px / 16) = 0.625rem */
+    width: 5%; /* (30px / 16) = 1.875rem */
+    height:auto;
+    /* padding: 0.625rem; (10px / 16) = 0.625rem */
     position: relative;
-    top: 1.25rem; /* (20px / 16) = 1.25rem */
-    left: -3.3125rem; /* (-53px / 16) = -3.3125rem */
+    top: -3rem;
+    left: 41vw; 
   }
   
+
+.search-box .row .autocomplete{
+  padding:5px 8px;
+  max-height:10vw;
+  overflow-y: auto;
+  background-color:aqua;
+  z-index:1000;
+  pointer-events: nome;
+}
+.search-box .row.active .autocomplete{
+  pointer-events: auto;
+
+}
+
+
+
+.autocomplete li{
+  top:-5vw;
+  position: relative;
+  padding:10px;
+  border-radius: 1rem;
+  overflow: -moz-scrollbars-none;
+}
+
+
+
   /* stock */
   .stock img {
     width: 15vw; /* (180px / 16) = 11.25rem */
     height: 6vw; /* (80px / 16) = 5rem */
-    margin-left: 55%; /* (780px / 16) = 48.75rem */
+    position: relative;
+    left: 55vw;
     
   }
+
   body .stock {
     position: relative;
   }
@@ -332,7 +368,7 @@
     position: absolute;
     justify-content: center;
     align-items: center;
-    right: 0;
+    left:68vw;
     top: -50%;
   }
 

@@ -179,6 +179,15 @@ btnLogin.addEventListener("click", (e) => {
 });
 
 
+const buyNowbtn = document.querySelector('.buyNow-btn')
+    buyNowbtn.addEventListener("click", function(){
+      popuplogin.style.display = "block";
+    })
 
 
+    
 
+    const cartBtn = document.querySelector('.cart-btn')
+    cartBtn.addEventListener("click", function(){
+      popuplogin.style.display = "block";
+    })

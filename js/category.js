@@ -21,6 +21,8 @@ Array.from(menuBtns).forEach(function (btn) {
 
 // CATEGORY
 document.addEventListener("DOMContentLoaded", function () {
+    const user = JSON.parse(localStorage.getItem('dangnhap'))|| []
+        const a = user.usernames + 1 ||[]    
     const productsData = [
         {
             id: 1,
@@ -630,14 +632,22 @@ document.addEventListener("DOMContentLoaded", function () {
         `
          ;
         
+         const popuplogin1 = document.querySelector(".login");
+         console.log(popuplogin1)
         const cartBtn = productDiv.querySelector(".cart-btn");
         productDiv.dataset.id = product.id;
         cartBtn.addEventListener('click', function (event) {
-            event.preventDefault();
-            let positionClick = event.target;
-            if(positionClick.classList.contains('cart-btn')){
-                let id_product = productDiv.dataset.id;
-                addToCart(id_product);
+            if (localStorage.getItem('dangnhap')) {
+                event.preventDefault();
+                let positionClick = event.target;
+                if (positionClick.classList.contains('cart-btn')) {
+                    let id_product = productDiv.dataset.id;
+                    addToCart(id_product);
+                }
+            } else {
+                popuplogin1.style.display = "block";
+                event.preventDefault();
+
             }
         });
         addCartToHTML();
@@ -650,9 +660,11 @@ document.addEventListener("DOMContentLoaded", function () {
     let body = document.querySelector('body');
     let closeCart = document.querySelector('.close');
     let cartTotalSpan = document.querySelector('#total');
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let cart = JSON.parse(localStorage.getItem(a)) || [];
     iconCart.addEventListener('click', () => {
+        if (localStorage.getItem('dangnhap')) {
         body.classList.toggle('showCart');
+        return;}
     });
 
     closeCart.addEventListener('click', () => {
@@ -680,7 +692,7 @@ document.addEventListener("DOMContentLoaded", function () {
         addCartToMemory();
     };
     const addCartToMemory = () => {
-        localStorage.setItem('cart', JSON.stringify(cart));
+        localStorage.setItem(a, JSON.stringify(cart));
     };
 
 

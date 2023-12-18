@@ -253,3 +253,18 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Lấy tất cả các phần tử img có class là "sub"
+    const subImages = document.querySelectorAll("img.sub");
+
+    // Lặp qua từng phần tử img
+    subImages.forEach((img) => {
+        // Kiểm tra xem ảnh có load được không
+        img.addEventListener("error", function () {
+            // Nếu không tải được, đặt thuộc tính display thành "none"
+            img.style.display = "none";
+        });
+    });
+});
