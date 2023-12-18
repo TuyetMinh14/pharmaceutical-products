@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
             imgSrc: "https://data-service.pharmacity.io/pmc-upload-media/production/pmc-ecm-core/products/P17315_1_l.webp",
             alt: "post",
             category: "Thuốc không kê đơn",
-            categoryName: "Dược phẩm",
+            categoryName: "Dược Phẩm",
             name: "Acetylcystein 200 Imexpharm (10 vỉ x 10 viên)",
             price: 147000,
             info: "Hoạt chất: Acetylcysteine. Công dụng: Điều trị các bệnh lý đường hô hấp có đờm nhầy quánh như viêm phế quản cấp và mạn. Đối tượng sử dụng: Người lớn/ trẻ em trên 2 tuổi. Hình thức: Viên nang cứng. Thương hiệu: Imexpharm. Nơi sản xuất: Việt Nam. *Thuốc chỉ dùng theo đơn của bác sĩ",
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
             imgSrc: "https://data-service.pharmacity.io/pmc-upload-media/production/pmc-ecm-core/products/P18107_1_l.webp",
             alt: "post",
             category: "Thuốc không kê đơn",
-            categoryName: "Dược phẩm",
+            categoryName: "Dược Phẩm",
             name: "Agiparofen 525mg (Hộp 5 vỉ x 10 viên)",
             price: 50000,
             info: "Hoạt chất: Acetaminophen 325mg, Ibuprofen 200mg. Công dụng: Giảm đau từ nhẹ đến vừa các chứng đau liên quan đến đau đầu, đau lưng, đau bụng kinh... Đối tượng sử dụng: Trên 12 tuổi. Hình thức: Viên nén. Thương hiệu: Agimexpharm. Nơi sản xuất: Chi Nhánh Công Ty CP Dược Phẩm Agimexpharm - Nhà Máy Sản Xuất Dược Phẩm Agimexpharm (Việt Nam)",
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
             imgSrc: "https://data-service.pharmacity.io/pmc-upload-media/production/pmc-ecm-core/products/P03195_1_l.webp",
             alt: "post",
             category: "Thuốc kê đơn",
-            categoryName: "Dược phẩm",
+            categoryName: "Dược Phẩm",
             name: "Acnotin 20 (Hộp 3 vỉ x 10 viên)",
             price: 100000,
             info: "Lưu ý: Sản phẩm này chỉ bán khi có chỉ định của bác sĩ, mọi thông tin trên Website, App chỉ mang tính chất tham khảo. Vui lòng xác nhận bạn là dược sĩ, bác sĩ, nhân viên y tế có nhu cầu tìm hiểu về sản phẩm này. Hoạt tính: Drotaverin HCI 40mg. Công dụng: Điều trị mụn trứng cá toàn thân, mụn nặng... Hình thức: Viên nang mềm. Thương hiệu: MEGA (Thái Lan). *Thuốc chỉ dùng theo đơn của bác sĩ.",
@@ -607,9 +607,6 @@ document.addEventListener("DOMContentLoaded", function () {
             // addDescription: "- Vết cắt. - Trầy xước. - Côn trùng cắn. - Phẫu thuật. Đối tượng sử dụng. An toàn và dịu nhẹ cho trẻ từ 3 tháng tuổi trở lên. Cách sử dụng. Điều trị sẹo với 3 bước đơn giản. Sử dụng dễ dàng: Lấy gel với lượng to bằng hạt đậu vào giữa vết sẹo và nhẹ nhàng xoa mỏng lan rộng ra ngoài cho toàn vùng sẹo. 2 lần/ngày: Nên thoa 2 lần vào sáng – tối để làn da được bảo vệ suốt 24h. 2 tháng dùng đều đặn: Kiên trì để đạt hiệu quả làm phẳng, mềm và mờ sẹo. Tác dụng của sản phẩm sẽ tùy thuộc vào cơ địa của mỗi người. Lưu ý. - Bạn chỉ cần một lượng nhỏ bằng hạt đậu Dermatix® Ultra Kids cho mỗi lần sử dụng. Việc thoa nhiều sẽ gây lãng phí và cần thời gian nhiều hơn để gel khô. Không thoa lên vết thương hở hoặc còn chảy dịch. Tác dụng của thuốc sẽ tùy thuộc vào cấu trúc cơ địa của mỗi người. Bảo quản: Dưới 25 độ và tránh xa nguồn nhiệt. Giữ xa tầm tay trẻ em. Quy cách đóng gói: Tuýp 5g. Thương hiệu: Menarini (Ý). Nhà sản xuất: Menarini. Nơi sản xuất: Singapore."
         },
     ];
-
-    const user = JSON.parse(localStorage.getItem('dangnhap'))|| []
-    const a = user.usernames + 1 ||[]
     localStorage.setItem('productsData', JSON.stringify(productsData));
 
     const productContainer = document.getElementById("posts-main-container");
@@ -622,15 +619,16 @@ document.addEventListener("DOMContentLoaded", function () {
         productDiv.href = 'detail.html?id=' + product.id;
         productDiv.classList.add("product-container");
         productDiv.innerHTML = `
-            <div class="post-img">
-                <img src="${product.imgSrc}" alt="${product.alt}">
-            </div>
-            <div class="post-content">
-                <h3>${product.name}</h3>
-                <p>${product.price.toLocaleString()} VNĐ</p>
-                <button type="button" class="cart-btn">Thêm vào giỏ hàng</button>
-            </div>
-        `;
+        <div class="post-img">
+            <img src="${product.imgSrc}" alt="${product.alt}">
+        </div>
+        <div class="post-content">
+            <h3>${product.name}</h3>
+            <p>${product.price.toLocaleString()} VNĐ</p>
+            <button type="button" class="cart-btn">Thêm vào giỏ hàng</button>
+        </div>
+        `
+         ;
         
         const cartBtn = productDiv.querySelector(".cart-btn");
         productDiv.dataset.id = product.id;
@@ -652,7 +650,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let body = document.querySelector('body');
     let closeCart = document.querySelector('.close');
     let cartTotalSpan = document.querySelector('#total');
-    let cart = JSON.parse(localStorage.getItem(a)) || [];
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
     iconCart.addEventListener('click', () => {
         body.classList.toggle('showCart');
     });
@@ -682,7 +680,7 @@ document.addEventListener("DOMContentLoaded", function () {
         addCartToMemory();
     };
     const addCartToMemory = () => {
-        localStorage.setItem(a, JSON.stringify(cart));
+        localStorage.setItem('cart', JSON.stringify(cart));
     };
 
 
@@ -767,11 +765,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const itemsPerPage = 6;
     let currentPage = 1;
     let currentCategory = '';
+    let currentSortOrder = ''; 
 
     function displayProductsByCategory(categoryId) {
         currentCategory = categoryId;
-        currentPage = 1; 
-    
+        currentPage = 1;
         displayProductsOnPage(currentPage);
         generatePagination();
     }
@@ -779,8 +777,9 @@ document.addEventListener("DOMContentLoaded", function () {
     function displayProductsOnPage(pageNumber) {
         const startIndex = (pageNumber - 1) * itemsPerPage;
         const endIndex = startIndex + itemsPerPage;
-        const productsToDisplay = productsData.filter(product => {
-            return currentCategory === '' || product.category === currentCategory;
+        const sortedProducts = sortProducts(productsData, currentSortOrder);
+        const productsToDisplay = sortedProducts.filter(product => {
+            return currentCategory === '' || product.category === currentCategory || product.categoryName === currentCategory;
         }).slice(startIndex, endIndex);
         displayProducts(productsToDisplay);
     }
@@ -788,7 +787,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function displayProducts(products) {
         productContainer.innerHTML = '';
         products.forEach(product => {
-            const productElement = createProductElement(product);
+            productElement = createProductElement(product);
             productContainer.appendChild(productElement);
         });
     }
@@ -796,7 +795,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
     function generatePagination() {
         const totalItems = productsData.filter(product => {
-            return currentCategory === '' || product.category === currentCategory;
+            return currentCategory === '' || product.category === currentCategory || product.categoryName === currentCategory;
         }).length;
         const totalPages = Math.ceil(totalItems / itemsPerPage);
         const paginationContainer = document.getElementById('pagination');
@@ -812,7 +811,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 currentPage = i;
                 displayProductsOnPage(currentPage);
                 highlightCurrentPage();
-                setQueryParameters();
             });
 
             li.appendChild(a);
@@ -822,7 +820,6 @@ document.addEventListener("DOMContentLoaded", function () {
         highlightCurrentPage();
     }
 
-    // Hàm hiển thị active trên trang khi thay đổi trang
     function highlightCurrentPage() {
         const paginationLinks = document.querySelectorAll('.pagination a');
         paginationLinks.forEach(link => {
@@ -834,19 +831,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     menuButtons.forEach(button => {
-        button.addEventListener('click', function () {
-            displayProductsByCategory('');
-            const categoryId = this.id;
-            console.log(categoryId);
-            if (categoryId === 'all' || categoryId === '' || categoryId.startsWith('menu')) {
-                displayProductsByCategory('');
-            } else {
-                displayProductsByCategory(categoryId);
+        button.addEventListener('click', function (event) {
+            if (event.target) {
+                displayProductsByCategory(event.target.innerText.trim());
             }
         });
     });
 
-    // Hàm sự kiện hiển thị các sản phẩm theo danh mục
+    document.getElementById('all').addEventListener('click', function (event) {
+        if (event.target) {
+            displayProductsByCategory('');
+        }
+    });
+
     document.querySelectorAll('.list-items').forEach(list => {
         list.addEventListener('click', function (event) {
             if (event.target.tagName === 'LI') {
@@ -856,24 +853,30 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Hàm sắp xếp thứ tự các sản phẩn theo giá
     function sortProductsByPrice(order) {
-        const sortedProducts = [...productsData];
+        currentSortOrder = order; 
+        currentPage = 1;
+        displayProductsOnPage(currentPage);
+        generatePagination();
+    }
+
+    function sortProducts(products, order) {
+        const sortedProducts = [...products];
         sortedProducts.sort((a, b) => {
             return order === "Giảm dần" ? b.price - a.price : a.price - b.price;
         });
-        displayProducts(sortedProducts);
+        return sortedProducts;
     }
 
-    // Hàm sự kiện hiển thị sản phẩm khi chọn Giảm dần và Tăng dần
     sortSelect.addEventListener('change', function () {
         const selectedOption = this.value;
         if (selectedOption === "Sắp xếp") {
-            displayProducts(productsData);
+            currentSortOrder = ''; 
         } else if (selectedOption === "Giảm dần" || selectedOption === "Tăng dần") {
             sortProductsByPrice(selectedOption);
         }
     });
+
     if (!currentCategory && currentPage === 1) {
         displayProductsOnPage(currentPage);
         generatePagination();
@@ -884,11 +887,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
-
-const thanhToan = document.querySelector('.checkOut')
-
-thanhToan.addEventListener("click",function(){
-  window.location.href = "payment.html";
-})
 

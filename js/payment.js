@@ -15,15 +15,13 @@ document.addEventListener("DOMContentLoaded", function () {
         const checkOutBtn = document.getElementById('button-checkout');
         const acceptCheckOutBtn = document.getElementById('accept-payment');
         const acceptCheckOutBtnOnline = document.getElementById('accept-payment-online');
-        const user = JSON.parse(localStorage.getItem('dangnhap'))|| []
-        const a = user.usernames + 1 ||[]
 
 
         // Đưa biến cart ra khỏi hàm để nó có thể được sử dụng ở các hàm khác
         let cart = [];
 
         const displayCartItems = () => {
-            cart = JSON.parse(localStorage.getItem(a)) || [];
+            cart = JSON.parse(localStorage.getItem('cart')) || [];
             listCartHTML.innerHTML = '';
             paymentContainer.innerHTML = '';
             let totalQuantity = 0;
@@ -162,33 +160,42 @@ document.addEventListener("DOMContentLoaded", function () {
             }
             return sum;
         };
-
         checkOutBtn.addEventListener('click', () => {
+            const ten = document.getElementById('name').value;
+            const sdt = document.getElementById('phone').value;
+            const thanhpho = document.getElementById('thanhpho').value;
+            const quan = document.getElementById('quan').value;
+            const soduong = document.getElementById('soduong').value;
             const selectedPaymentMethod = document.querySelector('input[name="payment"]:checked');
 
-            if (selectedPaymentMethod) {
-                const paymentMethod = selectedPaymentMethod.value;
-
-                if (paymentMethod === 'online') {
-                    paySuccessfulOnline.classList.add('checkOut-online')
-                } else if (paymentMethod === 'offline') {
-                    paySuccessful.classList.add('checkOut');
+            console.log(thanhpho);
+            if (ten === "" || sdt === "" || thanhpho === "" || quan === "" || soduong === "") {
+                alert('Bạn chưa điền đầy đủ thông tin đặt hàng!');
+            }  else {
+                if (selectedPaymentMethod) {
+                    const paymentMethod = selectedPaymentMethod.value;
+    
+                    if (paymentMethod === 'online') {
+                        paySuccessfulOnline.classList.add('checkOut-online')
+                    } else if (paymentMethod === 'offline') {
+                        paySuccessful.classList.add('checkOut');
+                    }
+                    
+                } else {
+                    alert('Vui lòng chọn loại thanh toán');
                 }
-                
-            } else {
-                alert('Vui lòng chọn loại thanh toán');
             }
         });
         acceptCheckOutBtn.addEventListener('click', () => {
-            localStorage.removeItem(a);
+            localStorage.removeItem('cart');
             displayCartItems();
             paySuccessful.classList.remove('checkOut');
         });
-        acceptCheckOutBtnOnline.addEventListener('click', () => {
-            localStorage.removeItem(a);
-            displayCartItems();
+        acceptCheckOutBtnOnline.addEventListener('submit', () => {
             paySuccessfulOnline.classList.remove('checkOut-online');
-            paySuccessful.classList.add('checkOut');
+            localStorage.removeItem('cart');
+            displayCartItems();
+            alert('Bạn đã thanh toán thành công!')
         });
         displayCartItems();
     }

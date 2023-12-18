@@ -532,7 +532,7 @@ hr {
 }
 
 .pay-successful-online{
-	width: 400px;
+    width: 400px;
     background: #fff;
     border-radius: 6px;
     position: absolute;
@@ -541,8 +541,8 @@ hr {
     transform: translate(-50%,-50%) scale(0.1);
     padding: 0 30px 30px;
     color: #333;
-	border: 1px solid #ccc;
-	height: 60vh;
+    border: 1px solid #ccc;
+    height: 60vh;
     visibility: hidden;
 }
 .checkOut-online {
@@ -556,16 +556,16 @@ hr {
     margin: 0 15px;
 }
 .pay-successful-online a{
-	width: 100%;
-	padding: 15px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .pay-successful-online .card-details input{
     width: 90%;
 }
-.pay-successful-online .card-details button {
+.pay-successful-online .card-details input[type='submit'] {
     width: 100px;
     margin-top: 10px;
     margin-left: 30%;
