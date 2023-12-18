@@ -1,7 +1,15 @@
 @font-face {
-    font-family:'Monsterat' ;
-    src: url(../font/Montserrat/26023618743.ttf);
-  }
+    font-family:'Montserrat';
+    src: url(/font/Montserrat/26023618743.ttf);
+}
+@font-face {
+    font-family: "Lalezar";
+    src: url(/font/Lalezar/Lalezar-Regular.ttf);
+}
+@font-face {
+    font-family:'Inter';
+    src: url(/font/Inter/Inter-VariableFont_slnt\,wght.ttf);
+}
 footer{
     display:block;
     position: relative;
@@ -21,7 +29,7 @@ background: #6E80DC;
 }
 .km-email p{
     color: #FFF;
-font-family: Monsterat;
+font-family: "Montserrat";
 color: #FFF;
 font-size: 2.125rem;
 font-style: normal;
@@ -56,7 +64,7 @@ input:-ms-input-placeholder{
 /*  */
 .contact{
     background-color: #fff;
-height: 18rem;
+    height: 18rem;
     width: 100vw;
     position:relative;
     left:-0.2rem;
@@ -64,7 +72,7 @@ height: 18rem;
 .contact p{
     color: #000;
 text-align: center;
-font-family: Montserrat;
+font-family: "Montserrat";
 font-size: 25px;
 font-style: normal;
 font-weight: 900;
@@ -91,5 +99,5 @@ margin-bottom: 0;
     padding:50px;
     color:#000;
     font-weight: 700;
-    font-family:Inter;
+    font-family: Inter;
 }
