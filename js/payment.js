@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         // Đưa biến cart ra khỏi hàm để nó có thể được sử dụng ở các hàm khác
-        let cart = [];
+        // let cart = [];
 
         const displayCartItems = () => {
             cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -144,7 +144,7 @@ document.addEventListener("DOMContentLoaded", function () {
         };
 
         const calculateDiscountedTotal = (discountPercentage) => {
-            let sum = calculateSum(); // Đây là hàm bạn cần cung cấp để tính tổng giá trị giỏ hàng
+            let sum = calculateSum(); 
             let discountAmount = (discountPercentage / 100) * sum;
             return sum - discountAmount;
         };
