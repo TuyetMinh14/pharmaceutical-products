@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (storedProductsData) {
         const productsData = JSON.parse(storedProductsData);
         const listCartHTML = document.querySelector('.listCart');
-        const cartTotalSpan = document.querySelector('#total');
+        const cartTotalSpan = document.querySelector('#total')||[];
         const iconCartSpan = document.querySelector('#icon-cart span');
         const paymentContainer = document.querySelector('.cart-container');
         const totalQuantityCheckout = document.querySelector('#total-quantity');
@@ -74,9 +74,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     `;
                 });
 
-                iconCartSpan.innerText = totalQuantity;
+                // iconCartSpan.innerText = totalQuantity;
                 totalQuantityCheckout.innerHTML = totalQuantity;
-                cartTotalSpan.innerHTML = `<span> Tổng tiền: ${sum.toLocaleString() } VNĐ </span>`;
+                // cartTotalSpan.innerHTML = `<span> Tổng tiền: ${sum.toLocaleString() } VNĐ </span>`;
                 totalPriceCheckout.innerHTML = (sum + shipFee).toLocaleString() + ' VNĐ';
             } else {
                 iconCartSpan.innerText = 0;
@@ -120,11 +120,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         applyDiscountBtn.addEventListener('click', () => {
             let discountCode = discountInput.value;
-            handleDiscount(discountCode);
-        });
-
-        // Hàm xử lý giảm giá
-        const handleDiscount = (discountCode) => {
             const discountCodeDefault = "choem10diemnhathay";
             const discountPercentage = 10;
           
@@ -134,9 +129,11 @@ document.addEventListener("DOMContentLoaded", function () {
               // Hiển thị tổng tiền sau khi giảm giá
               totalPriceCheckout.innerHTML = `<span>Tổng tiền (giảm ${discountPercentage}%): ${finalTotal.toLocaleString()} VNĐ</span>`;
             } else {
-              console.error('Mã giảm giá không hợp lệ');
+              alert('Mã giảm giá không hợp lệ');
             }
-          };
+        });
+
+        
 
         const calculateDiscountedTotal = (discountPercentage) => {
             let sum = calculateSum(); 
@@ -188,15 +185,17 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
         acceptCheckOutBtn.addEventListener('click', () => {
-            localStorage.removeItem('cart');
+            localStorage.removeItem(a);
             displayCartItems();
             paySuccessful.classList.remove('checkOut');
+            window.location.href = "index-login.html";
         });
         acceptCheckOutBtnOnline.addEventListener('submit', () => {
             paySuccessfulOnline.classList.remove('checkOut-online');
-            localStorage.removeItem('cart');
+            localStorage.removeItem(a);
             displayCartItems();
             alert('Bạn đã thanh toán thành công!')
+            window.location.href = "index-login.html";
         });
         displayCartItems();
     }
