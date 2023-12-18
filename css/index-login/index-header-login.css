@@ -8,15 +8,15 @@
 }
 body {
   overflow-x: hidden;
-  width: 100%;
+  max-width: 100%;
   background-color: hsl(213, 55%, 74%);
   height: 0;
 }
 
 .banner-header {
   display: block;
-  width:100vw;
-  height: 8vw;
+  max-width:100vw;
+  max-height: 8vw;
   top: 0;
   background-image: url(/img/header/keo\ Background\ Removed.png);
   background-size: 6.6%;
