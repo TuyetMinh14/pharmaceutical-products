@@ -750,7 +750,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-    if (window.location.pathname.includes("index-login.html")){
+    if (window.location.pathname.includes("index-login.html" )|| window.location.pathname.includes("index.html")){
     listCartHTML.addEventListener("click", (event) => {
       let positionClick = event.target;
       if (
