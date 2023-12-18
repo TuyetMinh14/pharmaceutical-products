@@ -85,13 +85,18 @@ btnRegister.addEventListener("click", (e) => {
   
     // use key name to retrieve the corresponding value
     const value = localStorage.getItem(key);
-  
-    // console.log the iteration key and value
-    if(inputPhoneRegister.value == JSON.parse(value).phone)
-    {
-      alert('Số điện thoại đã được đăng ký')
-      return;
+    
+    try {
+      const parsedValue = JSON.parse(value);
+      if (inputPhoneRegister.value === parsedValue.phone) {
+        alert('Số điện thoại đã được đăng ký');
+        return;
+      }
+    } catch (error) {
+      // Handle the error, e.g., log it or show a different alert
+      console.error('Error parsing JSON:', error);
     }
+    
   
   }
 
@@ -103,8 +108,16 @@ btnRegister.addEventListener("click", (e) => {
     };
     let json = JSON.stringify(user);
     localStorage.setItem(inputUsernameRegister.value, json);
-    alert("Đăng Ký Thành Công");
-    window.location.href = "index-login.html";
+    if (window.location.pathname.includes("index.html")) {
+      window.location.href = "index-login.html";
+    } else if (window.location.pathname.includes("detail.html")) {
+      const urlParams = new URLSearchParams(window.location.search);
+      const productId = urlParams.get('id');
+      window.location.href = `detail-login.html?id=${productId}`;
+      localStorage.setItem('href',`detail.html?id=${productId}`);
+    } else {
+      window.location.href = "category-login.html";
+    }
     const logIn = {
       usernames: inputUsernameRegister.value,
     };
@@ -167,28 +180,5 @@ btnLogin.addEventListener("click", (e) => {
 
 
 
-
-// var dangxuatbutton = document.querySelector('.dangxuat');
-
-// dangxuatbutton.addEventListener("click", function () {
-//   window.localStorage.removeItem('dangnhap')
-//  });
-// function handleBeforeUnload() {
-//   localStorage.removeItem('dangnhap');
-// }
-
-// window.addEventListener('beforeunload', handleBeforeUnload);
-
-
-
-// document.addEventListener("keydown", function (event) {
-//   if (event.key === "Enter") {
-//     if (document.querySelector(".login")) {
-//       // Thực hiện sự kiện đăng nhập
-//       event.preventDefault(); // Ngăn chặn hành động mặc định của phím Enter (chẳng hạn nhấn Enter để submit form)
-//       btnLogin.click(); // Gọi sự kiện click của nút đăng nhập
-//     }
-//   }
-// });
 
 
