@@ -888,3 +888,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+const thanhToan = document.querySelector('.checkOut')
+
+thanhToan.addEventListener("click",function(){
+  window.location.href = "payment.html";
+})
+
+const thanhToan2 = document.querySelector('.checkOut')
+
+thanhToan2.addEventListener("click",function(){
+  window.location.href = "payment.html";
+})
+
