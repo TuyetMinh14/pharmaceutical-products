@@ -180,8 +180,8 @@
   }
   .close {
     position: absolute;
-    top: 3rem;
-    right: 2rem;
+    top: 2.5rem;
+    right: 1.5rem;
     cursor: pointer;
     font-size: 2rem;
   }

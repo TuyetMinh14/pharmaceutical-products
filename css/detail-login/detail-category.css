@@ -651,6 +651,7 @@ header{
     transition: .5s;
     border-radius: 25px;
     padding: 20px;
+    z-index: 1000;
 }
 body.showCart .cartTab{
     right: 0;
@@ -716,23 +717,30 @@ body.showCart .main-container, body.showCart .header-container{
 }
 
 .cartTab .btn{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    display: flex;
+    justify-content: center;
 }
 .cartTab button{
     background-color: #99B9E1;
     border: none;
-    font-size: 18px;
+    padding: 0 20px;
+    font-size: 22px;
     font-family: Poppins;
     font-weight: 600;
     cursor: pointer;
     border-radius:  30px;
-    transition: all .5s ease;
+    transition: all .6s ease;
 }
 .cartTab .close, .cartTab .sale{
     background-color: #eee;
 }
+.close {
+    position: absolute;
+    top: 2.5rem;
+    right: 1.5rem;
+    cursor: pointer;
+    font-size: 2rem;
+  }
 
 .cartTab .checkOut-btn:hover {
     transform: scale(1.1);

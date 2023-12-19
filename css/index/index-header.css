@@ -290,8 +290,8 @@
   /* search box */
   .search-box {
     position: absolute;
-    left: 28%;
-    top: 25%; 
+    left: 27%;
+    top: 30%; 
   }
   
   .search-box input {
@@ -304,8 +304,8 @@
   }
   
   .search-box img {
-    width: 1.875rem; /* (30px / 16) = 1.875rem */
-    height: 1.875rem; /* (30px / 16) = 1.875rem */
+    width: 25px; /* (30px / 16) = 1.875rem */
+    height: 25px; /* (30px / 16) = 1.875rem */
     padding: 0.625rem; /* (10px / 16) = 0.625rem */
     position: relative;
     top: 1.25rem; /* (20px / 16) = 1.25rem */

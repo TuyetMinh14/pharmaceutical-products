@@ -178,7 +178,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     } else if (paymentMethod === 'offline') {
                         paySuccessful.classList.add('checkOut');
                     }
-                    
                 } else {
                     alert('Vui lòng chọn loại thanh toán');
                 }

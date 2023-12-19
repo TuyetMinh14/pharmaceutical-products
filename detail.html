@@ -120,10 +120,9 @@
         <div class="btn">
             <button class="close">Đóng</button>
             <button class="checkOut-btn" ><a href="payment.html">Thanh toán</a></button>
-            <button class="sale">Nhập mã KM</button>
         </div>
     </div>
-    <footer class="footer" style="left:0">
+    <footer class="footer" style="position: inherit;">
         <div class="km-email">
           <p>ĐĂNG KÝ NHẬN KHUYẾN MÃI</p>
           <input type="text" placeholder="Nhập email hoặc số điện thoại" id = "email"/>
@@ -234,7 +233,7 @@
       </form>
 
 
-    <script src="js/detail.js"></script>
+    <script src="js/detail-login.js"></script>
     <!-- <script src="js/category.js"></script> -->
     <script src="./js/login.js"></script>
     <script src="./js/nhap-email.js"></script>
@@ -242,7 +241,6 @@
     <script>
       function noLog(){
         if (window.location.pathname.includes("detail.html")) {
-        // Lấy id từ URL
         const urlParams = new URLSearchParams(window.location.search);
         const productId = urlParams.get('id');
         localStorage.setItem('href',`detail.html?id=${productId}`);

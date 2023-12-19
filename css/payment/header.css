@@ -1,10 +1,14 @@
 @font-face {
+  font-family: "Monserrat";
+  src: url(/font/Montserrat/26023618743.ttf);
+}
+@font-face {
   font-family: "Lalezar";
-  src: url(../font/Lalezar/Lalezar-Regular.ttf);
+  src: url(/font/Lalezar/Lalezar-Regular.ttf);
 }
 @font-face {
   font-family: "Inter";
-  src: url(../font/Inter/Inter-VariableFont_slnt\wght.ttf);
+  src: url(/font/Inter/Inter-VariableFont_slnt\wght.ttf);
 }
 body {
   overflow-x: hidden;
@@ -35,7 +39,7 @@ body {
 .decor-1 {
   color: #fff;
   text-shadow: 0px 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
-  font-family: Lalezar;
+  font-family: "Lalezar";
   font-size: 3.5vw;
   font-style: normal;
   font-weight: 400;
@@ -50,7 +54,7 @@ body {
 }
 .decor-2 {
   color: #efa7cf;
-  font-family: Lalezar;
+  font-family: "Lalezar";
   font-size: 3.5vw;
   font-style: normal;
   font-weight: 400;
@@ -65,7 +69,7 @@ body {
 }
 .decor-3 {
   color: black;
-  font-family: Lalezar;
+  font-family: "Lalezar";
   font-size: 3.5vw;
   font-style: normal;
   font-weight: 400;
@@ -96,7 +100,7 @@ a {
 }
 .decor-4 a {
   color: #ff1095;
-  font-family: Inter;
+  font-family: "Inter";
   font-size: 2vw;
   font-style: normal;
   font-weight: 700;
@@ -116,6 +120,7 @@ a {
   margin-left:3vw;
   position: absolute;
   margin-top: 1vw;
+  font-family: "Monserrat";
 }
 .hotline img {
   width: fit-content;
@@ -126,7 +131,7 @@ a {
 }
 .hotline a {
   color: #000;
-  font-family: Inter;
+  font-family: "Inter";
   font-size: 0.75rem;
   font-style: normal;
   font-weight: 400;
@@ -144,7 +149,7 @@ a {
 .nav-menu {
   position: absolute;
   left: 26cm;
-  font-family: Inter;
+  font-family: "Inter";
   text-decoration: none;
   color: #fff;
   font-size: 1.5vw;
@@ -161,7 +166,7 @@ a {
   margin-top: 12%;
 }
 .nav-menu a {
-  font-family: Inter;
+  font-family: "Inter";
   text-decoration: none;
   color: #fff;
   font-size: 1vw;
@@ -263,7 +268,7 @@ a.en:before {
 .log{
   position: relative;
   top:1.5vw;
-left: 13.5vw; /* (16px / 200) * 200 = 12.5rem */
+  left: 13.5vw; /* (16px / 200) * 200 = 12.5rem */
   width: 10vw; /* (16px / 200) * 100 = 6.25rem */
 }
 
@@ -285,8 +290,8 @@ left: 13.5vw; /* (16px / 200) * 200 = 12.5rem */
 /* search box */
 .search-box {
   position: absolute;
-  left: 28%;
-  top: 20%; 
+  left: 27%;
+  top: 30%; 
 }
 
 .search-box input {
@@ -299,12 +304,12 @@ left: 13.5vw; /* (16px / 200) * 200 = 12.5rem */
 }
 
 .search-box img {
-  width: 1.875rem; /* (30px / 16) = 1.875rem */
-  height: 1.875rem; /* (30px / 16) = 1.875rem */
+  width: 45px; /* (30px / 16) = 1.875rem */
+  height: 45px; /* (30px / 16) = 1.875rem */
   padding: 0.625rem; /* (10px / 16) = 0.625rem */
   position: relative;
-  top: 1.25rem; /* (20px / 16) = 1.25rem */
-  left: -3.3125rem; /* (-53px / 16) = -3.3125rem */
+  top: 2px; /* (20px / 16) = 1.25rem */
+  left: -40px; /* (-53px / 16) = -3.3125rem */
 }
 
 /* stock */
@@ -330,3 +335,5 @@ body .stock {
   right: 0;
   top: -50%;
 }
+
+
