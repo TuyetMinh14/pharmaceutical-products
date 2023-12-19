@@ -349,19 +349,15 @@
   overflow: -moz-scrollbars-none;
   border: 0.1 solid black;
   color: #000;
-<<<<<<< HEAD
+  list-style: none;
+
 }
 .autocomplete li:hover {
   background-color: #fff;
 }
 .autocomplete::-webkit-scrollbar{
-    width: 0;
-=======
-  list-style: none;
-
->>>>>>> bd2c09cce28b40ee7626e33eb579d53185a49749
+  width: 0;
 }
-
 
 
   /* stock */
