@@ -26,10 +26,7 @@ $(document).ready(function(){
             }
         });
         console.log(searchField)
-        if(searchField ==="a" ){
-            $('.autocomplete').css('display', 'none');
-        }
-        // Update display based on whether any matching item is found
+        
         if (found) {
             $('.autocomplete').css('display', 'block');
         } else {
