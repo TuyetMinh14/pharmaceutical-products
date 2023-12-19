@@ -90,8 +90,15 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
             function createProductElement(product) {
+                
                 const productDiv = document.createElement("a");
                 productDiv.href = 'detail.html?id=' + product.id;
+                if (localStorage.getItem('dangnhap')) {
+                    productDiv.href = 'detail-login.html?id=' + product.id;
+                }
+                else{
+                    productDiv.href = 'detail.html?id=' + product.id;
+                }
                 productDiv.classList.add("product-container");
                 productDiv.innerHTML = `
                     <div class="post-img">
@@ -103,17 +110,30 @@ document.addEventListener("DOMContentLoaded", function () {
                         <button type="button" class="cart-btn">Thêm vào giỏ hàng</button>
                     </div>
                 `;
+                const popuplogin1 = document.querySelector(".login");
                 const cartBtn = productDiv.querySelector(".cart-btn");
                 productDiv.dataset.id = product.id;
                 cartBtn.addEventListener('click', function (event) {
+
+                    if( window.location.href.includes('login'))
+                    {
+                        
                     event.preventDefault();
+
                     let positionClick = event.target;
+
                     if(positionClick.classList.contains('cart-btn')){
                         let id_product = productDiv.dataset.id;
                         console.log(id_product);
                         addToCart(id_product);
                     }
-                });
+                }
+                else
+                {
+                    popuplogin1.style.display = "block";
+                    event.preventDefault();
+                }}
+                );
                 addCartToHTML();
                 return productDiv;
             }
