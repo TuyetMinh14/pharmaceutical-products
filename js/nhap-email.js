@@ -1,11 +1,23 @@
 function nhapemial(){
-    var email = document.querySelector("#email")
+    
+    var email = document.querySelector("#email").value
+   
     const phoneRegex = /^(0|84)([0-9]{9,10})$/;
     const isValidPhone = phoneRegex.test(email);
-    if(email.value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/) || !isValidPhone)
+    const emailRegex = /^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/;
+    const isValidEmail = emailRegex.test(email) 
+    console.log(isValidEmail)
+    console.log(isValidPhone)
+    if(isValidEmail || isValidPhone)
     {
-        alert("Email/ Số điện thoại không hợp lệ")
-        
+        alert('Đăng ký thành công');
+       
+    }
+    else
+    {
+        event.preventDefault();
+        alert("Email/ Số điện thoại không hợp lệ")  
+
     }
 
 }

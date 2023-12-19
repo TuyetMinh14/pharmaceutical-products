@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const productsData = JSON.parse(storedProductsData);
         const listCartHTML = document.querySelector('.listCart');
         const cartTotalSpan = document.querySelector('#total')||[];
-        const iconCartSpan = document.querySelector('#icon-cart span');
+        const iconCartSpan = document.querySelector('#icon-cart span') || document.querySelector('#cart-item-count')
         const paymentContainer = document.querySelector('.cart-container');
         const totalQuantityCheckout = document.querySelector('#total-quantity');
         const totalPriceCheckout = document.querySelector('#total-price');
@@ -167,7 +167,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 return;
             }  
             if(!isValidPhone){
-
+                event.preventDefault()
+                    alert('Số điện thoại sai định dạng')
             }
             else {
                 if (selectedPaymentMethod) {
