@@ -21,12 +21,15 @@ $(document).ready(function(){
                 {
                     var path = 'detail.html?id='+ value.id
                 }
-                $('.autocomplete').append('<a href="'+path+'"><li><img src="'+value.imgSrc+'" height="40" width="40" class="" />'+value.name+'</li></a>');
+                $('.autocomplete').append('<a href="'+path+'"><li><img style="display:none" src="'+value.imgSrc+'" height="40" width="40" class="" />'+value.name+'</li></a>');
                 found = true;
             }
         });
         console.log(searchField)
-        
+        if(searchField ===" " ){
+            $('.autocomplete').css('display', 'none');
+        }
+        // Update display based on whether any matching item is found
         if (found) {
             $('.autocomplete').css('display', 'block');
         } else {
