@@ -58,6 +58,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     mainSubImage.classList.add('active');
                 });
                 productName.textContent = product.name;
+                document.title = product.name;
+
                 productPrice.textContent = product.price.toLocaleString() + ' Đ';
 
                 const descriptionTab = document.getElementById("description-tab");
@@ -91,8 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             function createProductElement(product) {
                 
-                const newTitle = product.name
-                document.title = newTitle
+                
                 const productDiv = document.createElement("a");
                 if (localStorage.getItem('dangnhap')) {
                     productDiv.href = 'detail-login.html?id=' + product.id;

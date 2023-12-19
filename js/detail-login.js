@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 const productDescription = document.getElementById('description');
                 // const productaddDescription = document.getElementById('add-description');
 
-
+                 
                 if (product.info) {
                     const infoLines = product.info.split('. ');
                     let infoHTML = '';
@@ -58,6 +58,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     mainSubImage.classList.add('active');
                 });
                 productName.textContent = product.name;
+                // document
+                    document.title = product.name;
                 productPrice.textContent = product.price.toLocaleString() + ' Đ';
 
                 const descriptionTab = document.getElementById("description-tab");
@@ -94,14 +96,15 @@ document.addEventListener("DOMContentLoaded", function () {
                 window.location.href = 'payment-login.html' ;
             });
 
-            function createProductElement(product) {
-                
+            function createProductElement(product) {   
                 const productDiv = document.createElement("a");
                 if (localStorage.getItem('dangnhap')) {
                     productDiv.href = 'detail-login.html?id=' + product.id;
+ 
                 }
                 else{
                     productDiv.href = 'detail.html?id=' + product.id;
+
                 }
                 productDiv.classList.add("product-container");
                 productDiv.innerHTML = `
