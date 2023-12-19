@@ -86,7 +86,12 @@ document.addEventListener("DOMContentLoaded", function () {
             const addToCartButton = document.querySelector('.cart-btn');
             addToCartButton.addEventListener('click', function (event) {
                 event.preventDefault();
-                addToCart(product.id); // Truyền ID sản phẩm hoặc giá trị tương tự
+                addToCart(product.id);
+            });
+            const buyNowButton = document.getElementById('buyNow-btn');
+            buyNowButton.addEventListener('click', function () {
+                addToCart(product.id);
+                window.location.href = 'payment.html' ;
             });
 
             function createProductElement(product) {
