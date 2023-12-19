@@ -349,7 +349,12 @@ border: 0.1 solid black;
 color: #000;
 
 }
-
+.autocomplete li:hover {
+  background-color: #fff;
+}
+.autocomplete::-webkit-scrollbar{
+  width: 0;
+}
 
 
 /* stock */
