@@ -25,11 +25,8 @@ $(document).ready(function(){
                 found = true;
             }
         });
-        // console.log(searchField)
-        // if(searchField == ""){
-        //     $('.autocomplete').css('display', 'none');
-        // }
-        // Update display based on whether any matching item is found
+        console.log(searchField)
+        
         if (found) {
             $('.autocomplete').css('display', 'block');
         } else {

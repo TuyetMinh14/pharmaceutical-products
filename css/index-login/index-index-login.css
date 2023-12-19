@@ -231,6 +231,13 @@ span {
   position: absolute;
   top: 115%;
 }
+
+.rows hr{
+  background-color: #d9d9d9;
+  left: 0.1vw;
+  width: 100vw;
+}
+
 .catgory1 {
   width: 100vw;
   height: 40vw;
@@ -280,6 +287,7 @@ hr {
   background: #d9d9d9;
   position: absolute;
   top: -9rem;
+  left:0vw;
   display: block;
   border: none;
 }
@@ -292,12 +300,14 @@ hr {
   background-color: #fff;
   display: block;
   position: relative;
-  top: -18rem;
-  left: -0.4rem;
+  top: 75vw;
+  left: 0rem;
   padding-bottom: 10%;
 }
 .oproducts hr {
   top: 2.875rem;
+  width: 100vw;
+  background: #d9d9d9;
 }
 
 .oproducts .cat-title {
@@ -427,10 +437,10 @@ hr {
 
 .news {
   max-width: 100vw;
-  height: 62.81rem;
+  height: 58rem;
   background-color: #fff;
   position: relative;
-  top: -22.4rem;
+  top: 5rem;
   left: -0.4em;
 }
 
@@ -452,7 +462,7 @@ hr {
   height: 0.3125rem;
   text-align: center;
   position: relative;
-  left: 5%;
+
   top: 1rem;
 }
 .news ul {

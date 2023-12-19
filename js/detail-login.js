@@ -97,7 +97,6 @@ document.addEventListener("DOMContentLoaded", function () {
             function createProductElement(product) {
                 
                 const productDiv = document.createElement("a");
-                productDiv.href = 'detail.html?id=' + product.id;
                 if (localStorage.getItem('dangnhap')) {
                     productDiv.href = 'detail-login.html?id=' + product.id;
                 }
