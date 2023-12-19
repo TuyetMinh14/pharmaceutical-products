@@ -289,9 +289,18 @@ a.en:before {
 
 /* search box */
 .search-box {
+  max-width: 45vw;
+  margin: 1.5rem auto;
   position: absolute;
-  left: 27%;
-  top: 30%; 
+  left: 28%;
+  top: 25%; 
+}
+.search-box .row{
+  background: #fff;
+  border-radius: 1rem;
+  max-width:  100%;
+  position: relative;
+  z-index: 1000;
 }
 
 .search-box input {
@@ -304,13 +313,48 @@ a.en:before {
 }
 
 .search-box img {
-  width: 45px; /* (30px / 16) = 1.875rem */
-  height: 45px; /* (30px / 16) = 1.875rem */
-  padding: 0.625rem; /* (10px / 16) = 0.625rem */
+  width: 45px; 
+  height: 5px;
+  padding: 0.625rem; 
   position: relative;
-  top: 2px; /* (20px / 16) = 1.25rem */
-  left: -40px; /* (-53px / 16) = -3.3125rem */
+  top: -3rem;
+  left: 41vw; 
 }
+
+
+.search-box .row .autocomplete{
+padding:5px 8px;
+max-height:20vw;
+overflow-y: auto;
+z-index:1000;
+pointer-events: nome;
+color: #000;
+background-color: #efefef;
+display: none;
+border-radius: 1vw;
+}
+.search-box .row.active .autocomplete{
+pointer-events: auto;
+
+}
+
+
+
+.autocomplete li{
+top:-5vw;
+position: relative;
+padding:10px 0;
+border-radius: 1rem;
+overflow: -moz-scrollbars-none;
+border: 0.1 solid black;
+color: #000;
+
+}
+
+.autocomplete > li:hover{
+  background-color: #efefef;
+}
+
 
 /* stock */
 .stock img {

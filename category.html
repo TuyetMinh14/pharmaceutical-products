@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="./css/sp-hover-index.css">
         <link rel="stylesheet" href="./css/footer-sp.css">
         <link rel="stylesheet" href="./css/sign-log-cate.css">
+
         <style>
           .signup .dangky{
               top:1.6rem;
@@ -59,17 +60,20 @@
             <a href="index.html"><img src="./img/header/LOGO.png" alt="" srcset="" class="logo" id="logo-web"/></a>
             <div class="search-box">
               <div class="row">
-                <input type="text" />
-                <img src="./img/header/lookup Background Removed.png" alt="" />
+                <input type="text" placehoder="type to search..." id="search" />
+                <!-- <img src="./img/header/lookup Background Removed.png" alt="" /> -->
+                <div class="autocomplete">
+                 </div> 
               </div>
-            </div>
           </div>
-          <a href="#" class="stock" id="icon-cart">
-            <img src="./img/header/stock.png" alt="" srcset="" />
-            <!-- <span id="cart-item-count" style="display: none;">0</span> -->
-            <span id="cart-item-count" style="display: none;">0</span>
-            <span id="cart-item-count cart-item-count1">0</span>
-          </a>
+            <a href="#" class="stock" id="icon-cart">
+              <img src="./img/header/stock.png" alt="" srcset="" />
+              <!-- <span id="cart-item-count" style="display: none;">0</span> -->
+              <span id="cart-item-count" style="display: none;">0</span>
+              <span id="cart-item-count cart-item-count1">0</span>
+            </a>
+          </div>
+          
     <div class="background">
         <div class = "main-container">
             <div class="head-container">
@@ -291,6 +295,8 @@
         <script src = "js/category.js"></script>
         <script src="./js/nhap-email.js"></script>
         <script src="/js/search-bar.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
 
 
         
