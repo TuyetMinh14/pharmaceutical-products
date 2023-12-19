@@ -9,6 +9,12 @@ $(document).ready(function(){
         // Flag to check if any matching item is found
         var found = false;
 
+        // Ẩn .autocomplete nếu ô tìm kiếm trống
+        if (searchField === '') {
+            $('.autocomplete').css('display', 'none');
+            return; // Ngừng thực hiện thêm logic nếu ô tìm kiếm trống
+        }
+
         $.each(productsData, function(key, value){
             if (value.name.toLowerCase().search(expression) != -1 || value.category.toLowerCase().search(expression) != -1)
             {
@@ -25,10 +31,9 @@ $(document).ready(function(){
                 found = true;
             }
         });
-        console.log(searchField)
-        if(searchField ===" " ){
-            $('.autocomplete').css('display', 'none');
-        }
+
+        console.log(searchField);
+
         // Update display based on whether any matching item is found
         if (found) {
             $('.autocomplete').css('display', 'block');
@@ -46,5 +51,3 @@ $(document).ready(function(){
         $('.autocomplete').empty().css('display', 'none');
     });
 });
-
-                                     
