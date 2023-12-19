@@ -347,7 +347,7 @@ color: #000;
 }
 
 .autocomplete > li:hover{
-
+  background-color: #efefef;
 }
 
 /* stock */

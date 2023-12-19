@@ -1,26 +1,22 @@
 @font-face {
-  font-family: "Monserrat";
-  src: url(/font/Montserrat/26023618743.ttf);
-}
-@font-face {
   font-family: "Lalezar";
-  src: url(/font/Lalezar/Lalezar-Regular.ttf);
+  src: url(../font/Lalezar/Lalezar-Regular.ttf);
 }
 @font-face {
   font-family: "Inter";
-  src: url(/font/Inter/Inter-VariableFont_slnt\wght.ttf);
+  src: url(../font/Inter/Inter-VariableFont_slnt\wght.ttf);
 }
 body {
   overflow-x: hidden;
-  width: 100%;
+  max-width: 100%;
   background-color: hsl(213, 55%, 74%);
   height: 0;
 }
 
 .banner-header {
   display: block;
-  width:100vw;
-  height: 8vw;
+  max-width:100vw;
+  max-height: 8vw;
   top: 0;
   background-image: url(/img/header/keo\ Background\ Removed.png);
   background-size: 6.6%;
@@ -39,7 +35,7 @@ body {
 .decor-1 {
   color: #fff;
   text-shadow: 0px 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
-  font-family: "Lalezar";
+  font-family: Lalezar;
   font-size: 3.5vw;
   font-style: normal;
   font-weight: 400;
@@ -54,7 +50,7 @@ body {
 }
 .decor-2 {
   color: #efa7cf;
-  font-family: "Lalezar";
+  font-family: Lalezar;
   font-size: 3.5vw;
   font-style: normal;
   font-weight: 400;
@@ -69,7 +65,7 @@ body {
 }
 .decor-3 {
   color: black;
-  font-family: "Lalezar";
+  font-family: Lalezar;
   font-size: 3.5vw;
   font-style: normal;
   font-weight: 400;
@@ -100,7 +96,7 @@ a {
 }
 .decor-4 a {
   color: #ff1095;
-  font-family: "Inter";
+  font-family: Inter;
   font-size: 2vw;
   font-style: normal;
   font-weight: 700;
@@ -120,7 +116,6 @@ a {
   margin-left:3vw;
   position: absolute;
   margin-top: 1vw;
-  font-family: "Monserrat";
 }
 .hotline img {
   width: fit-content;
@@ -131,7 +126,7 @@ a {
 }
 .hotline a {
   color: #000;
-  font-family: "Inter";
+  font-family: Inter;
   font-size: 0.75rem;
   font-style: normal;
   font-weight: 400;
@@ -149,7 +144,7 @@ a {
 .nav-menu {
   position: absolute;
   left: 26cm;
-  font-family: "Inter";
+  font-family: Inter;
   text-decoration: none;
   color: #fff;
   font-size: 1.5vw;
@@ -166,7 +161,7 @@ a {
   margin-top: 12%;
 }
 .nav-menu a {
-  font-family: "Inter";
+  font-family: Inter;
   text-decoration: none;
   color: #fff;
   font-size: 1vw;
@@ -268,7 +263,7 @@ a.en:before {
 .log{
   position: relative;
   top:1.5vw;
-  left: 13.5vw; /* (16px / 200) * 200 = 12.5rem */
+left: 13.5vw; /* (16px / 200) * 200 = 12.5rem */
   width: 10vw; /* (16px / 200) * 100 = 6.25rem */
 }
 
@@ -300,6 +295,7 @@ a.en:before {
   border-radius: 1rem;
   max-width:  100%;
   position: relative;
+  z-index: 1000;
 }
 
 .search-box input {
@@ -323,7 +319,7 @@ a.en:before {
 
 .search-box .row .autocomplete{
 padding:5px 8px;
-max-height:15vw;
+max-height:20vw;
 overflow-y: auto;
 z-index:1000;
 pointer-events: nome;
@@ -347,20 +343,23 @@ border-radius: 1rem;
 overflow: -moz-scrollbars-none;
 border: 0.1 solid black;
 color: #000;
-list-style: none;
 
 }
 
+.autocomplete > li:hover{
 
+}
 
 /* stock */
+
 .stock img {
-  width: 15vw;
-  height: 6vw;
-  position: relative;
+  width: 15vw; /* (180px / 16) = 11.25rem */
+  height: 7vw; /* (80px / 16) = 5rem */
+  position: absolute;
   left: 55vw;
-  
+  top:-6vw;
 }
+
 body .stock {
   position: relative;
 }
@@ -377,5 +376,3 @@ body .stock {
   left:68vw;
   top: -50%;
 }
-
-
