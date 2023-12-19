@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const buyNowButton = document.getElementById('buyNow-btn');
             buyNowButton.addEventListener('click', function () {
                 addToCart(product.id);
-                window.location.href = 'payment.html' ;
+                window.location.href = 'payment-login.html' ;
             });
 
             function createProductElement(product) {
@@ -253,7 +253,6 @@ document.addEventListener("DOMContentLoaded", function () {
                             break;
                     }
                 }
-            
                 addCartToHTML();
                 addCartToMemory();
             };

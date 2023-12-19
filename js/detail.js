@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 const productDescription = document.getElementById('description');
                 // const productaddDescription = document.getElementById('add-description');
 
+
                 if (product.info) {
                     const infoLines = product.info.split('. ');
                     let infoHTML = '';
@@ -85,12 +86,18 @@ document.addEventListener("DOMContentLoaded", function () {
             const addToCartButton = document.querySelector('.cart-btn');
             addToCartButton.addEventListener('click', function (event) {
                 event.preventDefault();
-                addToCart(product.id); 
+                addToCart(product.id);
             });
 
             function createProductElement(product) {
+                
                 const productDiv = document.createElement("a");
-                productDiv.href = 'detail.html?id=' + product.id;
+                if (localStorage.getItem('dangnhap')) {
+                    productDiv.href = 'detail-login.html?id=' + product.id;
+                }
+                else{
+                    productDiv.href = 'detail.html?id=' + product.id;
+                }
                 productDiv.classList.add("product-container");
                 productDiv.innerHTML = `
                     <div class="post-img">
@@ -102,17 +109,30 @@ document.addEventListener("DOMContentLoaded", function () {
                         <button type="button" class="cart-btn">Thêm vào giỏ hàng</button>
                     </div>
                 `;
+                const popuplogin1 = document.querySelector(".login");
                 const cartBtn = productDiv.querySelector(".cart-btn");
                 productDiv.dataset.id = product.id;
                 cartBtn.addEventListener('click', function (event) {
+
+                    if( window.location.href.includes('login'))
+                    {
+                        
                     event.preventDefault();
+
                     let positionClick = event.target;
+
                     if(positionClick.classList.contains('cart-btn')){
                         let id_product = productDiv.dataset.id;
                         console.log(id_product);
                         addToCart(id_product);
                     }
-                });
+                }
+                else
+                {
+                    popuplogin1.style.display = "block";
+                    event.preventDefault();
+                }}
+                );
                 addCartToHTML();
                 return productDiv;
             }
@@ -120,9 +140,13 @@ document.addEventListener("DOMContentLoaded", function () {
              const user = JSON.parse(localStorage.getItem('dangnhap'))|| []
             const a = user.usernames + 1 ||[]
              let listCartHTML = document.querySelector('.listCart');
-             let iconCartSpan = document.querySelector('#icon-cart span');
+             let iconCartSpan = document.querySelector('#icon-cart span') || document.querySelector('#cart-item-count');
+             let body = document.querySelector('body');
              let cartTotalSpan = document.querySelector('#total')
              let cart = JSON.parse(localStorage.getItem(a)) || [];
+
+
+
             const addToCart = (product_id) => {
                 let positionThisProductInCart = cart.findIndex((value) => value.product_id == product_id);
                 
@@ -144,7 +168,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 addCartToMemory();
             };
             const addCartToMemory = () => {
-                localStorage.setItem('cart', JSON.stringify(cart));
+                localStorage.setItem(a, JSON.stringify(cart));
             };
             const addCartToHTML = () => {
                 listCartHTML.innerHTML = '';
@@ -182,12 +206,17 @@ document.addEventListener("DOMContentLoaded", function () {
                     iconCartSpan.innerText = totalQuantity;
             
                     cartTotalSpan.innerHTML = `<span> Tổng tiền: ${sum.toLocaleString()} VNĐ </span>`;
-                } else {
+                } 
+                else{
                     iconCartSpan.innerText = 0;
-                    cartTotalSpan.innerHTML = '<strong>Giỏ hàng trống</strong>';
+                    totalQuantity=0;
+                    cartTotalSpan.innerHTML ="Gio hang trong"
                 }
             };
             
+
+
+
             listCartHTML.addEventListener('click', (event) => {
                 let positionClick = event.target;
                 if (positionClick.classList.contains('minus') || positionClick.classList.contains('plus')) {
@@ -219,10 +248,12 @@ document.addEventListener("DOMContentLoaded", function () {
                             break;
                     }
                 }
-            
                 addCartToHTML();
                 addCartToMemory();
             };
+
+
+
             function displaySubProducts(category, productId) {
                 const subProducts = productsData.filter(product => product.category === category && product.id !== productId);
 
@@ -235,14 +266,16 @@ document.addEventListener("DOMContentLoaded", function () {
                     subProductsContainer.appendChild(productElement);
                 });
             }
+            // buyNowButton.addEventListener('click', function (event) {
+            //     event.preventDefault();
+            //     addToCart(product.id); // Add to cart before redirecting
+            //     // window.location.href = `payment-login.html?id=${productId}`;
+            // });
             const currentProductCategory = product.category;
             const currentProductId = product.id;
             displaySubProducts(currentProductCategory, currentProductId);
         }
     }
-
-
-    
 });
 
 
