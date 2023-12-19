@@ -68,9 +68,10 @@
       <span id="cart-item-count cart-item-count1">0</span>
     </a>
     <div class="main-container">
-        <a href="/category.html">
+        <a href="/category.html" style=" display: block;
+        width: 90vw;">
           <div class="back-category">
-            <div class = "category-title menu-btn " id ="all">
+            <div class = "category-title menu-btn " id ="all" style="">
                 <li>Danh Mục</li>
                 <span><i class = "fas fa-border-all icon-arrow-right"></i></span>
             </div>
@@ -253,6 +254,11 @@
       } 
       }
       noLog()
+
+      window.addEventListener('beforeunload', function (event) {
+        localStorage.removeItem('dangnhap')
+      });
+
     </script>
             <script src="/js/search-bar.js"></script>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
