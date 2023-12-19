@@ -91,6 +91,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
             function createProductElement(product) {
                 
+                const newTitle = product.name
+                document.title = newTitle
                 const productDiv = document.createElement("a");
                 if (localStorage.getItem('dangnhap')) {
                     productDiv.href = 'detail-login.html?id=' + product.id;
@@ -185,6 +187,10 @@ document.addEventListener("DOMContentLoaded", function () {
                         let positionProduct = productsData.findIndex((value) => value.id == item.product_id);
                         let info = productsData[positionProduct];
                         sum += info.price * item.quantity;
+
+
+                        
+            
                         
                         listCartHTML.appendChild(newItem);
                         newItem.innerHTML = `
@@ -251,7 +257,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 addCartToHTML();
                 addCartToMemory();
             };
-
+            
 
 
             function displaySubProducts(category, productId) {
@@ -292,3 +298,5 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+
