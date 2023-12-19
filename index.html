@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="./css/index/index-index.css" />
     <link rel="stylesheet" href="./css/index/index-sign-log.css" />
     <link rel="stylesheet" href="./css/sp-hover-index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
     <!-- <link rel="stylesheet" href="./css/category-index.css"> -->
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -58,14 +60,13 @@
       <a href="index.html"><img src="./img/header/LOGO.png" alt="" srcset="" class="logo" id="logo-web"/></a>
       <div class="search-box">
         <div class="row">
-          <input type="text" data-search />
-          <img src="./img/header/lookup Background Removed.png" alt="" />
+          <input type="text" placehoder="type to search..." id="search" />
+          <!-- <img src="./img/header/lookup Background Removed.png" alt="" /> -->
+          <div class="autocomplete">
+            
+           </div> 
         </div>
-        <!-- <div class="user-cards" data-user-cards-container></div>
-       <template data-user-template123>
-        <div class="card">
-       <div class="header" data-header></div>
-        <div class="body" data-body></div> -->
+          
       </div>
       <a href="#" class="stock" id="icon-cart"
         ><img src="./img/header/stock.png" alt="" srcset=""
@@ -177,7 +178,7 @@
       </div>
 
       <div class="btn">
-          <button class="checkOut-btn"><a href="payment.html">Thanh toán</a></button>
+          <button class="checkOut-btn"><a href="payment-login.html">Thanh toán</a></button>
       </div>
   </div>
 
@@ -400,9 +401,37 @@
         localStorage.removeItem('dangnhap')
       });
 
+      // let productsData = JSON.parse(localStorage.getItem('productsData'))
+
+//       $(document).ready(function(){
+//     $('#search').keyup(function(){
+//         $('.autocomplete').html('');
+//         $('#state').val('');
+//         var searchField = $('#search').val().toLowerCase(); // Convert input to lowercase for case-insensitive matching
+//         var expression = new RegExp(searchField, "i");
+        
+//         // Loop through the productsData array
+//         $.each(productsData, function(key, value){
+//             if (value.name.toLowerCase().search(expression) != -1 || value.category.toLowerCase().search(expression) != -1)
+//             {
+//                 $('.autocomplete').append('<a href='+href+'detail.html?id=' + value.id +'><li>'+value.name+'</li></a>');
+//             }
+//         });   
+//     });
+    
+//     $('.autocomplete').on('click', 'li', function() {
+//         $('#search').val($.trim($(this).text()));
+//         $('.autocomplete').html('');
+//     });
+// });
       
 
     </script>
+
+    <script>
+      
+    </script>
+
     <script src="./js/search-bar.js"></script>
   </body>
 </html>

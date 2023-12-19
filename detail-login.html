@@ -80,10 +80,12 @@
         <a href="index-login.html"><img src="./img/header/LOGO.png" alt="" srcset="" class="logo" id="logo-web"/></a>
         <div class="search-box">
           <div class="row">
-            <input type="text" />
-            <img src="./img/header/lookup Background Removed.png" alt="" />
+            <input type="text" placehoder="type to search..." id="search" />
+            <!-- <img src="./img/header/lookup Background Removed.png" alt="" /> -->
+            <div class="autocomplete">
+              
+             </div> 
           </div>
-        </div>
         <a href="#" class="stock"
           ><img src="./img/header/stock.png" alt="" srcset=""
         />            <span id="cart-item-count">0</span>
@@ -112,22 +114,22 @@
                 </div>
                 <div class="info-detail"></div>
                 <div class="detail-btn">
-                    <button class="buyNow-btn">Mua ngay</button>
+                  <button class="buyNow-btn" id="buyNow-btn"><a href="payment-login.html">Mua ngay</a></button>
                     <button class="cart-btn"><i class="fa-solid fa-cart-shopping cart-detail"></i> Thêm vào giỏ hàng</button>
                 </div>
             </div>
         </div>
         <div class="sub-container">
-            <div class="sub-content">
-                    <ul>
-                        <li id="description-tab">Mô tả</li>
-                        <li id="info-tab">Thông tin sản phẩm</li>
-                    </ul>
-                    <div id="description"></div>
-                    <div id="add-decription"></div>
-                    <a href="" id="more-detail">Xem thêm</a>
-                    <div id="info"></div>
-            </div>
+          <div class="sub-content">
+                  <ul>
+                      <li id="description-tab">Mô tả</li>
+                      <li id="info-tab">Thông tin sản phẩm</li>
+                  </ul>
+                  <div id="description"></div>
+                  <div id="add-decription"></div>
+                  <div href="#" id="more-detail" class="xemthembutton">Xem thêm</div>
+                  <div id="info" style="display: block;"></div>
+          </div>
             <div class="sub-items">
                 <h2>SẢN PHẨM TƯƠNG TỰ</h2>
                 <div class="sub-products">
@@ -148,7 +150,7 @@
 
         <div class="btn">
           <button class="close">Đóng</button>
-          <button class="checkOut-btn"><a href="payment.html">Thanh toán</a></button>
+          <button class="checkOut-btn"><a href="payment-login.html">Thanh toán</a></button>
         </div>
     </div>
     <footer class="footer" style="left: 0rem;">
@@ -213,5 +215,7 @@ if (window.location.pathname.includes("detail.html")) {
 </script>
 <!-- <script src="./js/login.js"></script> -->
 <script src="./js/productindex.js"></script>
+<script src="/js/search-bar.js"></script>
+
 </body>
 </html>

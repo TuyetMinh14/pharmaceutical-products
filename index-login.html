@@ -9,10 +9,11 @@
     <link rel="stylesheet" href="./css/index-login/index-footer.css" />
     <link rel="stylesheet" href="./css/index-login/index-sign-log.css" />
     <link rel="stylesheet" href="/css/index-login/index-login.css">
-    <!-- <link rel="stylesheet" href="./css/sign-log.css" /> -->
+    <link rel="stylesheet" href="./css/sign-log.css" />
     <link rel="stylesheet" href="./css/sp-hover-index.css">
     <link rel="stylesheet" href="./css/category-index.css">
     <link rel="stylesheet" href="/css/index-login/index-index-login.css">
+    <link rel="stylesheet" href="/css/detail-login/detail-category.css">
     <style>
       .dangxuat {
     position: absolute;
@@ -44,7 +45,6 @@
       crossorigin="anonymous"
     ></script>
   </head>
-
   <body>
     <div class="banner-header">
       <img src="./img/header/caythong1.png" alt="" />
@@ -85,10 +85,12 @@
       <a href="index-login.html"><img src="./img/header/LOGO.png" alt="" srcset="" class="logo" id="logo-web"/></a>
       <div class="search-box">
         <div class="row">
-          <input type="text" />
-          <img src="./img/header/lookup Background Removed.png" alt="" />
+          <input type="text" placehoder="type to search..." id="search" />
+          <!-- <img src="./img/header/lookup Background Removed.png" alt="" /> -->
+          <div class="autocomplete">
+            
+           </div> 
         </div>
-      </div>
       <a href="#" class="stock">
         <img src="./img/header/stock.png" alt="" srcset=""/>            
         <span id="cart-item-count">0</span>
@@ -197,7 +199,7 @@
       </div>
 
       <div class="btn">
-          <button class="close">Đóng</button>
+        <button class="close">Đóng</button>
           <button class="checkOut-btn"><a href="payment.html">Thanh toán</a></button>
       </div>
   </div>
@@ -431,5 +433,7 @@
     displayusername()
     </script> 
     <script src="./js/productindex.js"></script>
+    <script src="/js/search-bar.js"></script>
+
   </body>
 </html>

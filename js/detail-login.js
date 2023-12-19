@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 const productDescription = document.getElementById('description');
                 // const productaddDescription = document.getElementById('add-description');
 
+
                 if (product.info) {
                     const infoLines = product.info.split('. ');
                     let infoHTML = '';
@@ -247,9 +248,29 @@ document.addEventListener("DOMContentLoaded", function () {
                     subProductsContainer.appendChild(productElement);
                 });
             }
+            // buyNowButton.addEventListener('click', function (event) {
+            //     event.preventDefault();
+            //     addToCart(product.id); // Add to cart before redirecting
+            //     // window.location.href = `payment-login.html?id=${productId}`;
+            // });
             const currentProductCategory = product.category;
             const currentProductId = product.id;
             displaySubProducts(currentProductCategory, currentProductId);
         }
     }
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Lấy tất cả các phần tử img có class là "sub"
+    const subImages = document.querySelectorAll("img.sub");
+
+    // Lặp qua từng phần tử img
+    subImages.forEach((img) => {
+        // Kiểm tra xem ảnh có load được không
+        img.addEventListener("error", function () {
+            // Nếu không tải được, đặt thuộc tính display thành "none"
+            img.style.display = "none";
+        });
+    });
 });

@@ -19,10 +19,11 @@ body {
 
 /********CATEGORY********/
 .main-container {
-    width: 90vw;
+    width: 100vw;
     margin: 0 auto;
     padding: 1.25em 0;
     transition: transform .5s;
+    background-color: #fff;
 }
 
 .main-container .head-container {
@@ -719,6 +720,7 @@ body.showCart .main-container, body.showCart .header-container{
 .cartTab .btn{
     display: flex;
     justify-content: center;
+    /* padding: 0 30px; */
 }
 .cartTab button{
     background-color: #99B9E1;
@@ -731,16 +733,16 @@ body.showCart .main-container, body.showCart .header-container{
     border-radius:  30px;
     transition: all .6s ease;
 }
-.cartTab .close, .cartTab .sale{
-    background-color: #eee;
-}
 .close {
     position: absolute;
     top: 2.5rem;
-    right: 1.5rem;
+    right: 2rem;
     cursor: pointer;
     font-size: 2rem;
   }
+.cartTab .close, .cartTab .sale{
+    background-color: #eee;
+}
 
 .cartTab .checkOut-btn:hover {
     transform: scale(1.1);
@@ -839,14 +841,17 @@ body.showCart .main-container, body.showCart .header-container{
 .main-img {
     width: 100%;
     height: 60vh;
-    border: 0.0625em dotted black;
     transition: all 0.6s ease;
     border-radius: 2.1875em;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+
+
 }
 
 .img-detail {
     width: 70%;
-    margin-left: 18%;
+    margin-left: 15%;
 }
 
 .main-img:hover {
@@ -864,9 +869,10 @@ body.showCart .main-container, body.showCart .header-container{
 .main-sub, .sub {
     width: 100%;
     height: 10vh;
-    border: 0.125em dotted black;
+    border: 1px solid #e5e5e5;
     border-radius: 0.3125em;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .main-sub.active {
@@ -914,6 +920,7 @@ body.showCart .main-container, body.showCart .header-container{
     border-radius: 1.3em;
     margin-top: 2%;
     transition: all 0.6s ease;
+    cursor: pointer;
 }
 
 .buyNow-btn {
@@ -966,7 +973,7 @@ body.showCart .main-container, body.showCart .header-container{
 .sub-content {
     width: 95%;
     margin: 1.5em 2.2em;
-    padding: 1.2em;
+    padding: 1.5em;
     border-radius: 20px;
     background-color: #fff;
 }

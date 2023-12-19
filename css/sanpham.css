@@ -202,7 +202,7 @@ span {
   position: relative;
 }
 
-.noidung-thontinsanpham {
+#noidung-thontinsanpham {
   display: block;
   width: 64rem;
   height: 15rem;

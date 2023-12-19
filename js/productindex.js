@@ -741,7 +741,10 @@ document.addEventListener("DOMContentLoaded", function () {
     let cartTotalSpan = document.querySelector("#total");
 
     iconCart.addEventListener("click", () => {
-      body.classList.toggle("showCart");
+     
+      if(localStorage.getItem('dangnhap')){
+        body.classList.toggle("showCart");
+      }
     });
   
     closeCart.addEventListener("click", () => {
@@ -821,21 +824,19 @@ document.addEventListener("DOMContentLoaded", function () {
   
           listCartHTML.appendChild(newItem);
           newItem.innerHTML = `
-            <div class="image">
-                <img src="${info.imgSrc}" >
-            </div>
-            <div class="name">
-                ${info.name}
-            </div>
-            <div class="totalPrice">${(
-              info.price * item.quantity
-            ).toLocaleString()}</div>
-            <div class="quantity">
-                <span class="minus"><</span>
-                <span>${item.quantity}</span>
-                <span class="plus">></span>
-            </div>
-        `;
+          <div class="image">
+              <img src="${info.imgSrc}" >
+          </div>
+          <div class="name">
+              ${info.name}
+          </div>
+          <div class="totalPrice">${(info.price * item.quantity).toLocaleString()}</div>
+          <div class="quantity">
+              <span class="minus"><</span>
+              <span>${item.quantity}</span>
+              <span class="plus">></span>
+          </div>
+      `;
         });
   
         iconCartSpan.innerText = totalQuantity;
@@ -888,15 +889,24 @@ document.addEventListener("DOMContentLoaded", function () {
   
       productDiv.dataset.id = product.id;
   
-      // Thêm sự kiện click cho nút thêm vào giỏ hàng
-      addToCartButton.addEventListener("click", function (event) {
-          event.preventDefault();
-          let positionClick = event.target;
-          if (positionClick.classList.contains("cart-btn")) {
-              let id_product = productDiv.dataset.id;
-              addToCart(product.id);
-          }
-      });
+      const popuplogin1 = document.querySelector(".login");
+      console.log(popuplogin1)
+     const cartBtn = productDiv.querySelector(".cart-btn");
+     productDiv.dataset.id = product.id;
+     cartBtn.addEventListener('click', function (event) {
+         if (localStorage.getItem('dangnhap')) {
+             event.preventDefault();
+             let positionClick = event.target;
+             if (positionClick.classList.contains('cart-btn')) {
+                 let id_product = productDiv.dataset.id;
+                 addToCart(id_product);
+             }
+         } else {
+             popuplogin1.style.display = "block";
+             event.preventDefault();
+
+         }
+     });
   
       addCartToHTML();
   
