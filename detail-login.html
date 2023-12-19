@@ -80,10 +80,12 @@
         <a href="index-login.html"><img src="./img/header/LOGO.png" alt="" srcset="" class="logo" id="logo-web"/></a>
         <div class="search-box">
           <div class="row">
-            <input type="text" />
-            <img src="./img/header/lookup Background Removed.png" alt="" />
+            <input type="text" placehoder="type to search..." id="search" />
+            <!-- <img src="./img/header/lookup Background Removed.png" alt="" /> -->
+            <div class="autocomplete">
+              
+             </div> 
           </div>
-        </div>
         <a href="#" class="stock"
           ><img src="./img/header/stock.png" alt="" srcset=""
         />            <span id="cart-item-count">0</span>
@@ -215,5 +217,7 @@ if (window.location.pathname.includes("detail.html")) {
 </script>
 <!-- <script src="./js/login.js"></script> -->
 <script src="./js/productindex.js"></script>
+<script src="/js/search-bar.js"></script>
+
 </body>
 </html>
