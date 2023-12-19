@@ -13,7 +13,7 @@
 footer{
     display:block;
     position: relative;
-    top:-35vw;
+    top:vw;
     left:-0.3rem;
     width: 100vw;
     max-height: fit-content;

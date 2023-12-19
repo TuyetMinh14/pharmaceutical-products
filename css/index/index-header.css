@@ -299,7 +299,8 @@
     background: #fff;
     border-radius: 1rem;
     max-width:  100%;
-    /* position: relative; */
+    position: relative;
+    z-index: 1000;
   }
   
   .search-box input {
@@ -323,14 +324,15 @@
 
 .search-box .row .autocomplete{
   padding:5px 8px;
-  max-height:10vw;
-  overflow-y: auto;
+  max-height:20vw;
+  overflow-y: hidden;
   z-index:1000;
   pointer-events: nome;
   color: #000;
   background-color: #efefef;
   display: none;
   border-radius: 1vw;
+  overflow-x: hidden;
 }
 .search-box .row.active .autocomplete{
   pointer-events: auto;
@@ -347,6 +349,7 @@
   overflow: -moz-scrollbars-none;
   border: 0.1 solid black;
   color: #000;
+  list-style: none;
 
 }
 
@@ -354,8 +357,8 @@
 
   /* stock */
   .stock img {
-    width: 15vw; /* (180px / 16) = 11.25rem */
-    height: 6vw; /* (80px / 16) = 5rem */
+    width: 15vw;
+    height: 6vw;
     position: relative;
     left: 55vw;
     

@@ -347,14 +347,20 @@ border-radius: 1rem;
 overflow: -moz-scrollbars-none;
 border: 0.1 solid black;
 color: #000;
+list-style: none;
 
 }
 
 /* stock */
+.stock a{
+  left:100vw;
+  position: absolute;
+
+}
 .stock img {
   width: 180px; /* (180px / 16) = 11.25rem */
   height: 100px; /* (80px / 16) = 5rem */
-  position: relative;
+  /* position: relative; */
   left: 50vw;
   
 }
