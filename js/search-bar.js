@@ -627,26 +627,50 @@ let productsData = [
 //   const listData = list.join('');
 //   suggBox.innerHTML = listData;
 // }
+// function convertToJSON(data) {
+//     return JSON.stringify(data, null, 2);
+// }
+
+// const jsonFormat = convertToJSON(productsData);
+// console.log(jsonFormat);
 
 $(document).ready(function(){
-    $.ajaxSetup({ cache: false });
     $('#search').keyup(function(){
         $('.autocomplete').html('');
-        $('#state').val('');
-        var searchField = $('#search').val();
+        var searchField = $('#search').val().toLowerCase();
         var expression = new RegExp(searchField, "i");
-        $.getJSON(productsData, function(data) {
-            $.each(data, function(key, value){
-                if (value.name.search(expression) != -1 || value.category.search(expression) != -1)
-                {
-                    $('.autocomplete').append('<li>'+value.name+'</li>');
-                }
-            });   
+
+        // Flag to check if any matching item is found
+        var found = false;
+
+        $.each(productsData, function(key, value){
+            if (value.name.toLowerCase().search(expression) != -1 || value.category.toLowerCase().search(expression) != -1)
+            {
+                // Append the link for each matching item
+                $('.autocomplete').append('<a href="detail.html?id=' + value.id + '"><li><img src="'+value.imgSrc+'" height="40" width="40" class="" />'+value.name+'</li></a>');
+                found = true;
+            }
         });
+        // console.log(searchField)
+        // if(searchField == ""){
+        //     $('.autocomplete').css('display', 'none');
+        // }
+        // Update display based on whether any matching item is found
+        if (found) {
+            $('.autocomplete').css('display', 'block');
+        } else {
+            $('.autocomplete').css('display', 'none');
+        }
     });
-    
+
     $('.autocomplete').on('click', 'li', function() {
-        $('#search').val($.trim($(this).text()));
-        $('.autocomplete').html('');
+        // Get the text or data attribute based on your implementation
+        var selectedItemText = $(this).text();
+        $('#search').val($.trim(selectedItemText));
+
+        // Clear autocomplete and hide it
+        $('.autocomplete').empty().css('display', 'none');
     });
 });
+
+                                     

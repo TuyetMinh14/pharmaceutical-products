@@ -182,6 +182,7 @@ btnLogin.addEventListener("click", (e) => {
 const buyNowbtn = document.querySelector('.buyNow-btn')
     buyNowbtn.addEventListener("click", function(){
       popuplogin.style.display = "block";
+      
     })
 
 

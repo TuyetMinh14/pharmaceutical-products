@@ -325,9 +325,12 @@
   padding:5px 8px;
   max-height:10vw;
   overflow-y: auto;
-  background-color:aqua;
   z-index:1000;
   pointer-events: nome;
+  color: #000;
+  background-color: #efefef;
+  display: none;
+  border-radius: 1vw;
 }
 .search-box .row.active .autocomplete{
   pointer-events: auto;
@@ -339,9 +342,12 @@
 .autocomplete li{
   top:-5vw;
   position: relative;
-  padding:10px;
+  padding:10px 0;
   border-radius: 1rem;
   overflow: -moz-scrollbars-none;
+  border: 0.1 solid black;
+  color: #000;
+
 }
 
 

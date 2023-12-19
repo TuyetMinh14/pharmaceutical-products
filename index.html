@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./css/index/index-index.css" />
     <link rel="stylesheet" href="./css/index/index-sign-log.css" />
     <link rel="stylesheet" href="./css/sp-hover-index.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <!-- <link rel="stylesheet" href="./css/category-index.css"> -->
     <script
@@ -63,12 +63,8 @@
           <a href="" target="_blank" hidden></a>
           <input type="text" placehoder="type to search..." id="search" />
           <!-- <img src="./img/header/lookup Background Removed.png" alt="" /> -->
-          <div class="autocomplete" style="z-index: 1000;">
-            <li>thuốc ho</li>
-            <li>thuôc ko ho</li>
-            <li>hêhheeh</li>
-            <li>hêhheeh</li>
-            <li>hêhheeh</li>
+          <div class="autocomplete">
+            
            </div> 
         </div>
           
@@ -406,6 +402,29 @@
         localStorage.removeItem('dangnhap')
       });
 
+      // let productsData = JSON.parse(localStorage.getItem('productsData'))
+
+//       $(document).ready(function(){
+//     $('#search').keyup(function(){
+//         $('.autocomplete').html('');
+//         $('#state').val('');
+//         var searchField = $('#search').val().toLowerCase(); // Convert input to lowercase for case-insensitive matching
+//         var expression = new RegExp(searchField, "i");
+        
+//         // Loop through the productsData array
+//         $.each(productsData, function(key, value){
+//             if (value.name.toLowerCase().search(expression) != -1 || value.category.toLowerCase().search(expression) != -1)
+//             {
+//                 $('.autocomplete').append('<a href='+href+'detail.html?id=' + value.id +'><li>'+value.name+'</li></a>');
+//             }
+//         });   
+//     });
+    
+//     $('.autocomplete').on('click', 'li', function() {
+//         $('#search').val($.trim($(this).text()));
+//         $('.autocomplete').html('');
+//     });
+// });
       
 
     </script>
