@@ -26,6 +26,7 @@
     background-size: 6.6%;
     background-repeat: no-repeat;
     background-position-x: 54%;
+
   }
   
   .banner-header img {
@@ -352,7 +353,12 @@
   list-style: none;
 
 }
-
+.autocomplete li:hover {
+  background-color: #fff;
+}
+.autocomplete::-webkit-scrollbar{
+  width: 0;
+}
 
 
   /* stock */
@@ -360,7 +366,7 @@
     width: 15vw;
     height: 6vw;
     position: relative;
-    left: 56vw;
+    left: 55vw;
     
   }
 
@@ -380,8 +386,6 @@
     left:68vw;
     top: -50%;
   }
-
-
 
 
   
