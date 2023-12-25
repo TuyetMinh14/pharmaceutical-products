@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-:root {
+/* :root {
     --font-size-base: 16px;
     --margin-base: 16px;
-}
+} */
 *{
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     padding: 0;
     margin: 0;
 }
@@ -40,9 +40,9 @@ body {
     width: 30rem;
 height: 3.75rem;
 border-radius: 6.25rem;
-/* border: 1px solid #000; */
+border: 1px solid #000;
 background: #99B9E1;
-box-shadow: 0px 0.44vw 0.4vw 0px rgba(0, 0, 0, 0.25);
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     text-align: center;
     background-color: #99B9E1;
     padding: 0.5em;
@@ -171,7 +171,7 @@ box-shadow: 0px 0.44vw 0.4vw 0px rgba(0, 0, 0, 0.25);
 
 #posts-main-container {
     display: grid;
-    grid-template-columns: repeat(3,0.3fr);
+    grid-template-columns: repeat(5, 0.1fr);
     grid-gap: 1em;
     font-family: 'Poppins', sans-serif;
 }
@@ -213,7 +213,7 @@ box-shadow: 0px 0.44vw 0.4vw 0px rgba(0, 0, 0, 0.25);
     transition: all 0.3s ease;
     box-shadow: 0 0 12px rgba(15, 61, 145, 0.12);
     width:100%;
-    height:100%;
+    height:5%;
 }
 
 .product-container:hover {
@@ -242,7 +242,7 @@ box-shadow: 0px 0.44vw 0.4vw 0px rgba(0, 0, 0, 0.25);
 .cart-btn {
     border: none;
     margin: 0.3125em auto;
-    padding: 0.8em 0.9375em;
+    padding: 0.5em 0.9375em;
     display: block;
     font-size: 1.125em;
     font-weight: 600;
@@ -294,14 +294,14 @@ box-shadow: 0px 0.44vw 0.4vw 0px rgba(0, 0, 0, 0.25);
 
 .pagination li a.active {
     color: #fff;
-    background-image: linear-gradient(#FF1093, #FF1095);
+    background-image: linear-gradient(#ff4568, #ff4568);
     background-repeat: no-repeat;
 }
 
 .pagination li a:hover {
     background-image: linear-gradient(#fff, #fff);
     color: #333;
-    border: 0.1875em solid #F4C1DE;
+    border: 0.1875em solid #ff4568;
     transform: scale(1.2);
 }
 
@@ -497,12 +497,12 @@ header{
 
 /* cart */
 .cartTab{
-    width: 500px;
+    width: 30vw;
     background-color: #D9D9D9;
     color: #333;
     position: fixed;
     top: 0;
-    right: -500px;
+    right: -50vw;
     bottom: 0;
     display: grid;
     grid-template-rows: 70px 1fr 100px 70px;
@@ -543,12 +543,13 @@ body.showCart .main-container, body.showCart .header-container{
     font-size: 20px;
     font-weight: 600;
     border-radius: 25px;
-    background-color: #eee;
+    background-color: #fff;
     border: 2px solid gray;
 }
 .cartTab .btn{
     display: flex;
     justify-content: center;
+    
 }
 .cartTab button{
     background-color: #99B9E1;
@@ -560,9 +561,10 @@ body.showCart .main-container, body.showCart .header-container{
     cursor: pointer;
     border-radius:  30px;
     transition: all .6s ease;
+   margin-left: 1vw;
 }
-.cartTab .close, .cartTab .sale{
-    background-color: #eee;
+.cartTab .close-carttab, .cartTab .sale{
+    background-color: #fff;
 }
 
 .cartTab .checkOut-btn:hover {
@@ -571,7 +573,7 @@ body.showCart .main-container, body.showCart .header-container{
 
 .listCart {
     padding: 10px;
-    background-color: #eee;
+    background-color: #fff;
     border: 2px solid gray;
     border-radius: 25px;
     margin-top: 5%;
@@ -698,9 +700,9 @@ body.showCart .main-container, body.showCart .header-container{
 }
 
 .detail-content {
-    width: 43.75rem;
-    height: 12.5rem;
-    border-radius: 8rem;
+    width: 90%;
+    height: 12.5vw;
+    border-radius: 8vw;
     margin-top: 1.875em;
     background-color: #6E80DC;
     padding: 0.625em 1.5625em;

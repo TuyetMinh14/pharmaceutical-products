@@ -20,6 +20,7 @@ body {
 /********CATEGORY********/
 .main-container {
     width: 90vw;
+    height:68vw;
     margin: 0 auto;
     padding: 1.25em 0;
     transition: transform .5s;

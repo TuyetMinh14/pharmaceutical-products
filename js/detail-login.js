@@ -145,13 +145,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 return productDiv;
             }
              // CART
-             const user = JSON.parse(localStorage.getItem('dangnhap'))|| []
-            const a = user.usernames + 1 ||[]
+             const user = JSON.parse(localStorage.getItem('dangnhap'))
+                const a = user.phone
              let listCartHTML = document.querySelector('.listCart');
              let iconCartSpan = document.querySelector('#icon-cart span') || document.querySelector('#cart-item-count');
              let body = document.querySelector('body');
              let cartTotalSpan = document.querySelector('#total')
-             let cart = JSON.parse(localStorage.getItem(a)) || [];
+             let cart = []
 
 
 

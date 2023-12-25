@@ -11,87 +11,94 @@
     src: url(/font/Inter/Inter-VariableFont_slnt\,wght.ttf);
 }
 footer{
-    display:block;
-    position: relative;
+    display:grid;
+    height:15vw;
+    width: 100vw;
+    /* position: relative;
     top:-36rem;
     left:-0.3rem;
     width: 100vw;
-    max-height: fit-content;
+    max-height: fit-content; */
 }
 .km-email{
     width: 100vw;
-    height: 7.3125rem;
+    height: 7.5vw;
 display: block;
-top:0rem;
-position:relative;
-left: -0.2rem;
+/* top:0rem; */
+/* position:relative;
+left: -0.2rem; */
 background: #6E80DC;
+
 }
 .km-email p{
+    float: left;
     color: #FFF;
 font-family: "Montserrat";
 color: #FFF;
-font-size: 2.125rem;
+font-size: 2.125vw;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
-position: relative;
-left:3.12rem;
-top:2.31rem;
+padding-top: 1.5vw;
+padding-left: 4vw;
+padding-right: 20vw;
+margin-top: 1%;
 }
 .km-email input{
-    width: 337px;
-height: 55px;
-top: 30px;
-left:19cm;
-position:absolute;
-border-radius: 1em;
-border: 0cap;
-text-indent: 1rem;
+    float: left;
+    width: 20%;
+height: 50%;
+border-radius: 1vw;
+text-indent: 1vw;
+color: 2vw;
+margin-top:1.8vw;
+border:0;
 }
 input::placeholder{
     text-align: center;
+    font-size: 1vw;
 }
 input:-ms-input-placeholder{
     text-align: center;
 }
 .footer .km-email .decor-4{
-    top:7rem;
     left:90px;
-    width:5cm;
+    width:10%;
+    margin-top:1vw;
+}
+
+.km-email .decor-5{
+    float: left;
+    padding-left: 5vw;
+    width: 10%;
+    
+
+}
+
+.km-email .decor-5 button{
+    background-color: #efa7cf;
+    width:100%;
+    height: 5vw;
+    border: none;
+    border-radius: 1cm 1cm 1cm 1cm;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+    font-weight: 800;
+    font-size: 1.5vw;
+    color: #ff1095;
+    margin-top:15%;
+
 }
 
 /*  */
 .contact{
     background-color: #fff;
-    height: 18rem;
+    height: 20vw;
     width: 100vw;
-    position:relative;
-    left:-0.2rem;
-    top:0rem;
-    margin-top:-1.5rem
+    /* display: grid; */
+    grid-template-columns: auto;
 }
-.contact p{
-    color: #000;
-text-align: center;
-font-family: "Montserrat";
-font-size: 25px;
-font-style: normal;
-font-weight: 900;
-line-height: normal;
-width: 449px;
-height: 64px;
-flex-shrink: 0;
-margin-bottom: 0;
-}
-.contact table{
-    position:absolute;
-    left:1cm;
-    
-}
-.contact td{
-    padding:10px
-}
+
+
 .contact img{
     width:48px;
     height: 48px;
@@ -103,3 +110,111 @@ margin-bottom: 0;
     font-weight: 700;
     font-family: Inter;
 }
+
+.contact .logo-footer{
+    width: 30%;
+    /* height:80%; */
+    float: left;
+}
+
+.contact .logo-footer img{
+    width:55%;
+    height:auto;
+    margin-left: 30%;
+    margin-top: 13%;
+}
+
+.contact .logo-footer p{
+    font-family: Inter;
+    margin-left: 48%;
+    font-size:1.3vw;
+
+}
+ .social {
+    width: 50%;
+    margin-left: 35%;
+    margin-top: 5%;
+    float: left;
+    height: 100%;
+  }
+.social > a {
+    padding:0 1vw;
+    font-size: 1.3vw;
+  }
+  
+ 
+ 
+  
+
+
+
+  .lienhe {
+    height: 90%;
+    width: 20%;
+    padding-top: 1vw;
+    float: left;
+  }
+  
+  .lienhe table tr td b {
+    font-size: 1.5vw;
+    padding:0;
+    /* padding-bottom: 0.5vw;
+    border-bottom: 0.2vw solid #efa7cf; */
+  }
+  .lienhe table tr:first-child td{
+    padding:0.3vw;
+  }
+  .lienhe hr{
+    width: 50%;
+   background-color:#efa7cf;
+    height:0.3vw;
+    border: none;
+    
+  }
+  .lienhe table tr:nth-child(2) td{
+    padding:0;
+  }
+  
+  .lienhe table tr td > a {
+    padding: 0;
+    font-size: 1.3vw;
+    width: 100%;
+  }
+  .lienhe table tr:nth-child(3) td{
+    padding-top:1vw;
+  }
+  .lienhe table tr td{
+    padding-bottom:1.2vw;
+  }
+  .lienhe table tr td  > a {
+    width: 100%;
+
+  }
+  .lienhe table tr td a > i {
+    width: 20%;
+    float:left;
+  }
+  .lienhe table tr td a > p {
+    float:left;
+    width: 50%;
+    font-size: 0.8vw;
+    font-weight: 200;
+    
+  }
+
+  
+  .lienhe3 hr{
+    width: 25%;
+   background-color:#efa7cf;
+    height:0.3vw;
+    border: none;
+    
+  }
+
+  .last-line{
+    width: 80%;
+    
+    margin-left: 10%;
+  }
+  
+  

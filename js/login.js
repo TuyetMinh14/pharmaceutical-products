@@ -7,6 +7,8 @@ console.log(loginButton2);
 const popupSignup = document.querySelector(".signup");
 const popuplogin = document.querySelector(".login");
 
+
+
 signupButton.addEventListener("click", function () {
   popupSignup.style.display = "block";
   popuplogin.style.display = "none";
@@ -18,8 +20,16 @@ signupButton2.addEventListener("click", function () {
 });
 
 loginButton.addEventListener("click", function () {
+  if(window.location.href.includes("login")){
+    localStorage.removeItem('dangnhap');
+                        let a = window.location.href;
+                        a = a.replace("-login", "");
+                        window.location.href = a
+  }
+  else{
   popuplogin.style.display = "block";
   popupSignup.style.display = "none";
+  }
 });
 
 loginButton2.addEventListener("click", function () {
@@ -48,10 +58,12 @@ const btnRegister = document.querySelector("#dongydangky");
 // iterate localStorage
 const logIn = {
   username: "user",
-  password: "123"
+  password: "123",
+  phone: '123'
 };
 let json2 = JSON.stringify(logIn);
 localStorage.setItem('user', json2);
+localStorage.setItem('123',' ')
 
 
 
@@ -120,9 +132,11 @@ btnRegister.addEventListener("click", (e) => {
     }
     const logIn = {
       usernames: inputUsernameRegister.value,
+      phone : inputPhoneRegister.value
     };
     let json1 = JSON.stringify(logIn);
     localStorage.setItem('dangnhap', json1);
+    localStorage.setItem(inputPhoneRegister.value,'')
 });
 
 
@@ -150,9 +164,12 @@ btnLogin.addEventListener("click", (e) => {
       // Lưu thông tin đăng nhập vào Local Storage
       const logIn = {
         username: inputUsername.value,
+        phone: user.phone
       };
       let json1 = JSON.stringify(logIn);
       localStorage.setItem('dangnhap', json1);
+
+      
 
       // Kiểm tra trang hiện tại và chuyển hướng tương ứng
       if (window.location.pathname.includes("index.html")) {
@@ -169,26 +186,25 @@ btnLogin.addEventListener("click", (e) => {
       }
     } else {
       alert("Đăng Nhập Thất Bại");
+      return;
     }
   }
-  const logIn = {
-    usernames: inputUsername.value,
-  };
-  let json1 = JSON.stringify(logIn);
-  localStorage.setItem('dangnhap', json1);
+  
+
+
 });
 
 
-const buyNowbtn = document.querySelector('.buyNow-btn')
-    buyNowbtn.addEventListener("click", function(){
-      popuplogin.style.display = "block";
+// const buyNowbtn = document.querySelector('.buyNow-btn')
+//     buyNowbtn.addEventListener("click", function(){
+//       popuplogin.style.display = "block";
       
-    })
+//     })
 
 
     
 
-    const cartBtn = document.querySelector('.cart-btn')
-    cartBtn.addEventListener("click", function(){
-      popuplogin.style.display = "block";
-    })
+    // const cartBtn = document.querySelector('.cart-btn')
+    // cartBtn.addEventListener("click", function(){
+    //   popuplogin.style.display = "block";
+    // })

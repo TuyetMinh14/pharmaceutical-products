@@ -12,31 +12,45 @@
 }
   * {
     list-style: none;
+    margin: 0;
+    padding: 0;
   }
   
   .banner-qc {
     display: block;
     background-color: #fff;
-    position: relative;
-    left: -0.5rem;
-    height: 62.5rem;
+    /* position: relative;
+    left: -0.5rem; */
+    height: 50vw;
     width: 100vw;
+  }
+
+  .banner-qc hr{
+    width: 100vw;
+    height: 4vw;
+    background: #d9d9d9;
+    border: none;
   }
   
   .container {
     display: block;
-    max-width: 82.5rem; /* (1320 / 16) */
-    padding: 3.25rem; /* (52 / 16) */
-    max-height: 22.5rem; /* (360 / 16) */
-    position: relative;
+    max-width: 90%; /* (1320 / 16) */
+    padding: 3.25vw; /* (52 / 16) */
+    max-height: 65%; /* (360 / 16) */
+    margin-left: 1vw;
+    padding-bottom: 0;
+    padding-top: 6vw;
+    
+    /* position: relative;
     top: -62rem;
-    left: rem;
+    left: rem; */
   }
   
   .slider-wrapper {
-    position: relative;
-    max-width: 1320px;
+    /* position: relative; */
+    max-width: 90%;
     margin: 0 auto;
+    height: 20%;
   }
   
   .slider {
@@ -46,6 +60,8 @@
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0, 0, 0.25);
+    height: 100%;
+    width: 100%;
   }
 
   @media all and (max-width: 480px) {
@@ -59,23 +75,25 @@
     flex: 1 0 100%;
     scroll-snap-align: start;
     object-fit: cover;
-    height: 360px;
-    border-radius: 3em;
+    height: 50%;
+    width: 100%;
+    border-radius: 3vw;
   }
   
   .nav-slide {
     display: flex;
     column-gap: 1rem;
     position: absolute;
-    top: 21rem;
+    /* top: 21rem; */
     left: 50%;
+    top:48vw;
     transform: translateX(-50%);
     z-index: 1;
   }
   
-  .nav-slide a {
-    width: 0.7rem;
-    height: 0.7rem;
+  .nav-slide > a {
+    width: 0.7vw;
+    height: 0.7vw;
     border-radius: 50%;
     background-color: green;
     opacity: 0.75;
@@ -83,36 +101,37 @@
   }
   
   .nav-slide a:hover {
-    opacity: 1;
+    opacity: 2;
   }
   
   .container button {
-    width: 3.1875rem; /* (51px / 16) = 3.1875rem */
-    height: 3.1875rem; /* (51px / 16) = 3.1875rem */
+    width: 3.5vw; /* (51px / 16) = 3.1875rem */
+    height: 3.5vw; /* (51px / 16) = 3.1875rem */
     border-radius: 50%;
     border: 0;
     padding: 0;
+    position: absolute;
   }
   
   .next {
     position: relative;
-    left: 80.875rem; /* (1294px / 16) = 80.875rem */
-    bottom: 15.5cm;
+    left: 88vw; 
+    top:36vw; 
   }
   
   .round1 {
     position: relative;
     background-color: #efa7cf;
-    width: 51px;
-    height: 51px;
+    width: 3.5vw;
+    height: 3.5vw;
     border-radius: 50%;
   }
   
   span {
     z-index: 999;
-    height: 3px;
-    margin: 1px;
-    width: 20px;
+    height: 0.2vw;
+    margin: 0.2vw;
+    width: 1.3vw;
     background: #ff1095;
     transition: 0.4s ease;
   }
@@ -167,15 +186,15 @@
   
   /* prev */
   .prev {
-    position: absolute;
-    right: 1290px;
-    bottom: 15.5cm;
+    position: relative;
+    left:7vw;
+    top:36vw;
   }
   .round2 {
     position: relative;
     background-color: #efa7cf;
-    width: 51px;
-    height: 51px;
+    width: 3.5vw;
+    height: 3.5vw;
     border-radius: 50%;
   }
   
@@ -239,57 +258,113 @@
     border-radius: 3em;
   }
   
+
+
+
   /* danh muc san pham */
-  .rows {
-    width: 100%;
-    left: -0.01vw;
-    position: absolute;
-    top: 113%;
+  .danhmuc-section {
+    width: 100vw;
+    height: 25vw;
+    background-color: #F4C1DE;
+
+    
   }
   .catgory1 {
     width: 100vw;
-    height: 30vw;
+    height: 100%;
     background: #d99bbd;
   }
   
   .cat-title {
     color: #000;
     font-family: "Montserrat";
-    font-size:3vw; 
+    font-size:2.3vw; 
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     display: block;
-    position: relative;
-    top: 2vw;
-    left: 3vw;
+   
+    padding-top: 2vw;
+    margin-left: 3vw;
   }
+
+  
   .danhmuc {
-    position: absolute;
-    top: 5.063rem;
-    left: 6.25rem;
+    width: 80%;
+    height: 60%;
+    padding-top: 3%;
+    padding-left: 10%;
   }
   .danhmuc ul {
     list-style: none;
     display: flex;
+    height: 100%;
+    width: 100%;
   }
-  .danhmuc a {
+  .danhmuc > a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     padding: 0;
   }
   .danhmuc ul li {
-    margin-right: -7.6px;
-    margin-left: 0; /* Adjust the value as needed for your desired spacing */
+    /* margin-right: -7.6px; */
+
+    margin:1vw;
     padding: 0;
+    height: 90%;
+    width: 90%;
+    
   }
+
+  .danhmuc ul li > a{
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+  }
+
   .danhmuc img {
     width: 100%;
+    height: 100%;
     margin: 0;
-  }
-  .danhmuc a:hover {
+    border-radius: 2vw;
+    opacity: 1;
+    transition: .5s ease;
+}
+
+.danhmuc a:hover {
     cursor: pointer;
-    opacity: 10;
-  }
-  hr {
+    opacity: 0.5; 
+}
+
+.cate-name {
+    transition: .5s ease;
+    opacity: 0;
+    position: relative;
+    top: -2vw;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.danhmuc .img:hover .img {
+    opacity: 0.5; 
+}
+
+.danhmuc .cate:hover .cate-name {
+    opacity: 2; 
+}
+
+.cate-name {
+  font-family: Inter;
+    color: #000;
+    font-size: 1vw;
+    opacity:0;
+    font-weight: bold;
+}
+
+  /* hr {
     height: 4vw;
     width: 100vw;
     background: #d9d9d9;
@@ -297,30 +372,96 @@
     top: -9rem;
     display: block;
     border: none;
-  }
+  } */
   
+  /* neww category */
+/* 
+  .danhmuc-section{
+    width: 100vw;
+    height:20vw;
+    background-color: #F4C1DE;
+  }
+.cat-title{
+    color: #000;
+    font-family: "Montserrat";
+    font-size:2.3vw; 
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    display: block;
+    padding-top: 2vw;
+    margin-left: 3vw;
+    }
+    .category1{
+      width: 100vw;
+      height:20vw;
+    }
+.danhmuc{
+  display: flex;
+      width: 90%;
+      height:70%;
+      margin-left:10vw;
+    }
+
+.danhmuc > a{
+  width: 25%;
+  height: 100%;
+  margin-left: 5vw;
+}
+.danhmuc a picture >span{
+  display: block;
+  content:" ";
+  background-color: #fff;
+  width: 120%;
+  height:40%;
+}
+
+.danhmuc a > picture{
+  background-color: #fff;
+  width: 15vw; */
+  
+
+
+.danhmuc a picture > img{
+  position: relative;
+  top: -11vw;
+  left: 15%;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 35%;
+  max-height: 35%;
+  transition: all .3s;
+  opacity: 1;
+  display: block;
+}
+
+
+
+
+
   /* SANPHAMNOIBAT */
   
   .oproducts {
     width: 100vw;
-    height:fit-content;
+    height:55vw;
     background-color: #fff;
-    display: block;
-    position: relative;
+    /* display: block; */
+    /* position: relative;
     top: -28.7rem;
-    left: -0.4rem;
-    padding-bottom: 2%;
+    left: -0.4rem; */
+    /* padding-bottom: 2%; */
   }
-  .oproducts hr {
+  /* .oproducts hr {
     top: 2.875rem;
-  }
+  } */
   
   .oproducts .cat-title {
-    top: 9rem;
-    left: 3rem;
+    margin-top: 2vw;
+    /* top: 9rem;
+    left: 3rem; */
   }
-  .oproducts ul li{
-    width:24%
+  .oproducts ul li,  .cproduct ul li,  .gproducts ul li{
+    width:23%;
   }
   .oproducts .product {
   
@@ -329,12 +470,19 @@
     height: 100%;
     border: none;
     box-shadow: 0 0 12px rgba(15, 61, 145, 0.12);
-    border-radius: 12px;
+    border-radius: 2vw;
     margin-left: 1rem;
     
   }
+  .oproducts hr{
+    width: 100vw;
+    height: 4vw;
+    background: #d9d9d9;
+    border: none;
+  }
   .oproducts .row {
-    margin-top: 12rem;
+    margin-left: 5%;
+    margin-top: 3vw;
   }
   
   .oproducts > a{
@@ -347,7 +495,7 @@
   }
   
   .product > img {
-    width: 100%;
+    width: 90%;
     border-radius: 12px;
   }
   
@@ -357,21 +505,21 @@
   .pname,.post-content {
     color: black;
     font-family: "Inter";
-    font-size: 1.2vw; 
+    font-size: 1.1vw; 
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     text-align: left;
     overflow: hidden;
     width: 90%;
-    height: 3.6rem;
+    height: 13%;
     text-overflow: ellipsis;
     padding:5%
   }
   .price , p.price {
     color: #ff1095;
     font-family: "Montserrat";
-    font-size: 1.5vw; 
+    font-size: 1.4vw; 
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -380,21 +528,22 @@
     margin-right: 0.6rem;
     margin-top: 0.8rem;
     margin-bottom:3%;
-    width:90%
+    width:90%;
+    padding:5%;
   }
   #addstock {
     width: 80%;
-    height:8%;
+    height:10%;
     border: none;
-    border-radius: 30px;
+    border-radius: 3vw;
     background-color: #6e80dc;
     color: black;
     font-family: "Inter";
-    font-size: 1.5vw; 
+    font-size: 1.4vw; 
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    margin-bottom: 15%;
+    margin-bottom: 20%;
   }
   
   /* chuc nang */
@@ -407,15 +556,15 @@
   }
   .seeall {
     position: absolute;
-    bottom: 1rem;
-    left: 74.94rem;
+    bottom: 1vw;
+    left: 74.94vw;
     width: 11.125rem;
     height: 2.75rem;
-    border-radius: 6.25rem;
+    border-radius: 6.25vw;
     background: #d99bbd;
     text-align: center;
     color: #000;
-    font-size: 1.25rem;
+    font-size: 1.25vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -427,7 +576,7 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    padding: 0.625rem 1.25rem;
+    padding: 0.625vw 1.25vw;
     text-decoration: none; /* Remove underline from the link */
   }
   
@@ -440,39 +589,44 @@
   
   .news {
     width: 100vw;
-    height: 62.81rem;
+    height: 62.81vw;
     background-color: #fff;
-    position: relative;
-    top: -29rem;
-    left: -0.4em;
+    /* position: relative; */
+    /* top: -29rem;
+    left: -0.4em; */
   }
   
   .news .new-title {
-    padding-top: 2rem;
+    padding-top: 2vw;
     color: #000;
     font-family: "Inter";
-    font-size: 2rem;
+    font-size: 2vw;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    position: relative;
-    left: 3rem;
+    padding-left: 3vw;
+    /* position: relative;
+    left: 3rem; */
   }
   .news hr {
     opacity: 0.3;
     background: #6e80dc;
-    width: 82.375rem;
-    height: 0.3125rem;
+    width: 90vw;
+    height: 0.3125vw;
     text-align: center;
-    position: relative;
+    margin-left: 3.5vw;
+    margin-top: 1vw;
+    /* position: relative;
     left: -0.6rem;
-    top: 1rem;
+    top: 1rem; */
   }
   .news ul {
     display: flex;
-    position: relative;
+    margin-top: 2vw;
+    margin-left: 3.5vw;
+    /* position: relative;
     top: 1rem;
-    left: 0.7rem;
+    left: 0.7rem; */
   }
   .news ul li {
     margin-right: 3rem;
@@ -480,8 +634,8 @@
   .news-category {
     width: fit-content;
     height: fit-content;
-    padding: 0.5rem 1rem;
-    border-radius: 6.25rem;
+    padding: 0.5vw 1vw;
+    border-radius: 6.25vw;
     border: 1px solid #000;
     background: #fff;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -490,53 +644,60 @@
     color: #000;
     text-align: center;
     font-family: "Inter";
-    font-size: 1.3rem;
+    font-size: 1.3vw;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
   }
   .news table {
-    position: relative;
-    left: 3rem;
-    top: 2rem;
+    /* position: relative;
+    left: 3vw;
+    top: 2vw; */
+    padding-top: 2vw;
+    padding-left: 3vw;
+    
+    
   }
   .left-col img {
-    width: 47.4375rem;
-    height: 31.5625rem;
-    left: 2rem;
-    border-radius: 1rem;
+    width: 48vw;
+    height: 32vw;
+    left: 2vw;
+    border-radius: 1vw;
     background: #fff;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   }
   .left-col .left-title {
-    width: 47.5rem;
-    height: 5.6rem;
+    width: 100%;
+    height: 5vw;
+    overflow: hidden;
     position: relative;
-    top: 2rem;
-    font-size: 1.8rem;
+    top: 2vw;
+    font-size: 1.8vw;
     color: #000;
     font-family: "Montserrat";
+    font-weight: 900;
   }
   .right-col {
-    padding: 0;
+    padding-left: 1vw;
+    padding-bottom: 1vw;
   }
   .right-col ul {
-    height: 13rem;
+    height: 13vw;
   }
   .right-col img {
-    width: 17.25rem;
-    height: 11rem;
-    left: 2rem;
-    border-radius: 1rem;
+    width: 17.25vw;
+    height: 100%;
+    left: 2vw;
+    border-radius: 1vw;
     background: #fff;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   }
   .right-col .right-title {
-    width: 13.9375rem;
-    height: 11rem;
+    width: 13.9375vw;
+    height: 11vw;
     flex-shrink: 0;
     position: relative;
-    font-size: 1rem;
+    font-size: 1vw;
     color: #000;
     font-family: "Montserrat";
     overflow: hidden;
@@ -550,7 +711,7 @@
   }
   
   .right-col ul li {
-    padding-right: 1rem;
+    padding-right: 1vw;
     width: fit-content;
     margin: 0;
   }

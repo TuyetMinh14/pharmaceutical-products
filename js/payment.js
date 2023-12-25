@@ -2,9 +2,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const storedProductsData = localStorage.getItem('productsData');
     if (storedProductsData) {
         const productsData = JSON.parse(storedProductsData);
-        const listCartHTML = document.querySelector('.listCart');
-        const cartTotalSpan = document.querySelector('#total')||[];
-        const iconCartSpan = document.querySelector('#icon-cart span') || document.querySelector('#cart-item-count')
+        // const listCartHTML = document.querySelector('.listCart');
+        // const cartTotalSpan = document.querySelector('#total')||[];
+        // const iconCartSpan = document.querySelector('#icon-cart span') || document.querySelector('#cart-item-count')
         const paymentContainer = document.querySelector('.cart-container');
         const totalQuantityCheckout = document.querySelector('#total-quantity');
         const totalPriceCheckout = document.querySelector('#total-price');
@@ -19,12 +19,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Đưa biến cart ra khỏi hàm để nó có thể được sử dụng ở các hàm khác
         // let cart = [];
-        const user = JSON.parse(localStorage.getItem('dangnhap'))|| []
-        const a = user.usernames + 1 ||[]    
-
+        const user = JSON.parse(localStorage.getItem('dangnhap'))
+        const a = user.phone 
+        console.log(a)
         const displayCartItems = () => {
             cart = JSON.parse(localStorage.getItem(a)) || [];
-            listCartHTML.innerHTML = '';
+            // listCartHTML.innerHTML = '';
             paymentContainer.innerHTML = '';
             let totalQuantity = 0;
             let sum = 0;
@@ -42,21 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     newItem.classList.add('item');
                     newItem.dataset.id = item.product_id;
 
-                    listCartHTML.appendChild(newItem);
-                    newItem.innerHTML = `
-                        <div class="image">
-                            <img src="${info.imgSrc}">
-                        </div>
-                        <div class="name">
-                            ${info.name}
-                        </div>
-                        <div class="totalPrice">${(info.price * item.quantity).toLocaleString()} VNĐ</div>
-                        <div class="quantity">
-                            <span class="minus"><</span>
-                            <span>${item.quantity}</span>
-                            <span class="plus">></span>
-                        </div>
-                    `;
+                    
 
                     let newItemPayment = document.createElement('div');
                     newItemPayment.classList.add('payment-item');
@@ -74,49 +60,11 @@ document.addEventListener("DOMContentLoaded", function () {
                     `;
                 });
 
-                // iconCartSpan.innerText = totalQuantity;
-                totalQuantityCheckout.innerHTML = totalQuantity;
-                // cartTotalSpan.innerHTML = `<span> Tổng tiền: ${sum.toLocaleString() } VNĐ </span>`;
                 totalPriceCheckout.innerHTML = (sum + shipFee).toLocaleString() + ' VNĐ';
-            } else {
-                iconCartSpan.innerText = 0;
-                cartTotalSpan.innerHTML = '<strong>Giỏ hàng trống</strong>';
             }
         };
 
-        listCartHTML.addEventListener('click', (event) => {
-            let positionClick = event.target;
-            if (positionClick.classList.contains('minus') || positionClick.classList.contains('plus')) {
-                let product_id = positionClick.parentElement.parentElement.dataset.id;
-                let type = 'minus';
-                if (positionClick.classList.contains('plus')) {
-                    type = 'plus';
-                }
-                changeQuantityCart(product_id, type);
-            }
-        });
-
-        const changeQuantityCart = (product_id, type) => {
-            let positionItemInCart = cart.findIndex((value) => value.product_id == product_id);
-
-            if (positionItemInCart >= 0) {
-                switch (type) {
-                    case 'plus':
-                        cart[positionItemInCart].quantity = cart[positionItemInCart].quantity + 1;
-                        break;
-                    default:
-                        let changeQuantity = cart[positionItemInCart].quantity - 1;
-                        if (changeQuantity > 0) {
-                            cart[positionItemInCart].quantity = changeQuantity;
-                        } else {
-                            cart.splice(positionItemInCart, 1);
-                        }
-                        break;
-                }
-            }
-
-            displayCartItems();
-        };
+       
 
         applyDiscountBtn.addEventListener('click', () => {
             let discountCode = discountInput.value;

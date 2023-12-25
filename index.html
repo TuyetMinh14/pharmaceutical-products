@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/index/index-index.css" />
     <link rel="stylesheet" href="./css/index/index-sign-log.css" />
     <link rel="stylesheet" href="./css/sp-hover-index.css">
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <!-- <link rel="stylesheet" href="./css/category-index.css"> -->
@@ -18,10 +19,12 @@
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
   </head>
 
   <body>
-    
+    <div class="page">
     <div class="banner-header">
       <img src="./img/header/caythong1.png" alt="" />
       <div class="decor-1">KHUYẾN MÃI ĐẶC BIỆT</div>
@@ -31,7 +34,7 @@
     </div>
     <div class="logo-content">
       <div class="hotline">
-        Hotline đặt hàng
+       <div class="block1">Hotline đặt hàng</div> 
         <button>
           <img src="./img/header/phone.png" alt="" /><a href="tel: +84896714266"
             >08967-14-266</a
@@ -39,25 +42,13 @@
         </button>
       </div>
       <div class="nav-menu">
-        <div class="language">
-          <div class="language-selected">
-            <img
-              src="https://www.worldometers.info/img/flags/vm-flag.gif"
-              alt=""
-            />
-            <div class="lan">VietNam</div>
-          </div>
-          <ul>
-            <li><a href="#" class="vie">VietNam</a></li>
-            <li><a href="#" class="en">English</a></li>
-          </ul>
-        </div>
-        <div class="decor"></div>
-        <a href="#" class="log">Đăng Nhập</a>
-        <div class="decor1"></div>
-        <a href="#" class="sigin" >Đăng Ký</a>
-      </div>
-      <a href="index.html"><img src="./img/header/LOGO.png" alt="" srcset="" class="logo" id="logo-web"/></a>
+      <ul >
+       <li><a href="#" class="log">Đăng Nhập</a></li> 
+       <li><a href="#" class="sigin" >Đăng Ký</a></li>
+      </ul></div>
+      <div class="logo">
+      <a href="index.html"><img src="./img/header/LOGO.png" alt="" srcset=""  id="logo-web"/></a>
+    </div>
       <div class="search-box">
         <div class="row">
           <input type="text" placehoder="type to search..." id="search" />
@@ -74,7 +65,7 @@
       </a>
     </div>
     <!-- banner qc -->
-    <div class="banner-qc"></div>
+    <div class="banner-qc">
     <section class="container">
       <div class="slider-wrapper">
         <div class="slider">
@@ -104,31 +95,49 @@
           </div>
         </button>
       </div>
+      
     </section>
-
+    <hr>
+ </div>
     <!-- service -->
     <!-- <div class="service"> -->
       <!-- danhmuc -->
-    </div>
-    <div class="rows">
+   
+    <div class="danhmuc-section" >
       <!-- <hr>  -->
-      <div class="catgory1">
-        <div class="cat-title">DANH MỤC SẢN PHẨM</div>
+      <div class="category1">
+        <div class="cat-title"><a href="./category.html" style="color: black;">DANH MỤC SẢN PHẨM</a></div>
         <div class="danhmuc">
           <ul>
-            <li>
-              <a href="./category.html"><img src="./img/index/duocpham.png" alt="" /></a>
+            <li class ="select-cate">
+              <a class="cate" href="./category.html" ><img class="img" src="https://data-service.pharmacity.io/pmc-upload-media/production/pmc-ecm-core/products/P17315_1_l.webp" alt="" />
+                <div class="cate-name">Dược Phẩm</div>
+              
+              </a>
             </li>
-            <li>
-              <a href="./category.html"><img src="./img/index/chamsocsuckhoe.png" alt="" /></a>
+            <li class ="select-cate">
+              <a class="cate" href="./category.html"><img src="https://data-service.pharmacity.io/pmc-upload-media/production/pmc-ecm-core/products/P21654_11.jpg" alt="" />
+                <div class="cate-name">Thiết bị y tế</div>
+              </a>
+              
             </li>
-            <li>
-              <a href="./category.html"><img src="./img/index/thietbiyte.png" alt="" /></a>
+            <li class ="select-cate">
+              <aclass="cate" href="./category.html"
+                ><img src="https://data-service.pharmacity.io/pmc-upload-media/production/pmc-ecm-core/products/P25921_2.jpg" alt=""
+              />
+              <div class="cate-name">Thực phẩm chức năng</div></aclass=>
             </li>
-            <li>
-              <a href="./category.html"
-                ><img src="./img/index/thucphamchucnang.png" alt=""
-              /></a>
+            <li class ="select-cate">
+              <a class="cate" href="./category.html"
+                ><img src="https://data-service.pharmacity.io/pmc-upload-media/production/pmc-ecm-core/products/P01352_1_l.webp" alt=""
+              />
+              <div class="cate-name">Chăm sóc sức khỏe</div></a>
+            </li>
+            <li class ="select-cate">
+              <a class="cate" href="./category.html"
+                ><img src="https://data-service.pharmacity.io/pmc-upload-media/production/pmc-ecm-core/products/P25096_5.jpg" alt=""
+              />
+              <div class="cate-name">Chăm sóc sắc đẹp</div></a>
             </li>
           </ul>
         </div>
@@ -136,12 +145,12 @@
     </div>
 
     <!-- sanphamnoibat -->
-    <div class="oproducts" >
-      <hr />
+    <section class="oproducts" >
+      <hr>
           <div class="cat-title">SẢN PHẨM NỔI BẬT</div>
           <ul class="row">
           </ul>
-    </div>
+    </section>
 
 
     
@@ -280,24 +289,116 @@
       <div class="km-email">
         <p>ĐĂNG KÝ NHẬN KHUYẾN MÃI</p>
         <input type="text" placeholder="Nhập email hoặc số điện thoại" id = "email"/>
-        <button class="decor-4" href="#" onclick="nhapemial()"><a href="">ĐĂNG KÝ</a></button>
+        <div class="decor-5"><button  href="#" onclick="nhapemial()">ĐĂNG KÝ</button></div>
       </div>
       <div class="contact">
-        <p>Theo dõi chúng tôi trên</p>
-        <table>
-          <tr>
-            <td>
-              <a href=""><img src="./img/header/zalo.jpeg" alt="" /> Zalo</a>
+        <div class="logo-footer">
+          <img src="./img/header/logo.png" alt="" srcset="">
+          <p>Follow us</p>
+          <div class="social">
+            <a href="" > <i class="fa-brands fa-facebook-f"></i></a>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-brands fa-twitter"></i></a>
+          <a href=""><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="lienhe">
+          <table>
+            <tr>
+              <td><b>Mạng Xã Hội</b></td>
+            </tr>
+            <tr>
+              <td><hr></td>
+            </tr>
+            <tr>
+              <td>
+                <a href="" > <i class="fa-brands fa-facebook-f"></i><p>Facebook</p></a>
             </td>
           </tr>
           <tr>
             <td>
-              <a href=""><img src="./img/header/fb.png" alt="" />Facebook</a>
+              <a href=""><i class="fa-brands fa-instagram"></i> <p>Instagram</p></a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href=""><i class="fa-brands fa-twitter"></i><p>Twitter</p></a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href=""><i class="fa-brands fa-youtube"></i><p>Youtube</p></a></td>
+      
+    </tr>
+          </table>
+        </div>
+
+
+        <div class="lienhe">
+          <table>
+            <tr>
+              <td><b>Mạng Xã Hội</b></td>
+            </tr>
+            <tr>
+              <td><hr></td>
+            </tr>
+            <tr>
+              <td>
+                <a href="" > <i class="fa-brands fa-facebook-f"></i><p>Facebook</p></a>
             </td>
           </tr>
-        </table>
+          <tr>
+            <td>
+              <a href=""><i class="fa-brands fa-instagram"></i> <p>Instagram</p></a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href=""><i class="fa-brands fa-twitter"></i><p>Twitter</p></a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href=""><i class="fa-brands fa-youtube"></i><p>Youtube</p></a></td>
+      
+    </tr>
+          </table>
+        </div>
+
+        <div class="lienhe lienhe3">
+          <table>
+            <tr>
+              <td><b>Liên hệ</b></td>
+            </tr>
+            <tr>
+              <td><hr></td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.google.com/maps/place/University+of+Information+Technology+-+VNUHCM/@10.8700142,106.8004792,17z/data=!3m1!4b1!4m6!3m5!1s0x317527587e9ad5bf:0xafa66f9c8be3c91!8m2!3d10.8700089!4d106.8030541!16s%2Fm%2F02qqlmm?entry=ttu" ><i class="fa-solid fa-location-dot"></i><p>Khu phố 6, P.Linh Trung, Tp.Thủ Đức, 
+                  Tp.Hồ Chí Minh.</p></a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href=""><i class="fa-regular fa-envelope"></i> <p>cuahangbanthuoc@gm.uit.com</p></a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="+841404200303"><i class="fa-solid fa-phone"></i></i><p>+84 1404 2003 03</p></a>
+        </td>
+      </tr>
+          </table>
+        </div>
+<hr class ="last-line">
       </div>
+      
     </footer>
+  </div>
+
+
+
 
     <!-- sigin -->
     <form class="signup">
@@ -387,46 +488,11 @@
     <div id="sort-items" style="display: none;"></div>
     <div id="pagination" style="display: none;"></div>
     <div id="posts-main-container" style="display: none;"></div>
-
-    <script src="./js/index.js"></script>
+    <div class = "buyNow-btn" style="display: none;"></div>
+    <script src="./js/main.js"></script>
     <script src="./js/login.js"></script>
-    <script src="./js/nhap-email.js"></script>
-    <script src="./js/productindex.js"></script>
-
-    <script>
-      window.addEventListener('beforeunload', function (event) {
-        localStorage.removeItem('dangnhap')
-      });
-    </script>
-      <!-- // let productsData = JSON.parse(localStorage.getItem('productsData'))
-
-//       $(document).ready(function(){
-//     $('#search').keyup(function(){
-//         $('.autocomplete').html('');
-//         $('#state').val('');
-//         var searchField = $('#search').val().toLowerCase(); // Convert input to lowercase for case-insensitive matching
-//         var expression = new RegExp(searchField, "i");
-        
-//         // Loop through the productsData array
-//         $.each(productsData, function(key, value){
-//             if (value.name.toLowerCase().search(expression) != -1 || value.category.toLowerCase().search(expression) != -1)
-//             {
-//                 $('.autocomplete').append('<a href='+href+'detail.html?id=' + value.id +'><li>'+value.name+'</li></a>');
-//             }
-//         });   
-//     });
-    
-//     $('.autocomplete').on('click', 'li', function() {
-//         $('#search').val($.trim($(this).text()));
-//         $('.autocomplete').html('');
-//     });
-// }); -->
-      
-
-  
-
-    <script src="./js/search-bar.js"></script>
+    <script src="./js/nhap-email.js"></script>    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
+   
   </body>
 </html>

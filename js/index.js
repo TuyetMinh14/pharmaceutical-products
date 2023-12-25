@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
         
     }
 
-    document.querySelector('.prev').addEventListener('click', prev);
-    document.querySelector('.next').addEventListener('click', next);
+    document.querySelector('.prev')||[].addEventListener('click', prev);
+    document.querySelector('.next')||[].addEventListener('click', next);
 });
 

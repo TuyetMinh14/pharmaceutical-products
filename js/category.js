@@ -659,6 +659,8 @@ document.addEventListener("DOMContentLoaded", function () {
         addCartToHTML();
         return productDiv;
     }
+
+    
     // CART
     let listCartHTML = document.querySelector('.listCart');
     let iconCart = document.querySelector('#icon-cart');
@@ -779,11 +781,17 @@ document.addEventListener("DOMContentLoaded", function () {
         addCartToHTML();
         addCartToMemory();
     };   
+
+
+
+
     // PAGINATION
     const itemsPerPage = 6;
     let currentPage = 1;
     let currentCategory = '';
     let currentSortOrder = ''; 
+
+   
 
     function displayProductsByCategory(categoryId) {
         currentCategory = categoryId;
@@ -799,6 +807,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const productsToDisplay = sortedProducts.filter(product => {
             return currentCategory === '' || product.category === currentCategory || product.categoryName === currentCategory;
         }).slice(startIndex, endIndex);
+        
         displayProducts(productsToDisplay);
     }
 
@@ -899,7 +908,19 @@ document.addEventListener("DOMContentLoaded", function () {
         displayProductsOnPage(currentPage);
         generatePagination();
     }
-    displayProductsByCategory('');
+    if(localStorage.getItem("category")){
+        categoryId = localStorage.getItem("category")
+        displayProductsByCategory(categoryId)
+        localStorage.removeItem('category')
+    }
+    else{
+    displayProductsByCategory('');}
+   
+
+
+
+
+
 });
 
 

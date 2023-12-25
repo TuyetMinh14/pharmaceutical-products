@@ -38,7 +38,7 @@
 }
 .log:hover,.sigin:hover,.dangxuat:hover{
     text-decoration: underline solid #efa7cf 0.3rem;
-
+    transition: all 0.2s;
 }
 
 .sanphamtuongtu .product:hover{
