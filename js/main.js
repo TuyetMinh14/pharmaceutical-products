@@ -1305,6 +1305,22 @@ document.addEventListener("DOMContentLoaded", function () {
     if(localStorage.getItem("category")){
       categoryId = localStorage.getItem("category")
       displayProductsByCategory(categoryId)
+      btn.addEventListener('click', function () {
+        let id = this.id;
+        let click = document.getElementById('list-items-'+id);
+        let show = document.getElementsByClassName('show');
+        if(click.classList.contains('show'))
+        {
+           click.classList.remove('show') 
+        }
+        else {
+            Array.from(show).forEach(function (item){
+                item.classList.remove('show');
+            });
+
+            click.classList.add('show')
+        }
+    });
     }
     else
     {

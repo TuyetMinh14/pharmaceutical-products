@@ -281,22 +281,10 @@
 
     
         <!-- JS file -->
-        <script src = "js/category.js"></script>
+        <script src = "./js/main.js"></script>
         <script src="./js/nhap-email.js"></script>
-        <script>
-          function displayusername(){
-      var usernameDisplay = document.querySelector('.user-name')||[]
-      const user = JSON.parse(localStorage.getItem('dangnhap'));
-        usernameDisplay.innerHTML = user.usernames + '<img src="./img/header/username-icon-png-6.jpg" alt="" srcset="">'
-        localStorage.removeItem('user');
-        } 
-        displayusername()
+        <script src="./js/search-bar.js"></script>
 
-        function dangxuat(){
-  localStorage.removeItem('dangnhap');
-} 
-        </script> 
-        <script src="/js/search-bar.js"></script>
         
     </body>
 </html>
