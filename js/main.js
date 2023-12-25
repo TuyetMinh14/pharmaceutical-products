@@ -1088,10 +1088,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
                 else{
                   
-                  function dangXuat(){
-                    localStorage.removeItem('dangnhap')
-                  };
-                  dangXuat()  
+                  
 
                   // nut mua ngay khi chua dang nhap
                   buyNowbtn.addEventListener("click",function(){
@@ -1305,27 +1302,13 @@ document.addEventListener("DOMContentLoaded", function () {
     if(localStorage.getItem("category")){
       categoryId = localStorage.getItem("category")
       displayProductsByCategory(categoryId)
-      btn.addEventListener('click', function () {
-        let id = this.id;
-        let click = document.getElementById('list-items-'+id);
-        let show = document.getElementsByClassName('show');
-        if(click.classList.contains('show'))
-        {
-           click.classList.remove('show') 
-        }
-        else {
-            Array.from(show).forEach(function (item){
-                item.classList.remove('show');
-            });
-
-            click.classList.add('show')
-        }
-    });
+      
     }
     else
     {
     displayProductsByCategory('');
     }
+
     }
 
     function handleUnload() {
@@ -1334,14 +1317,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
   
-  // Đăng ký sự kiện beforeunload hoặc unload
   window.addEventListener('beforeunload', handleUnload);
 
     if(window.location.href.includes('category')){
     productOnscreen()
     }
 
-// displayProductsByCategory('');
   
 
 
@@ -1420,6 +1401,20 @@ $(document).ready(function(){
         $('.autocomplete').empty().css('display', 'none');
     });
 });
+
+
+
+
+
+      if(!window.location.href.includes("login")){
+        function dangXuat(){
+          localStorage.removeItem('dangnhap')
+        }
+        dangXuat()
+      }
+
+
+
     });
 
 
