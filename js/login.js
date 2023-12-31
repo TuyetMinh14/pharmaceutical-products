@@ -26,10 +26,6 @@ const logIn = {
 let json2 = JSON.stringify(logIn);
 localStorage.setItem('user', json2);
 
-if(localStorage.getItem('123')){
-  localStorage.setItem('123')
-}
-
 if(!window.location.href.includes('login'))
 {
 signupButton.addEventListener("click", function () {
@@ -115,7 +111,7 @@ btnRegister.addEventListener("click", (e) => {
     };
     let json1 = JSON.stringify(logIn);
     localStorage.setItem('dangnhap', json1);
-    localStorage.setItem(inputPhoneRegister.value,'')
+    localStorage.setItem(inputPhoneRegister.value,'[]')
 });
 
 const btnLogin = document.querySelector("#dongydangnhap");

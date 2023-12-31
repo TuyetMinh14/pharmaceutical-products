@@ -741,7 +741,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const storedProductsData = JSON.parse(localStorage.getItem("productsData"));
             const user = JSON.parse(localStorage.getItem('dangnhap')) || []
     const phone = user.phone || []
-    let cart = []
+    const cart = JSON.parse(localStorage.getItem(phone))||[];
 
     const buyNowbtn = document.querySelector('.buyNow-btn')||document.querySelector('.checkOut-btn')
 
@@ -937,6 +937,7 @@ document.addEventListener("DOMContentLoaded", function () {
                if (positionClick.classList.contains('cart-btn')) {
                    let id_product = productDiv.dataset.id;
                    addToCart(id_product);
+                   
                }
            } else {
                popuplogin1.style.display = "block";
@@ -946,12 +947,13 @@ document.addEventListener("DOMContentLoaded", function () {
        });
     
         addCartToHTML();
+        
     
         return productDiv;
     }
     
     
-  
+    
   
     function displayProducts(products) {
       function generateRandomNumbers() {
@@ -1056,11 +1058,10 @@ document.addEventListener("DOMContentLoaded", function () {
                         var usernameDisplay = document.querySelector('.sigin')
                         var dangxuat = document.querySelector('.log')
                         const user = JSON.parse(localStorage.getItem('dangnhap')) ;
-                        var firstFiveChars = user.username.slice(0, 5);
+                        var firstFiveChars = user.usernames
                         usernameDisplay.innerText = firstFiveChars
                         // + '<img src="./img/header/username-icon-png-6.jpg" alt="" srcset="">'
                         dangxuat.innerText = 'Đăng xuất'
-                  
                         }
                 displayUsername()
 

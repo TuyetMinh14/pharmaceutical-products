@@ -151,7 +151,10 @@ document.addEventListener("DOMContentLoaded", function () {
              let iconCartSpan = document.querySelector('#icon-cart span') || document.querySelector('#cart-item-count');
              let body = document.querySelector('body');
              let cartTotalSpan = document.querySelector('#total')
-             let cart = []
+            
+            const cart = JSON.parse(localStorage.getItem(a));
+
+
 
 
 
