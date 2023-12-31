@@ -170,10 +170,15 @@ btnLogin.addEventListener("click", (e) => {
 
 loginButton.addEventListener("click", function () {
   if(window.location.href.includes("login")){
+    if(window.location.href.includes("payment")){
+      indow.location.href = "./index.html"
+    }
+    else{
                         let a = window.location.href;
                         console.log(a)
                         a = a.replace("-login", "");
                         window.location.href = a
+                      }
   }
   else{
   popuplogin.style.display = "block";
