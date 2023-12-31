@@ -739,9 +739,17 @@ document.addEventListener("DOMContentLoaded", function () {
             let iconCartSpan = document.querySelector("#cart-item-count")||[]
             let cartTotalSpan = document.querySelector("#total")||[];
             const storedProductsData = JSON.parse(localStorage.getItem("productsData"));
+            
             const user = JSON.parse(localStorage.getItem('dangnhap')) || []
-    const phone = user.phone || []
-    const cart = JSON.parse(localStorage.getItem(phone))||[];
+            const phone = user.phone || []
+            let cart = [];
+            
+// if (JSON.parse(localStorage.getItem(phone)) == '{}') {
+//     cart = [];
+// } else {
+//     cart = JSON.parse(localStorage.getItem(phone));
+// }
+
 
     const buyNowbtn = document.querySelector('.buyNow-btn')||document.querySelector('.checkOut-btn')
 
@@ -853,6 +861,8 @@ document.addEventListener("DOMContentLoaded", function () {
         addCartToHTML();
         addCartToMemory();
       };
+     
+
       
       if(window.location.href.includes('index')){
 
@@ -1042,8 +1052,22 @@ document.addEventListener("DOMContentLoaded", function () {
       
 
       if(window.location.href.includes("login")){
+        function displayUsername(){
+          var usernameDisplay = document.querySelector('.sigin')
+          var dangxuat = document.querySelector('.log')
+          const user = JSON.parse(localStorage.getItem('dangnhap')) ;
+          var firstFiveChars = user.usernames
+          usernameDisplay.innerText = firstFiveChars
+          // + '<img src="./img/header/username-icon-png-6.jpg" alt="" srcset="">'
+          dangxuat.innerText = 'Đăng xuất'
+          }
+  displayUsername()
+        if (JSON.parse(localStorage.getItem(phone)) == '') {
+          cart = [];
+      } else {
+          cart = JSON.parse(localStorage.getItem(phone));
+      }
             // đóng mở giỏ hàng
-            
 
             iconCart.addEventListener("click", () => {    
                               
@@ -1054,16 +1078,7 @@ document.addEventListener("DOMContentLoaded", function () {
                   body.classList.toggle("showCart");
                 });
 
-            function displayUsername(){
-                        var usernameDisplay = document.querySelector('.sigin')
-                        var dangxuat = document.querySelector('.log')
-                        const user = JSON.parse(localStorage.getItem('dangnhap')) ;
-                        var firstFiveChars = user.usernames
-                        usernameDisplay.innerText = firstFiveChars
-                        // + '<img src="./img/header/username-icon-png-6.jpg" alt="" srcset="">'
-                        dangxuat.innerText = 'Đăng xuất'
-                        }
-                displayUsername()
+            
 
 
 
@@ -1346,73 +1361,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
-
-
-
-      // search-bar
-$(document).ready(function(){
-    $('#search').keyup(function(){
-        $('.autocomplete').html('');
-        var searchField = $('#search').val().toLowerCase();
-        var expression = new RegExp(searchField, "i");
-
-        // Flag to check if any matching item is found
-        var found = false;
-
-        // Ẩn .autocomplete nếu ô tìm kiếm trống
-        if (searchField === '') {
-            $('.autocomplete').css('display', 'none');
-            return; // Ngừng thực hiện thêm logic nếu ô tìm kiếm trống
-        }
-
-        $.each(storedProductsData, function(key, value){
-            if (value.name.toLowerCase().search(expression) != -1 || value.category.toLowerCase().search(expression) != -1)
-            {
-                // Append the link for each matching item
-                if (window.location.pathname.includes("login"))
-                {
-                    var path = 'detail-login.html?id='+ value.id;
-                }
-                else
-                {
-                    var path = 'detail.html?id='+ value.id
-                }
-                $('.autocomplete').append('<a href="'+path+'"><li><img style="display:none" src="'+value.imgSrc+'" height="40" width="40" class="" />'+value.name+'</li></a>');
-                found = true;
-            }
-        });
-
-        console.log(searchField);
-
-        // Update display based on whether any matching item is found
-        if (found) {
-            $('.autocomplete').css('display', 'block');
-        } else {
-            $('.autocomplete').css('display', 'none');
-        }
-    });
-
-    $('.autocomplete').on('click', 'li', function() {
-        // Get the text or data attribute based on your implementation
-        var selectedItemText = $(this).text();
-        $('#search').val($.trim(selectedItemText));
-
-        // Clear autocomplete and hide it
-        $('.autocomplete').empty().css('display', 'none');
-    });
-});
-
-
-
-
-
-      if(!window.location.href.includes("login")){
-        function dangXuat(){
-          localStorage.removeItem('dangnhap')
-        }
-        dangXuat()
-      }
+      
 
 
 

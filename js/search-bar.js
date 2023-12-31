@@ -1,4 +1,4 @@
-let productsData = JSON.parse(localStorage.getItem('productsData'))
+// let productsData = JSON.parse(localStorage.getItem('productsData'))
 
 $(document).ready(function(){
     $('#search').keyup(function(){

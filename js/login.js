@@ -86,7 +86,6 @@ btnRegister.addEventListener("click", (e) => {
     
   
   }
-
     // array user
     const user = {
       username: inputUsernameRegister.value,
@@ -95,6 +94,7 @@ btnRegister.addEventListener("click", (e) => {
     };
     let json = JSON.stringify(user);
     localStorage.setItem(inputUsernameRegister.value, json);
+    localStorage.setItem(inputPhoneRegister.value,'')
     if (window.location.pathname.includes("index.html")) {
       window.location.href = "index-login.html";
     } else if (window.location.pathname.includes("detail.html")) {
@@ -111,7 +111,8 @@ btnRegister.addEventListener("click", (e) => {
     };
     let json1 = JSON.stringify(logIn);
     localStorage.setItem('dangnhap', json1);
-    localStorage.setItem(inputPhoneRegister.value,'[]')
+    
+    
 });
 
 const btnLogin = document.querySelector("#dongydangnhap");
@@ -131,7 +132,7 @@ btnLogin.addEventListener("click", (e) => {
 
       // Lưu thông tin đăng nhập vào Local Storage
       const logIn = {
-        username: inputUsername.value,
+        usernames: inputUsername.value,
         phone: user.phone
       };
       let json1 = JSON.stringify(logIn);
